@@ -16,7 +16,10 @@
         },
         "assets": {
             "/static/": "static",
-            "/doc2/image/": "docs/doc2/image"
+            "/doc2/image/": "docs/doc2/image",
+            "/doc3/image1/": "docs/doc3/image1",
+            "/doc3/image2/": "docs/doc3/image2",
+            "/doc3/image3/": "docs/doc23/image3"
         }
     },
     "executable": {
