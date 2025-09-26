@@ -1,7 +1,7 @@
 {
     "locale": "zn",
     "navbar": {
-        "title": "Odoo学习笔记",
+        "title": "个人学习笔记",
         "logo": {
             "alt": "teedoc logo",
             "src": "/static/image/logo.png"
@@ -35,7 +35,7 @@
         ],
         "bottom": [
             {
-                "label": "Technical support | LC_Link",
+                "label": "Technical support | LC",
                 "url": "https://gitee.com/LC_Link",
                 "target": "_blank"
             }

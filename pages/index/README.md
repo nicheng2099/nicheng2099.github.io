@@ -14,6 +14,6 @@ id: home_page
     <h3>好耶~ 新的风暴已经出现！</h3>
 </div>
 <div id="big_btn_wrapper">
-    <a class="btn" href="/doc1/">快速上手</a>
+    <a class="btn" href="/doc1/">技术栈</a>
 </div>
 
