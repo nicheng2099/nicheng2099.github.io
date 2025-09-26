@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://diz.study.io/sitemap.xml
