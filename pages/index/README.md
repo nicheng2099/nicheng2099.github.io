@@ -10,7 +10,7 @@ id: home_page
 
 
 <div>
-    <h1><span>Odoo</span></h1>
+    <h1><span>LC_Link</span></h1>
     <h3>好耶~ 新的风暴已经出现！</h3>
 </div>
 <div id="big_btn_wrapper">

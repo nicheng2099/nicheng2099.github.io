@@ -5,9 +5,9 @@ date: 2025-09-26
 
 # 个人
 
-[gitHub](https://github.com/nicheng2099/)
+[github](https://github.com/nicheng2099/)
 
-[gitee]([LC_Link (LC_Link) - Gitee.com](https://gitee.com/LC_Link))
+[gitee](https://gitee.com/LC_Link)
 
 ## CRUD
 
