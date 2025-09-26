@@ -1,0 +1,44 @@
+{
+    "locale": "zn",
+    "navbar": {
+        "title": "Odoo学习笔记",
+        "logo": {
+            "alt": "",
+            "url": ""
+        },
+        "home_url": "/",
+        "items": [
+            {
+                "url": "/doc2/",
+                "label": "大数据",
+                "position": "left"
+            },
+            {
+                "url": "/doc3/",
+                "label": "Linux",
+                "position": "left"
+            }
+        ]
+    },
+    "footer":{
+        "top":[
+            {
+                "label": "",
+                "items": [
+                    {
+                        "label": "",
+                        "url": "#",
+                        "target": "_blank"
+                    }
+                ]
+            }
+        ],
+        "bottom": [
+            {
+                "label": "Technical support | LC_Link",
+                "url": "https://gitee.com/LC_Link",
+                "target": "_blank"
+            }
+        ]
+    }
+}

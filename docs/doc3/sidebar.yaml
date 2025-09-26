@@ -1,0 +1,9 @@
+items:
+-   label: linux学习
+    file: README.md
+-   label: linux mysql 操作命令
+    file: linux mysql 操作命令.md
+-   label: CentOS 7 yum安装 MySQL 5.7
+    file: CentOS 7 yum安装 MySQL 5.7.md
+-   label: Nginx安装部署
+    file: Nginx/README.md
