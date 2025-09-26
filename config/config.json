@@ -3,8 +3,8 @@
     "navbar": {
         "title": "Odoo学习笔记",
         "logo": {
-            "alt": "",
-            "url": ""
+            "alt": "teedoc logo",
+            "src": "/static/image/logo.png"
         },
         "home_url": "/",
         "items": [
