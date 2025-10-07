@@ -9,6 +9,10 @@
         "home_url": "/",
         "items": [
             {
+                "url": "/doc4/",
+                "label": "Odoo",
+                "position": "left"
+            },{
                 "url": "/doc2/",
                 "label": "大数据",
                 "position": "left"
