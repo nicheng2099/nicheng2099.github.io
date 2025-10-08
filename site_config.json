@@ -40,6 +40,7 @@
             "config": {
                 "dark": true,
                 "show_print_page": false,
+                "heading_no_counter": true,
                 "env":{
                     "main_color": "#4caf7d"
                 }
@@ -48,7 +49,7 @@
         "teedoc-plugin-search":{
             "from": "pypi",
             "config": {
-                "search_hint": "Search"
+                "search_hint": "搜索"
             }
         },
         "teedoc-plugin-assets": {
