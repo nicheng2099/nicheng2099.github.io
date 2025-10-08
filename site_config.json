@@ -10,7 +10,8 @@
             "/doc1/": "docs/doc1",
             "/doc2/": "docs/doc2",
             "/doc3/": "docs/doc3",
-            "/Odoo/": "docs/doc4"
+            "/Odoo/": "docs/Odoo",
+            "/Link/": "docs/Link"
         },
         "pages": {
             "/": "pages/index"
