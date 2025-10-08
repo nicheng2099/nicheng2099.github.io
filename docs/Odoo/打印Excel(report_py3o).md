@@ -24,7 +24,7 @@
 
 ### 在Odoo的config文件引入相关配置
 
-```editorconfig
+```config
 [options]
 bin_path = D:\Odoo\odoo-soft\odoo-path\wkhtmltopdf\bin
 py3o_server_path = D:\Odoo\odoo-sotf\odoo-path\LibreOffice\program\soffice.exe
