@@ -1,8 +1,8 @@
 {
     "site_name": "LCDOC",
-    "site_slogon": "测试环境",
+    "site_slogon": "笔记",
     "site_root_url": "/",
-    "site_domain": "diz.study.io",
+    "site_domain": "lc.study.io",
     "site_protocol": "https",
     "config_template_dir": "config",
     "route": {
