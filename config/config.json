@@ -1,15 +1,15 @@
 {
     "locale": "zn",
     "navbar": {
-        "title": "个人学习笔记",
+        "title": "个人笔记",
         "logo": {
-            "alt": "teedoc logo",
+            "alt": "/",
             "src": "/static/image/logo.png"
         },
         "home_url": "/",
         "items": [
             {
-                "url": "/doc4/",
+                "url": "/Odoo/",
                 "label": "Odoo",
                 "position": "left"
             },{
