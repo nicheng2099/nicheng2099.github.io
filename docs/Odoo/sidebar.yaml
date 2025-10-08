@@ -5,5 +5,8 @@ items:
     file: Link.md
 -   label: SQL
     file: SQL.md
--   label: 打印Excel(report_py3o)
-    file: 打印Excel(report_py3o).md
+-   label: 更多笔记
+    collapsed: false
+    items:
+    -   label: 打印Excel(report_py3o)
+        file: 打印Excel(report_py3o).md
