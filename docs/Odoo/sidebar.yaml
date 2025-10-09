@@ -9,7 +9,7 @@ items:
     file: Tool.md
 -   label: SQL
     file: SQL.md
--   label: 更多笔记
+-   label: 随笔
     collapsed: false
     items:
     -   label: 打印Excel(report_py3o)

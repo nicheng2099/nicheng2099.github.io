@@ -1,7 +1,7 @@
 {
     "locale": "zn",
     "navbar": {
-        "title": "个人笔记",
+        "title": "笔记",
         "logo": {
             "alt": "/",
             "src": "/static/image/logo.png"
