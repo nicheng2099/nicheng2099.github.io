@@ -37,7 +37,6 @@ def _compute_plotly_chart(self):
 ```xml
 <field name="plotly_chart" widget="plotly_chart" nolabel="1"/>
 ```
-
 **效果**
 
-![](assets/2025-10-09-14-46-32-image.png)
+![](../assets/2025-10-09-14-46-32-image.png)

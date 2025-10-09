@@ -3,18 +3,21 @@ items:
     file: README.md
 -   label: 链接
     file: Link.md
--   label: 小部件
-    file: Widget.md
 -   label: 工具
     file: Tool.md
 -   label: 样式
     file: Class.md
--   label: 主题
-    file: Theme.md
 -   label: SQL
     file: SQL.md
+-   label: 第三方模块
+    collapsed: true
+    items:
+    - label: 小部件
+      file: third_party_modules/Widget.md
+    - label: 主题
+      file: third_party_modules/Theme.md
 -   label: 随笔
     collapsed: false
     items:
     -   label: 打印Excel(report_py3o)
-        file: 打印Excel(report_py3o).md
+        file: note/打印Excel(report_py3o).md

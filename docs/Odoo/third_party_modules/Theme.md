@@ -1,4 +1,3 @@
-# 主题
 
 ## spiffy_theme_backend
 
