@@ -39,4 +39,4 @@ def _compute_plotly_chart(self):
 ```
 **效果**
 
-![](../assets/2025-10-09-14-46-32-image.png)
+![](assets/2025-10-09-14-46-32-image.png)

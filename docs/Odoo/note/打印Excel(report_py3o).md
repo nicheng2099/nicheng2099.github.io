@@ -41,7 +41,7 @@ py3o_server_port = 2002
 
 具体使用：[Templating with LibreOffice — py3o.template 0.9.10 documentation (py3otemplate.readthedocs.io)](https://py3otemplate.readthedocs.io/en/latest/templating.html?highlight=html)
 
-![](../assets/2025-10-08-10-36-04-image.png)
+![](assets/2025-10-08-10-36-04-image.png)
 
 ### 打印动作视图
 
@@ -66,7 +66,7 @@ py3o_server_port = 2002
 
 ```python
 def action_print(self):
-    return self.env.ref('my_test_module.action_account_entry_invoices').report_action(self)
+    return self.env.ref('my_test_module.action_account_entry_invoices').report_action(self)
 ```
 
 - 打印处理过的数据(json) 
