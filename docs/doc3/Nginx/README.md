@@ -60,7 +60,6 @@ server {
             root   html;
         }
     }
-
 ```
 
 输入以下代码，将防火墙打开
@@ -206,7 +205,7 @@ vim nginx.conf
 upstream lichao
     { 
         server 127.0.0.1:8080 weight=1;
-   		server 127.0.0.1:8081 weight=1;
+           server 127.0.0.1:8081 weight=1;
     }
 ```
 
@@ -242,6 +241,6 @@ location / {
 
 ![](image/21.jpg)
 
-通过curl命令访问curl http://localhost/hello,也确认能正确交替返回上述两个tomcat的内容。
+通过curl命令访问http://localhost/hello，确认能正确交替返回上述两个tomcat的内容。
 
 ![](image/22.jpg)
