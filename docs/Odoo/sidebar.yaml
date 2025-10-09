@@ -5,6 +5,8 @@ items:
     file: Link.md
 -   label: 工具
     file: Tool.md
+-   label: 小部件
+    file: Widget.md
 -   label: 样式
     file: Class.md
 -   label: SQL
@@ -19,5 +21,5 @@ items:
 -   label: 随笔
     collapsed: false
     items:
-    -   label: 打印Excel(report_py3o)
-        file: note/打印Excel(report_py3o).md
+    - label: 打印Excel(report_py3o)
+      file: note/打印Excel(report_py3o).md

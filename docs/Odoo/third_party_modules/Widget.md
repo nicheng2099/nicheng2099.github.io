@@ -1,6 +1,6 @@
 # 小部件
 
-### Web Widget Plotly （非原生）
+## Web Widget Plotly
 
 > 通过Text字段存储图表信息，并生成Plotly Chart图表
 
