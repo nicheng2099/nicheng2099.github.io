@@ -1,49 +1,16 @@
-teedoc official website
+使用teedoc记录笔记
 =====
 
-visit: [teedoc.neucrack.com](https://teedoc.neucrack.com/) or [teedoc.github.io](https://teedoc.github.io)
+## 添加文章
 
+* 在本文件所在目录创建 markdown 以  `.md` 结尾的文件，比如 `first.md`  
+* 在 `sidebar.yaml` 中添加侧边栏链接  
 
-## build locally
-
-* Install Python3 first
-
+```markdown
+items:  
+-   label: Brief  
+    file: README.md-   label: First  
+    file: first.md  
 ```
-sudo apt install python3 python3-pip
-```
-
-* Install teedoc
-
-```
-pip3 install teedoc
-```
-
-* Get site source files
-
-```
-git clone https://github.com/teedoc/teedoc.github.io my_site
-```
-
-或者
-
-```
-git clone https://github.com/teedoc/teedoc.gitee.io my_site
-```
-
-* Install plugins
-
-```
-cd my_site
-teedoc install
-```
-
-* build and serve
-
-```
-teedoc build
-teedoc serve
-```
-
-then visit [http://127.0.0.1:2333](http://127.0.0.1:2333)
 
 
