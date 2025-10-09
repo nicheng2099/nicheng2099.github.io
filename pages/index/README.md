@@ -1,8 +1,8 @@
 
 ---
-title: LC_Link
-keywords: LC_Link
-desc: LC_Link, generated with teedoc, a static site generator
+title: DOC
+keywords: DOC
+desc: DOC, generated with teedoc, a static site generator
 id: home_page
 ---
 <div>
