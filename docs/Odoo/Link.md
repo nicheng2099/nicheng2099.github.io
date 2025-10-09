@@ -12,4 +12,4 @@
 
 链接：[Odoo Community Apps | The Odoo Community Association Website (OCA) (odoo-community.org)](https://odoo-community.org/shop)
 
-# 
+github链接：[Odoo Community Association · GitHub](https://github.com/OCA) 
