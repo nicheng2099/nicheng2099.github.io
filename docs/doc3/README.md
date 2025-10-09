@@ -1,7 +1,4 @@
----
-title: Linux
-date: 2025-09-26
----
+# Linux
 
 # 第一章 Linux操作系统概述
 
@@ -11,39 +8,37 @@ date: 2025-09-26
 
 ![](image1/17.jpg)
 
+**/bin**:    bin 是 Binaries (二进制文件) 的缩写, 这个目录存放着最经常使用的命令。
 
+**/usr**:     usr 是 unix shared resources(共享资源) 的缩写，这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于 windows 下的 program files 目录。
 
-**/bin**:	bin 是 Binaries (二进制文件) 的缩写, 这个目录存放着最经常使用的命令。
+**/dev**:    dev 是 Device(设备) 的缩写, 该目录下存放的是 Linux 的外部设备，在 Linux 中访问设备的方式和访问文件的方式是相同的。
 
-**/usr**:	 usr 是 unix shared resources(共享资源) 的缩写，这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于 windows 下的 program files 目录。
+**/etc**:    etc 是 Etcetera(等等) 的缩写,这个目录用来存放所有的系统管理所需要的配置文件和子目录。
 
-**/dev**:	dev 是 Device(设备) 的缩写, 该目录下存放的是 Linux 的外部设备，在 Linux 中访问设备的方式和访问文件的方式是相同的。
+**/home**:    用户的主目录，在 Linux 中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的，如上图中的 alice、bob 和 eve。
 
-**/etc**:	etc 是 Etcetera(等等) 的缩写,这个目录用来存放所有的系统管理所需要的配置文件和子目录。
+**/srv**:    该目录存放一些服务启动之后需要提取的数据。
 
-**/home**:	用户的主目录，在 Linux 中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的，如上图中的 alice、bob 和 eve。
+**/var**:    var 是 variable(变量) 的缩写，这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。
 
-**/srv**:	该目录存放一些服务启动之后需要提取的数据。
+**/lib**:    lib 是 Library(库) 的缩写这个目录里存放着系统最基本的动态连接共享库，其作用类似于 Windows 里的 DLL 文件。几乎所有的应用程序都需要用到这些共享库。
 
-**/var**:	var 是 variable(变量) 的缩写，这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。
+**/lost+found**:    这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。
 
-**/lib**:	lib 是 Library(库) 的缩写这个目录里存放着系统最基本的动态连接共享库，其作用类似于 Windows 里的 DLL 文件。几乎所有的应用程序都需要用到这些共享库。
+**/media**:    linux 系统会自动识别一些设备，例如U盘、光驱等等，当识别后，Linux 会把识别的设备挂载到这个目录下。
 
-**/lost+found**:	这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。
+**/mnt**:    系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在 /mnt/ 上，然后进入该目录就可以查看光驱里的内容了。
 
-**/media**:	linux 系统会自动识别一些设备，例如U盘、光驱等等，当识别后，Linux 会把识别的设备挂载到这个目录下。
+**/opt**:    opt 是 optional(可选) 的缩写，这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。
 
-**/mnt**:	系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在 /mnt/ 上，然后进入该目录就可以查看光驱里的内容了。
+**/root**:    该目录为系统管理员，也称作超级权限者的用户主目录。
 
-**/opt**:	opt 是 optional(可选) 的缩写，这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。
+**/boot**:    这里存放的是启动 Linux 时使用的一些核心文件，包括一些连接文件以及镜像文件。
 
-**/root**:	该目录为系统管理员，也称作超级权限者的用户主目录。
+**/tmp**:    tmp 是 temporary(临时) 的缩写这个目录是用来存放一些临时文件的。
 
-**/boot**:	这里存放的是启动 Linux 时使用的一些核心文件，包括一些连接文件以及镜像文件。
-
-**/tmp**:	tmp 是 temporary(临时) 的缩写这个目录是用来存放一些临时文件的。
-
-**注**：Linux存储用户帐号的文件是:**/etc/passwd**；	Linux存储密码和群组名称的文件是:**/etc/shadow**；	Linux存储所有用户的变量设置的文件是**/etc/profile**。
+**注**：Linux存储用户帐号的文件是:**/etc/passwd**；    Linux存储密码和群组名称的文件是:**/etc/shadow**；    Linux存储所有用户的变量设置的文件是**/etc/profile**。
 
 # 第二章 Linux系统的环境搭建
 
@@ -72,7 +67,7 @@ DNS1=192.168.101.2
 systemctl restart network
 ```
 
-# 第三章 Linux操作基础		
+# 第三章 Linux操作基础
 
 ### 简单命令
 
@@ -99,7 +94,7 @@ cal 2022
 
 <img src="image/2.jpg" style="zoom:80%;" />
 
-su命令切换用户：su   	
+su命令切换用户：su       
 
 ```
 #”-“表示是否切换环境变量
@@ -111,10 +106,8 @@ su [-] [用户名]
 统计命令：wc
 
 ```
-wc [-lw][-c] 文件名  		#-L:统计行数;	-W:统计字数;	-c:统计字节数;
+wc [-lw][-c] 文件名          #-L:统计行数;    -W:统计字数;    -c:统计字节数;
 ```
-
-
 
 ### Shell命令的操作基础
 
@@ -133,9 +126,7 @@ man ls
 #q：推出man命令
 ```
 
-
-
-#####  目录和文件的操作
+##### 目录和文件的操作
 
 列出目录的内容：ls
 
@@ -204,11 +195,9 @@ rm [选项] 要删除的文件
 软链接：ln
 
 ```
-ln -s [文件或目录][软连接名]	#删除软链接： rm -rf 软链接名，而不是 rm -rf 软链接名/
-						  #如果使用 rm -rf 软链接名/ 删除，会把软链接对应的真实目录下内容删掉
+ln -s [文件或目录][软连接名]    #删除软链接： rm -rf 软链接名，而不是 rm -rf 软链接名/
+                          #如果使用 rm -rf 软链接名/ 删除，会把软链接对应的真实目录下内容删掉
 ```
-
-
 
 ##### 查看输出文件操作
 
@@ -221,7 +210,7 @@ cat [选项] 要查看的文件
 文件内容分屏查看器：more
 
 ```
-more 要查看的文件				#一次显示一页
+more 要查看的文件                #一次显示一页
 ```
 
 ![](image/8.jpg)
@@ -253,15 +242,15 @@ tail [选项] 文件
 输出重定向和 追加：>    >>
 
 ```
-ls -l > 文件		#将列表内容写入文件.txt中（覆盖）
-ls -al >> 文件 	#将列表内容追加到文件.txt的末尾
+ls -l > 文件        #将列表内容写入文件.txt中（覆盖）
+ls -al >> 文件     #将列表内容追加到文件.txt的末尾
 cat 文件1 > 文件2
 ```
 
 echo
 
 ```
-echo [选项][输出内容]	#-e 支出反斜线字符转换
+echo [选项][输出内容]    #-e 支出反斜线字符转换
 
 [atguigu@hadoop101 ~]$ echo “hello\tworld”
 hello\tworld
@@ -273,23 +262,23 @@ hello world
 
 ##### 用户管理命令
 
-添加新用户：useradd	/	adduser
+添加新用户：useradd    /    adduser
 
 ```
-useradd 用户名 			#添加新用户
-useradd -g 组名 用户名	   #添加新用户到某个组
+useradd 用户名             #添加新用户
+useradd -g 组名 用户名       #添加新用户到某个组
 ```
 
 设置用户密码：passwd
 
 ```
-passwd 用户名				#设置用户密码
+passwd 用户名                #设置用户密码
 ```
 
 查看用户是否存在：id
 
 ```
-id 用户		#查看用户是否存在
+id 用户        #查看用户是否存在
 ```
 
 查看创建了哪些用户：cat  /etc/passwd
@@ -311,9 +300,9 @@ su - 用户名   #切换用户，并获得该用户的环境变量及执行权�
 删除用户：userdel
 
 ```
-userdel 用户名			#删除用户，但保留用户主目录
+userdel 用户名            #删除用户，但保留用户主目录
 
-userdel -r 用户名		#用户和用户主目录都删除
+userdel -r 用户名        #用户和用户主目录都删除
 su - tangseng
 ```
 
@@ -324,13 +313,13 @@ su - tangseng
 ![](image/12.jpg)
 
 ```
-sudo mksir /opt/module		#在/opt目录下创建目录
+sudo mksir /opt/module        #在/opt目录下创建目录
 ```
 
  修改用户：usermod
 
 ```
-usermod -g 用户组 用户名		#将用户加入用户组
+usermod -g 用户组 用户名        #将用户加入用户组
 ```
 
 ##### 组管理命令
@@ -356,9 +345,9 @@ groupmod -n 新组名 旧组名  #改名
 管理组内用户：gpasswd
 
 ```
-gpasswd -a 用户名 组名	  #将用户添加到组中
-gpasswd -d 用户名 组名	  #将用户从组中删除
-gpasswd -A 用户名 组名	  #将用户设为组的管理员
+gpasswd -a 用户名 组名      #将用户添加到组中
+gpasswd -d 用户名 组名      #将用户从组中删除
+gpasswd -A 用户名 组名      #将用户设为组的管理员
 ```
 
 查看创建了哪些组： cat /etc/group
@@ -377,9 +366,9 @@ gpasswd -A 用户名 组名	  #将用户设为组的管理员
 
 （1）0 首位表示类型 在Linux中第一个字符代表这个文件是目录、文件或链接文件等等 
 
-   - -代表文件 
-   - d 代表目录 
-   - l 链接文档(link file)； 
+- -代表文件 
+- d 代表目录 
+- l 链接文档(link file)； 
 
 （2）第1-3位确定属主（该文件的所有者）拥有该文件的权限。---User 
 
@@ -393,14 +382,14 @@ gpasswd -A 用户名 组名	  #将用户设为组的管理员
 chmod [{ugoa}{+-}{rwx}] 文件或目录 #u:所有者 g:所有组 o:其他人 a:所有人(u、g、o的总和)
 chmod u-x,o+x houge.txt
 
-chmod [mode=421] 文件或目录		  #r=4 w=2 x=1 rwx=4+2+1=7
+chmod [mode=421] 文件或目录          #r=4 w=2 x=1 rwx=4+2+1=7
 chmod 777 houge.txt
 ```
 
 改变所有者：chown
 
 ```
-chown [选项] [最终用户][文件或目录]	   #改变文件或者目录的所有者
+chown [选项] [最终用户][文件或目录]       #改变文件或者目录的所有者
 chown atguigu houge.txt
 ```
 
@@ -409,7 +398,7 @@ chown atguigu houge.txt
 改变所属组：chgrp
 
 ```
-chgrp [最终组] [文件或目录]				#改变文件或者目录的所属组
+chgrp [最终组] [文件或目录]                #改变文件或者目录的所属组
 chgrp root houge.txt
 ```
 
@@ -454,10 +443,10 @@ grep [选项] [查找内容] [源文件]
 （3）同时多个文件会产生多个压缩包
 
 ```
-gzip 文件		#压缩文件，只能将文件压缩为*.gz 文件
+gzip 文件        #压缩文件，只能将文件压缩为*.gz 文件
 gzip houge.txt
- 
-gunzip 文件	#解压缩文件命令
+
+gunzip 文件    #解压缩文件命令
 gunzip houge.txt.gz
 ```
 
@@ -466,7 +455,7 @@ gunzip houge.txt.gz
 zip 压缩命令在windows/linux都通用，可以压缩目录且保留源文件。
 
 ```
-zip [选项] XXX.zip 将要压缩的内容		#压缩文件和目录的命令
+zip [选项] XXX.zip 将要压缩的内容        #压缩文件和目录的命令
 root@hadoop101 opt]# touch bailongma.txt
 [root@hadoop101 ~]# zip mypackage.zip houge.txt bailongma.txt
 adding: houge.txt (stored 0%)
@@ -474,7 +463,7 @@ adding: bailongma.txt (stored 0%)
 [root@hadoop101 opt]# ls
 houge.txt bailongma.txt mypackage.zip
 
-unzip [选项] XXX.zip					 #解压缩文件
+unzip [选项] XXX.zip                     #解压缩文件
 [root@hadoop101 ~]# unzip mypackage.zip
 Archive: houma.zip
 extracting: houge.txt
@@ -488,7 +477,7 @@ houge.txt bailongma.txt mypackage.zip
 打包：tar
 
 ```
-tar [选项] XXX.tar.gz 将要打包进去的内容		#打包目录，压缩后的文件格式.tar.gz
+tar [选项] XXX.tar.gz 将要打包进去的内容        #打包目录，压缩后的文件格式.tar.gz
 tar -zcvf lichao.tar.gz bailongma.txt houma.txt -C/opt/app #压缩
 tar -zxvf lichao.tar.gz -C /opt #解压
 ```
@@ -512,7 +501,7 @@ RPM包的名称格式：Apache-1.3.23-11.i386.rpm
 RPM包安装：rpm -ivh
 
 ```
-rpm -ivh 包名				#安装RPM
+rpm -ivh 包名                #安装RPM
 rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm
 ```
 
@@ -521,17 +510,17 @@ rpm -ivh firefox-45.0.1-1.el6.centos.x86_64.rpm
 RPM包卸载：rpm -e
 
 ```
-rpm -e 包名				#卸载RPM
+rpm -e 包名                #卸载RPM
 rpm -e firefox
- 
-rpm -e --nodeps 包名			
+
+rpm -e --nodeps 包名            
 ```
 
 RPM包查询：rpm -qa
 
 ```
 rpm -qa | grep rpm
-rpm -q 包名		#查询是否安装
+rpm -q 包名        #查询是否安装
 ```
 
 ##### YUM软件包
@@ -541,7 +530,7 @@ YUM（全称为 Yellow dog Updater, Modified）是一个在 Fedora 和 RedHat �
 YUM 的常用命令：yum
 
 ```
-yum [选项][参数]			#采用 yum 方式安装 firefox
+yum [选项][参数]            #采用 yum 方式安装 firefox
 yum -y install firefox
 ```
 
@@ -554,8 +543,8 @@ yum -y install firefox
  查看文件和目录占用的磁盘空间：du 
 
 ```
-du 目录/文件		#显示目录下每个子目录的磁盘使用情况
-du -sh			   #查看当前用户主目录占用的磁盘空间大小
+du 目录/文件        #显示目录下每个子目录的磁盘使用情况
+du -sh               #查看当前用户主目录占用的磁盘空间大小
 ```
 
 ![](image/19.jpg)
@@ -563,8 +552,8 @@ du -sh			   #查看当前用户主目录占用的磁盘空间大小
 查看磁盘空间使用情况：df
 
 ```
-df [选项]				#列出文件系统的整体磁盘使用量，检查文件系统的磁盘空间占用情况
-df -h				 #查看磁盘使用情况
+df [选项]                #列出文件系统的整体磁盘使用量，检查文件系统的磁盘空间占用情况
+df -h                 #查看磁盘使用情况
 ```
 
 ![](image1/1.jpg)
@@ -572,7 +561,7 @@ df -h				 #查看磁盘使用情况
 查看设备挂载情况：lsblk
 
 ```
-lsblk 				#查看设备挂载情况
+lsblk                 #查看设备挂载情况
 ```
 
 ![](image1/2.jpg)
@@ -580,10 +569,10 @@ lsblk 				#查看设备挂载情况
 挂载/卸载：mount/umount
 
 ```
-mount [-t vfstype] [-o options] device dir		#挂载设备
-mount -t iso9660 /dev/cdrom /mnt/cdrom/			#设备/dev/cdrom挂载到 挂载点：/mnt/cdrom 中
- 
-umount 设备文件名或挂载点						  #卸载设备
+mount [-t vfstype] [-o options] device dir        #挂载设备
+mount -t iso9660 /dev/cdrom /mnt/cdrom/            #设备/dev/cdrom挂载到 挂载点：/mnt/cdrom 中
+
+umount 设备文件名或挂载点                          #卸载设备
 umount /mnt/cdrom
 ```
 
@@ -596,11 +585,11 @@ umount /mnt/cdrom
 分区：fdisk
 
 ```
-fdisk -l			#查看磁盘分区详情,-l:显示所有硬盘的分区列表
-fdisk 硬盘设备名		 #对新增硬盘进行分区操作
+fdisk -l            #查看磁盘分区详情,-l:显示所有硬盘的分区列表
+fdisk 硬盘设备名         #对新增硬盘进行分区操作
 ```
 
-#####  进程管理命令
+##### 进程管理命令
 
 进程：是正在执行的一个程序或命令，每一个进程都是一个运行的实体，都有自己的地址空间，并占用一定的系统资源。/指进程实体的运行过程，是系统进行资源分配和调度的独立单位。或者说是一个程序在处理机上的一次执行活动
 
@@ -613,8 +602,8 @@ fdisk 硬盘设备名		 #对新增硬盘进行分区操作
 如果想查看进程的父进程 ID 可以使用 ef;
 
 ```
-ps aux | grep xxx			#查看系统中所有进程
-ps -ef | grep xxx			#可以查看子父进程之间的关系
+ps aux | grep xxx            #查看系统中所有进程
+ps -ef | grep xxx            #可以查看子父进程之间的关系
 ```
 
 ![](image1/5.jpg)
@@ -623,57 +612,57 @@ ps -ef | grep xxx			#可以查看子父进程之间的关系
 
 （1）ps -aux 
 
-​			显示信息说明 
+​            显示信息说明 
 
-​			USER：该进程是由哪个用户产生的 
+​            USER：该进程是由哪个用户产生的 
 
-​			PID：进程的 ID 号
+​            PID：进程的 ID 号
 
-​			%CPU：该进程占用 CPU 资源的百分比，占用越高，进程越耗费资源； 
+​            %CPU：该进程占用 CPU 资源的百分比，占用越高，进程越耗费资源； 
 
-​			%MEM：该进程占用物理内存的百分比，占用越高，进程越耗费资源；
+​            %MEM：该进程占用物理内存的百分比，占用越高，进程越耗费资源；
 
-​		 	VSZ：该进程占用虚拟内存的大小，单位 KB； 
+​             VSZ：该进程占用虚拟内存的大小，单位 KB； 
 
-​			RSS：该进程占用实际物理内存的大小，单位 KB； 
+​            RSS：该进程占用实际物理内存的大小，单位 KB； 
 
-​			TTY：该进程是在哪个终端中运行的。对于 CentOS 来说，tty1 是图形化终端， 
+​            TTY：该进程是在哪个终端中运行的。对于 CentOS 来说，tty1 是图形化终端， 
 
-​			tty2-tty6 是本地的字符界面终端。pts/0-255 代表虚拟终端。 
+​            tty2-tty6 是本地的字符界面终端。pts/0-255 代表虚拟终端。 
 
-​			STAT：进程状态。常见的状态有：R：运行状态、S：睡眠状态、T：暂停状态、 Z：僵尸状态、s：包含子进程、l：多线程、+：前台显示 
+​            STAT：进程状态。常见的状态有：R：运行状态、S：睡眠状态、T：暂停状态、 Z：僵尸状态、s：包含子进程、l：多线程、+：前台显示 
 
-​			START：该进程的启动时间 
+​            START：该进程的启动时间 
 
-​			TIME：该进程占用 CPU 的运算时间，注意不是系统时间 
+​            TIME：该进程占用 CPU 的运算时间，注意不是系统时间 
 
-​			COMMAND：产生此进程的命令名
+​            COMMAND：产生此进程的命令名
 
 （2）ps -ef 
 
-​			显示信息说明 
+​            显示信息说明 
 
-​			UID：用户 ID 
+​            UID：用户 ID 
 
-​			PID：进程 ID 
+​            PID：进程 ID 
 
-​			PPID：父进程 ID 
+​            PPID：父进程 ID 
 
-​			C：CPU 用于计算执行优先级的因子。数值越大，表明进程是 CPU 密集型运算， 执行优先级会降低；数值越小，表明进程是 I/O 密集型运算，执行优先级会提高 
+​            C：CPU 用于计算执行优先级的因子。数值越大，表明进程是 CPU 密集型运算， 执行优先级会降低；数值越小，表明进程是 I/O 密集型运算，执行优先级会提高 
 
-​			STIME：进程启动的时间 
+​            STIME：进程启动的时间 
 
-​			TTY：完整的终端名称 
+​            TTY：完整的终端名称 
 
-​			TIME：CPU 时间 
+​            TIME：CPU 时间 
 
-​			CMD：启动进程所用的命令和参数
+​            CMD：启动进程所用的命令和参数
 
  终止进程：kill
 
 ```
-kill [选项] 进程号 		#通过进程号杀死进程  选项 -9：强制杀死
-killall 进程名称		 #通过进程名称杀死进程，也支持通配符，这在系统因负载过os大而变得很慢时很有用
+kill [选项] 进程号         #通过进程号杀死进程  选项 -9：强制杀死
+killall 进程名称         #通过进程名称杀死进程，也支持通配符，这在系统因负载过os大而变得很慢时很有用
 ```
 
 查看进程树：pstree
@@ -699,8 +688,8 @@ top [选项]
  显示网络状态和端口占用信息：netstat
 
 ```
-netstat -anp | grep 进程号			#查看该进程网络信息
-netstat –nlp | grep 端口号			#查看网络端口号占用情况
+netstat -anp | grep 进程号            #查看该进程网络信息
+netstat –nlp | grep 端口号            #查看网络端口号占用情况
 ```
 
 ##### 定时服务管理
@@ -712,7 +701,7 @@ service crond reload //重新载入配置
 
 ```
 crontab [选项]
-crontab -e		#进入 crontab 编辑界面。会打开 vim 编辑你的
+crontab -e        #进入 crontab 编辑界面。会打开 vim 编辑你的
 ```
 
 ![](image2/13.jpg)
@@ -736,25 +725,25 @@ VIM 编辑器是从 VI 发展出来的一个性能更强大的文本编辑器。
 ### vi编辑器启动与退出
 
 ```
-vi + n 文件名		#打开文件，光标在第n行
-vi + 文件名		#打开文件，光标停在最末行行首:
-vi -r 文件名		#恢复文件
-vi + /词 文件名	  	#找到“词”的第一次出现的文件，光标在该行行首
+vi + n 文件名        #打开文件，光标在第n行
+vi + 文件名        #打开文件，光标停在最末行行首:
+vi -r 文件名        #恢复文件
+vi + /词 文件名          #找到“词”的第一次出现的文件，光标在该行行首
 
-:w		#保存
-:q		#退出
-:wq		#保存并退出
-:q!		#强制退出
+:w        #保存
+:q        #退出
+:wq        #保存并退出
+:q!        #强制退出
 ```
 
 ### vi编辑器的三种工作方式
 
 - ##### 一般模式、编辑模式、命令模式
-
+  
   ![](image1/18.jpg)
 
 - ##### 命令模式、插入模式、底行命令模式
-
+  
   ![](image1/19.jpg)
 
 - ##### 命令模式、输入模式
@@ -767,7 +756,7 @@ vi + /词 文件名	  	#找到“词”的第一次出现的文件，光标在�
 
 ![](image1/20.jpg)
 
-#####  编辑模式
+##### 编辑模式
 
 在一般模式中可以进行删除、复制、粘贴等的动作，但是却无法编辑文件内容的！要 等到你按下『i, I, o, O, a, A』等任何一个字母之后才会进入编辑模式。 
 
@@ -775,7 +764,7 @@ vi + /词 文件名	  	#找到“词”的第一次出现的文件，光标在�
 
 ![](image2/1.jpg)
 
-#####  指令模式
+##### 指令模式
 
 在一般模式当中，输入『 : / ?』3个中的任何一个按钮，就可以将光标移动到最底下那 一行。
 
@@ -785,7 +774,7 @@ vi + /词 文件名	  	#找到“词”的第一次出现的文件，光标在�
 
 # 第六章 Shell编程
 
-###  Shell 概述
+### Shell 概述
 
 ![](image2/3.jpg)
 
@@ -817,7 +806,7 @@ lrwxrwxrwx. 1 root root 4 5 月 27
 /bin/bash
 ```
 
-###  Shell 脚本入门
+### Shell 脚本入门
 
 ##### 脚本格式
 
@@ -838,7 +827,7 @@ echo "helloworld"
 脚本的常用执行方式
 
 - 第一种：采用 bash 或 sh+脚本的相对路径或绝对路径（不用赋予脚本+x 权限）
-
+  
   ```
   #sh+脚本的相对路径
   [root@lichao scripts]# sh ./hello.sh 
@@ -903,10 +892,10 @@ set
 自定义变量
 
 ```
-变量名=变量值		#定义变量，=号前不能有空格
-unset 变量名	  #撤销变量
+变量名=变量值        #定义变量，=号前不能有空格
+unset 变量名      #撤销变量
 readonly 变量名  #声明静态变量不能unset
-export 变量名	  #把变量提升为全局环境变量，可供其他 Shell 程序使用
+export 变量名      #把变量提升为全局环境变量，可供其他 Shell 程序使用
 ```
 
 变量定义规则
@@ -918,13 +907,13 @@ export 变量名	  #把变量提升为全局环境变量，可供其他 Shell �
 - 在 bash 中，变量默认类型都是字符串类型，无法直接进行数值运算。 
 
 - 变量的值如果有空格，需要使用双引号或单引号括起来。
-
- 特殊变量
+  
+  特殊变量
 
 $n
 
 ```
-$n		#n 为数字，$0 代表该脚本名称，$1-$9 代表第一到第九个参数，十以上的参数，十以上的参数需要用大括号包含，如${10}
+$n        #n 为数字，$0 代表该脚本名称，$1-$9 代表第一到第九个参数，十以上的参数，十以上的参数需要用大括号包含，如${10}
 
 [atguigu@hadoop101 shells]$ touch parameter.sh
 [atguigu@hadoop101 shells]$ vim parameter.sh
@@ -944,7 +933,7 @@ xz
  $#
 
 ```
-$#		#获取所有输入参数个数，常用于循环,判断参数的个数是否正确以及加强脚本的健壮性
+$#        #获取所有输入参数个数，常用于循环,判断参数的个数是否正确以及加强脚本的健壮性
 
 [atguigu@hadoop101 shells]$ vim parameter.sh
 #!/bin/bash
@@ -967,8 +956,8 @@ xz
  $*、$@
 
 ```
-$*		#这个变量代表命令行中所有的参数，$*把所有的参数看成一个整体
-$@		#这个变量也代表命令行中所有的参数，不过$@把每个参数区分对待，可以使用for遍历
+$*        #这个变量代表命令行中所有的参数，$*把所有的参数看成一个整体
+$@        #这个变量也代表命令行中所有的参数，不过$@把每个参数区分对待，可以使用for遍历
 
 ）案例实操
 [atguigu@hadoop101 shells]$ vim parameter.sh
@@ -999,7 +988,7 @@ a b c d e f g
 $?
 
 ```
-$?		最后一次执行的命令的返回状态。如果这个变量的值为 0，证明上一个命令正确执行；如果这个变量的值为非 0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。
+$?        最后一次执行的命令的返回状态。如果这个变量的值为 0，证明上一个命令正确执行；如果这个变量的值为非 0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。
 
 [atguigu@hadoop101 shells]$ ./helloworld.sh
 hello world
@@ -1007,7 +996,7 @@ hello world
 0
 ```
 
-#####  运算符
+##### 运算符
 
 expr 1 + 2
 
@@ -1037,13 +1026,13 @@ sum=3
 test
 
 ```
-test condition	#（注意 condition 内部前后要有空格）
+test condition    #（注意 condition 内部前后要有空格）
 [root@lichao scripts]# a=1
 [root@lichao scripts]# test $a = 2
 [root@lichao scripts]# echo $?
 1
 
-[ condition ]	#（注意 condition 前后要有空格）
+[ condition ]    #（注意 condition 前后要有空格）
 [root@lichao scripts]# [ $a=1 ]
 [root@lichao scripts]# echo $?
 0
@@ -1052,16 +1041,14 @@ test condition	#（注意 condition 内部前后要有空格）
 常用判断条件
 
 - 两个整数之间比较
-
+  
   ![](image2/4.jpg)
-
+  
   ```
   [root@lichao scripts]# [ 23 -eq 22 ]
   [root@lichao scripts]# echo $?
   1
   ```
-
-  
 
 - 按照文件权限进行判断
 
@@ -1072,8 +1059,6 @@ test condition	#（注意 condition 内部前后要有空格）
 [root@lichao scripts]# echo $?
 1
 ```
-
-
 
 - 按照文件类型进行判断
 
@@ -1086,7 +1071,7 @@ test condition	#（注意 condition 内部前后要有空格）
 ```
 
 - 多条件判断
-
+  
   && 表示前一条命令执行成功时，才执行后一条命令，|| 表示上一 条命令执行失败后，才执行下一条命令
 
 ```
@@ -1228,7 +1213,6 @@ this is mls
 在for循环中$*和$@的区别
 
 ```
-
 #!/bin/bash
 echo '=============$*============='
 for i in $*
@@ -1299,7 +1283,7 @@ echo $sum
 5050
 ```
 
-#####  read 读取控制台输入
+##### read 读取控制台输入
 
 ```
 read [选项] [参数]
@@ -1340,7 +1324,7 @@ continue：用于结束本次循环，进入下一次循环
  系统函数
 
 - basename
-
+  
   ```
   #basename 命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来
   #basename 可以理解为取路径里的文件名
@@ -1354,8 +1338,8 @@ continue：用于结束本次循环，进入下一次循环
   whileTest
   ```
 
--  dirname
-
+- dirname
+  
   ```
   #从给定的包含绝对路径的文件名中去除文件名（非目录的部分），然后返回剩下的路径（目录的部分）
   #dirname 可以理解为取文件路径的绝对路径名称
@@ -1366,9 +1350,9 @@ continue：用于结束本次循环，进入下一次循环
   [root@lichao scripts]# dirname /opt/donc/scripts/whileTest.sh
   /opt/donc/scripts
   ```
-
+  
   自定义函数
-
+  
   ```
   [ function ] funname[()]
   {
@@ -1381,7 +1365,7 @@ continue：用于结束本次循环，进入下一次循环
   
   function sum()
   {
-          echo $[$1+$2]
+         echo $[$1+$2]
   }
   
   read -p "place scanf numb1:" numb1
@@ -1418,7 +1402,7 @@ lichao:x:1000:1000:lichao:/home/lichao:/bin/bash
 
 ```
 #$ 匹配一行的结束
-cat /etc/passwd | grep t$		#会匹配出所有以 t 结尾的行
+cat /etc/passwd | grep t$        #会匹配出所有以 t 结尾的行
 halt:x:7:0:halt:/sbin:/sbin/halt
 ```
 
@@ -1478,11 +1462,11 @@ cat /etc/passwd | grep r[a,b,c]*t
 cut [选项参数] filename
 ```
 
-| 选项参数 |                      功能                      |
-| :------: | :--------------------------------------------: |
-|    -f    |                列号，提取第几列                |
-|    -d    | 分隔符，按照指定分隔符分割列，默认是制表符"\t" |
-|    -c    |  按字符进行切割，后加n表示取第几列，比如 -c 1  |
+| 选项参数 | 功能                        |
+|:----:|:-------------------------:|
+| -f   | 列号，提取第几列                  |
+| -d   | 分隔符，按照指定分隔符分割列，默认是制表符"\t" |
+| -c   | 按字符进行切割，后加n表示取第几列，比如 -c 1 |
 
  awk
 
@@ -1494,20 +1478,20 @@ pattern：表示 awk 在数据中查找的内容，就是匹配模式
 action：在找到匹配内容时所执行的一系列命令
 ```
 
-#####  归档文件
+##### 归档文件
 
 ```
 #!/bin/bash
 # 首先判断输入参数个数是否为 1
 if [ $# -ne 1 ]
 then
-	echo "参数个数错误！应该输入一个参数，作为归档目录名"
-	exit
+    echo "参数个数错误！应该输入一个参数，作为归档目录名"
+    exit
 fi
 # 从参数中获取目录名称
 if [ -d $1 ]
 then
-	echo
+    echo
 else
     echo
     echo "目录不存在！"
@@ -1527,10 +1511,10 @@ echo
 tar -czf $DEST $DIR_PATH/$DIR_NAME
 if [ $? -eq 0 ]
 then
-	echo
-	echo "归档成功！"
-	echo "归档文件为：$DEST"
-	echo
+    echo
+    echo "归档成功！"
+    echo "归档文件为：$DEST"
+    echo
 else
     echo "归档出现问题！"
     echo
@@ -1538,7 +1522,7 @@ fi
 exit
 ```
 
-#####  发送消息
+##### 发送消息
 
 我们可以利用 Linux 自带的 mesg 和 write 工具，向其它用户发送消息。 需求：实现一个向某个用户快速发送消息的脚本，输入用户名作为第一个参数，后面直 接跟要发送的消息。脚本需要检测用户是否登录在系统中、是否打开消息功能，以及当前发 送消息是否为空。
 
@@ -1576,4 +1560,3 @@ echo "发送成功！"
 fi
 exit
 ```
-
