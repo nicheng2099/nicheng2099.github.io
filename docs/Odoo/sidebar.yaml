@@ -7,6 +7,10 @@ items:
     file: Widget.md
 -   label: 工具
     file: Tool.md
+-   label: 样式
+    file: Class.md
+-   label: 主题
+    file: Theme.md
 -   label: SQL
     file: SQL.md
 -   label: 随笔
