@@ -43,16 +43,6 @@
         ],
         "bottom": [
             {
-                "label": "链接",
-                "items": [
-                    {
-                        "label": "网站使用 teedoc 生成",
-                        "url": "https://teedoc.neucrack.com",
-                        "target": "_blank"
-                    }
-                ]
-            },
-            {
                 "label": "Technical support | LC",
                 "url": "https://gitee.com/LC_Link",
                 "target": "_blank"
