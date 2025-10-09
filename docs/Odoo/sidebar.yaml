@@ -3,6 +3,10 @@ items:
     file: README.md
 -   label: 链接
     file: Link.md
+-   label: 小部件
+    file: Widget.md
+-   label: 工具
+    file: Tool.md
 -   label: SQL
     file: SQL.md
 -   label: 更多笔记
