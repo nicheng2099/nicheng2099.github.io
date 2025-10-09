@@ -22,7 +22,7 @@
             "/doc3/image1/": "docs/doc3/image1",
             "/doc3/image2/": "docs/doc3/image2",
             "/doc3/image3/": "docs/doc23/image3",
-            "/assets/": "docs/assets"
+            "/assets/": "docs/Odoo/assets"
         }
     },
     "executable": {
