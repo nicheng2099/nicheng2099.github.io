@@ -8,6 +8,8 @@
 
 下载report_py3o：[Py3o Report Engine | The Odoo Community Association | OCA (odoo-community.org)](https://odoo-community.org/shop/py3o-report-engine-4104#attr=6451)
 
+gitee链接：[OCA/report_py3o · LC_Link/document - 码云 - 开源中国 (gitee.com)](https://gitee.com/LC_Link/document/tree/master/OCA/report_py3o)
+
 下载LibreOffice：[下载 LibreOffice | LibreOffice 简体中文官方网站 - 自由免费的办公套件](https://zh-cn.libreoffice.org/download/libreoffice/)
 
 ### 环境

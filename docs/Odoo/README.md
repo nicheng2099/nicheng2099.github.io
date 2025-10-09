@@ -1,5 +1,3 @@
-
-
 # 指令
 
 ## anaconda指令
@@ -21,5 +19,3 @@ pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --tr
 ```shell
 python odoo-bin scaffold my_name_module myaddons/test
 ```
-
-
