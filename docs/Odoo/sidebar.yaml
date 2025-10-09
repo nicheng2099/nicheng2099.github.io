@@ -14,12 +14,12 @@ items:
 -   label: 第三方模块
     collapsed: true
     items:
-    - label: 小部件
-      file: third_party_modules/Widget.md
-    - label: 主题
-      file: third_party_modules/Theme.md
+    -   label: 小部件
+        file: third_party_modules/Widget.md
+    -   label: 主题
+        file: third_party_modules/Theme.md
 -   label: 随笔
     collapsed: false
     items:
-    - label: 打印Excel(report_py3o)
-      file: note/打印Excel(report_py3o).md
+    -   label: 打印Excel(report_py3o)
+        file: note/打印Excel(report_py3o).md
