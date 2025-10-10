@@ -241,6 +241,6 @@ location / {
 
 ![](image/21.jpg)
 
-通过curl命令访问http://localhost/hello确认能正确交替返回上述两个tomcat的内容。
+通过curl命令访问[http://localhost/hello](http://localhost/hello)，确认能正确交替返回上述两个tomcat的内容。
 
 ![](image/22.jpg)
