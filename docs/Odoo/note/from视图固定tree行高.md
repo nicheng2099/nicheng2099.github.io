@@ -35,6 +35,12 @@
 },
 ```
 
+## 在tree引入样式
+
+```xml
+class="scroll-tree-view"
+```
+
 ## 效果
 
 ![](assets/2025-10-11-10-10-00-image.png)
