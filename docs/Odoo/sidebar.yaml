@@ -23,3 +23,6 @@ items:
     items:
     -   label: 打印Excel(report_py3o)
         file: note/打印Excel(report_py3o).md
+    -   label: 弹窗提醒
+        file: note/弹窗提醒.md
+
