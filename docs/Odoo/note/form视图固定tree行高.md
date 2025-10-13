@@ -8,6 +8,10 @@
 
 目录：lc_scroll_tree_view/static/src/style.scss
 
+> overflow-y: scroll; 强制出现y轴方向滚动条
+> 
+> overflow-y: auto：当行数溢出时才会出现y轴方向滚动条
+
 ```scss
 .scroll-tree-view {
   &.o_list_renderer {
