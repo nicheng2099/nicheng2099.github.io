@@ -27,4 +27,6 @@ items:
         file: note/弹窗提醒.md
     -   label: form视图固定tree行高
         file: note/form视图固定tree行高.md
+    -   label: 冻结tree视图第一列.md
+        file: note/冻结tree视图第一列.md
 
