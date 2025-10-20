@@ -1,6 +1,10 @@
 # Odoo安排活动
 
 > 通常在工作流审批时使用
+> 
+> 需继承: _inherit = ['mail.thread', 'mail.activity.mixin']模型
+
+参考链接：[Module/odoo_send_notification · LC_Link/document - 码云 - 开源中国 (gitee.com)](https://gitee.com/LC_Link/document/tree/master/Module/odoo_send_notification)
 
 ## 在对应发送活动的按钮方法添加下列代码
 
