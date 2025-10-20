@@ -25,6 +25,10 @@ items:
         file: note/打印Excel(report_py3o).md
     -   label: 弹窗提醒
         file: note/弹窗提醒.md
+    -   label: Odoo提示模块
+        file: note/Odoo提示模块.md
+    -   label: Odoo活动安排
+        file: note/Odoo安排活动.md
     -   label: form视图固定tree行高
         file: note/form视图固定tree行高.md
     -   label: 冻结tree视图第一列
