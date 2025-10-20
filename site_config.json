@@ -41,7 +41,7 @@
                 "show_print_page": false,
                 "heading_no_counter": true,
                 "env":{
-                    "main_color": "#c4a19d"
+                    "main_color": "#CAAAA7"
                 }
             }
         },
@@ -61,8 +61,8 @@
                     "/static/js/custom.js"
                 ],
                 "env":{
-                    "main_color": "#c4a19d",
-                    "second_color": "#C3988B"
+                    "main_color": "#CAAAA7",
+                    "second_color": "#B0918D"
                 }
             }
         }
