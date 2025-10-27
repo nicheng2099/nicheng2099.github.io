@@ -35,4 +35,6 @@ items:
         file: note/form视图固定tree行高.md
     -   label: 冻结tree视图第一列
         file: note/冻结tree视图第一列.md
+    -   label: Odoo视图字段默认显示
+        file: note/Odoo视图字段默认显示.md
 
