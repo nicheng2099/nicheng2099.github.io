@@ -7,3 +7,5 @@ items:
     file: CentOS 7 yum安装 MySQL 5.7.md
 -   label: Nginx安装部署
     file: Nginx/README.md
+-   label: 克隆模板机
+    file: 克隆模板机.md
