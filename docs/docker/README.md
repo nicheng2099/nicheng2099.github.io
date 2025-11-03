@@ -33,11 +33,6 @@ sudo systemctl enable docker
 
 # 7. 验证安装
 sudo docker --version
-```
-
-## 检查
-
-```shell
 sudo systemctl status docker
 ```
 
