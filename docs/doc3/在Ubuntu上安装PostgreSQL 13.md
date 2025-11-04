@@ -122,5 +122,3 @@ sudo -u postgres psql -c "SELECT version();"
 ```
 
 安装完成后，你就可以开始使用PostgreSQL 13了。记得根据你的需求适当调整配置文件。
-
-
