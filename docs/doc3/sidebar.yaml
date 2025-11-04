@@ -9,3 +9,5 @@ items:
     file: Nginx/README.md
 -   label: 克隆模板机
     file: 克隆模板机.md
+-   label: NFS网络文件
+    file: NFS网络文件.md
