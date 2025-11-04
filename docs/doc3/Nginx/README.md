@@ -205,7 +205,7 @@ vim nginx.conf
 upstream lichao
     { 
         server 127.0.0.1:8080 weight=1;
-           server 127.0.0.1:8081 weight=1;
+        server 127.0.0.1:8081 weight=1;
     }
 ```
 
