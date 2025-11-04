@@ -49,5 +49,4 @@ sudo mount -t nfs 192.168.100.105:/odoo_shared_data /mnt/odoo_shared
 
 # 设置开机自动挂载
 echo "192.168.100.105:/odoo_shared_data /mnt/odoo_shared nfs defaults 0 0" | sudo tee -a /etc/fstab
-
 ```
