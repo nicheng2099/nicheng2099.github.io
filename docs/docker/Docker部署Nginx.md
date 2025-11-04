@@ -70,15 +70,15 @@ cat > /home/lc_link/nginx/conf.d/app.conf << 'EOF'
 server {
     listen 80;
     server_name _;
-    
+
     # 重要：指向容器内的标准HTML目录
     root /usr/share/nginx/html;
     index index.html index.htm;
-    
+
     location / {
         try_files $uri $uri/ =404;
     }
-    
+
     # 访问日志和错误日志
     access_log /var/log/nginx/access.log;
     error_log /var/log/nginx/error.log;
@@ -116,4 +116,11 @@ sudo docker exec my-nginx cat /etc/nginx/conf.d/app.conf
 
 # 5. 查看容器日志
 sudo docker logs my-nginx
+```
+
+## 停止并删除容器
+
+```shell
+sudo docker stop my-nginx
+sudo docker rm my-nginx
 ```
