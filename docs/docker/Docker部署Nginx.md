@@ -118,9 +118,22 @@ sudo docker exec my-nginx cat /etc/nginx/conf.d/app.conf
 sudo docker logs my-nginx
 ```
 
-## 停止并删除容器
+## 容器常用命令
 
-```shell
+```bash
+# 停止容器
 sudo docker stop my-nginx
-sudo docker rm my-nginx
+
+# 启动容器
+sudo docker start my-nginx
+
+# 重启容器（例如修改配置后）
+sudo docker restart my-nginx
+
+# 进入容器内部（用于调试，一般情况下应避免）
+sudo docker exec -it my-nginx /bin/bash
+
+# 删除容器（如果需要重新配置）
+sudo docker stop my-nginx
+sudo docker rm my-nginxx
 ```
