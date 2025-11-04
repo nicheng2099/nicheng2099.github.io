@@ -1,4 +1,4 @@
-# entOS 7 yum安装 MySQL 5.7
+# CentOS 7 yum安装 MySQL 5.7
 
 1、下载命令
 
@@ -29,8 +29,6 @@ systemctl start mysqld
 ```
 systemctl status mysqld
 ```
-
-
 
 6、查看默认密码
 

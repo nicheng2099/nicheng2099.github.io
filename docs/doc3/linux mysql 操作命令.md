@@ -94,7 +94,6 @@ mysqldump --all-databases > all-databases.sql（将所有数据库备份到all-d
 mysql < all-databases.sql（导入数据库）
 mysql>source news.sql;（在mysql命令下执行，可导入表）
 
-
 一、连接MySQL 
 格式： mysql -h主机地址 -u用户名 －p用户密码
 
@@ -144,8 +143,6 @@ delete on mydb.* to test2@localhost identified by \"abc\";
 
 grant select,insert,update,delete on mydb
 .* to test2@localhost identified by \"\";
-
- 
 
 启动：net start mySql;
 进入：mysql -u root -p/mysql -h localhost -u root -p databaseName;
@@ -212,7 +209,6 @@ select * from students order by id limit 9,10;
 13、MySQL不支持的功能
 事务，视图，外键和引用完整性，存储过程和触发器
 
-
 14、MySQL会使用索引的操作符号
 <,<=,>=,>,=,between,in,不带%或者_开头的like
 
@@ -268,31 +264,19 @@ select * from students procedure analyse(16,256);
 3）在不同的物理硬盘设备上重新分配磁盘活动；
 如果可能，应将最繁忙的数据库存放在不同的物理设备上，这跟使用同一物理设备的不同分区是不同的，因为它们将争用相同的物理资源（磁头）。
 
- 
-
 ## 删除MySQL数据库
 
- 
-
- 
-
 1、创建数据库
-
- 
 
 mysql> create database drop_database;
 Query OK, 1 row affected (0.00 sec)
 
 2、删除一个已经确定存在的数据库
 
- 
-
 mysql> drop database drop_database;
 Query OK, 0 rows affected ( 0.00 sec)
 
 3、删除一个不确定存在的数据库
-
- 
 
 mysql> drop database drop_database;
 ERROR 1008 (HY000): Can't drop database 'drop_database'; database doesn't exist

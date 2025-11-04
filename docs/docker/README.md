@@ -1,6 +1,6 @@
 # Docker
 
-## 安装
+## 安装docker
 
 ```shell
 # 1. 卸载当前可能存在的 Docker 残留
@@ -34,6 +34,48 @@ sudo systemctl enable docker
 # 7. 验证安装
 sudo docker --version
 sudo systemctl status docker
+
+# 8. 将当前用户加入docker组
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+## 安装docker-compose
+
+```shell
+# 更新包列表
+sudo apt update
+
+# 安装 docker-compose
+sudo apt install -y docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+# 验证安装
+docker-compose --version
+```
+
+## 镜像加速
+
+```shell
+# 编辑daemon.json 没有就创建
+sudo vim /etc/docker/daemon.json
+
+# 添加镜像加速，当前可用的镜像：https://docker.xuanyuan.me
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["镜像加速地址"]
+}
+EOF
+
+# 重启docker
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+## 检查镜像
+
+```shell
+sudo docker run hello-world
 ```
 
 
