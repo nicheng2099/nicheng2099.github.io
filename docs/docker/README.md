@@ -59,10 +59,12 @@ docker-compose --version
 # 编辑daemon.json 没有就创建
 sudo vim /etc/docker/daemon.json
 
-# 添加镜像加速，当前可用的镜像：https://docker.xuanyuan.me
+# 添加镜像加速，当前可用的镜像：https://n3.ink/helper docker.1ms.run
+# https://1ms.run/
 sudo tee /etc/docker/daemon.json <<- EOF
 {
-  "registry-mirrors": ["镜像加速地址"]
+  "insecure-registries": ["docker.1ms.run"],
+  "registry-mirrors": ["https://docker.1ms.run"]
 }
 EOF
 
