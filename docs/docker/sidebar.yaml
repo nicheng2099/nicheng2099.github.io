@@ -1,5 +1,5 @@
 items:
 -   label: Docker安装
     file: README.md
--   label: Docker部署Nginx
+-   label: Docker部署Nginx(简单案例)
     file: Docker部署Nginx.md
