@@ -39,7 +39,7 @@ sudo showmount -e localhost
 
 ```bash
 # 安装NFS客户端
-
+sudo apt update
 sudo apt install nfs-common
 
 # 创建挂载点
