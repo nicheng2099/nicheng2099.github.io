@@ -77,5 +77,3 @@ sudo systemctl restart docker
 ```shell
 sudo docker run hello-world
 ```
-
-
