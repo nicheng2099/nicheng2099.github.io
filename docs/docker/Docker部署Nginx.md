@@ -48,7 +48,7 @@ sudo mkdir conf.d html logs certs
 
 ```shell
 # 创建index静态资源
-cat > /home/lc_link/nginx/html/index.html << 'EOF'
+cat > /home/lc_link/nginx/html/index.html << EOF
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +66,7 @@ EOF
 
 ```shell
 # 创建Nginx配置文件
-cat > /home/lc_link/nginx/conf.d/app.conf << 'EOF'
+cat > /home/lc_link/nginx/conf.d/app.conf << EOF
 server {
     listen 80;
     server_name _;
