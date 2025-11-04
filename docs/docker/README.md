@@ -61,7 +61,7 @@ docker-compose --version
 sudo vim /etc/docker/daemon.json
 
 # 添加镜像加速，当前可用的镜像：https://docker.xuanyuan.me
-sudo tee /etc/docker/daemon.json <<-'EOF'
+sudo tee /etc/docker/daemon.json <<- EOF
 {
   "registry-mirrors": ["镜像加速地址"]
 }
