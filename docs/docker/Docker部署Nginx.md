@@ -20,10 +20,8 @@ sudo docker images
 sudo docker run --name nginx-test -p 8080:80 -d nginx
 ```
 
-## 添加本地映射
+## 添加本地映射文件结构
 
-> 文件结构
-> 
 > /home/lc_link/nginx/
 > ├── html/
 > 
