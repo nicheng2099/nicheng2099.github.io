@@ -73,7 +73,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-## 检查镜像
+检查镜像
 
 ```shell
 sudo docker run hello-world
