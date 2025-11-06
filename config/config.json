@@ -13,10 +13,6 @@
                 "label": "Odoo",
                 "position": "left"
             },{
-                "url": "/Link/",
-                "label": "收藏的链接",
-                "position": "right"
-            },{
                 "url": "/doc2/",
                 "label": "大数据",
                 "position": "left"
@@ -26,10 +22,19 @@
                 "label": "Linux",
                 "position": "left"
             },
+          {
+                "url": "/Python/",
+                "label": "Python",
+                "position": "left"
+            },
             {
                 "url": "/Docker/",
                 "label": "Docker",
                 "position": "left"
+            },{
+                "url": "/Link/",
+                "label": "收藏的链接",
+                "position": "right"
             }
         ]
     },

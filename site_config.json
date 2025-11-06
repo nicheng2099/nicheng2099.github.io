@@ -12,6 +12,7 @@
             "/doc3/": "docs/doc3",
             "/Odoo/": "docs/Odoo",
             "/Docker/": "docs/docker",
+            "/Python/": "docs/python",
             "/Link/": "docs/Link"
         },
         "pages": {
