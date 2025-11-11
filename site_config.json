@@ -9,7 +9,7 @@
         "docs": {
             "/doc1/": "docs/doc1",
             "/doc2/": "docs/doc2",
-            "/doc3/": "docs/doc3",
+            "/Linux/": "docs/Linux",
             "/Odoo/": "docs/Odoo",
             "/Docker/": "docs/docker",
             "/Python/": "docs/python",
@@ -19,11 +19,7 @@
             "/": "pages/index"
         },
         "assets": {
-            "/static/": "static",
-            "/doc2/image/": "docs/doc2/image",
-            "/doc3/image1/": "docs/doc3/image1",
-            "/doc3/image2/": "docs/doc3/image2",
-            "/doc3/image3/": "docs/doc23/image3"
+            "/static/": "static"
         }
     },
     "executable": {
