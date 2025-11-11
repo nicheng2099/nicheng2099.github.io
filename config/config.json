@@ -22,14 +22,9 @@
                 "label": "Linux",
                 "position": "left"
             },
-          {
+            {
                 "url": "/Python/",
                 "label": "Python",
-                "position": "left"
-            },
-            {
-                "url": "/Docker/",
-                "label": "Docker",
                 "position": "left"
             },{
                 "url": "/Link/",

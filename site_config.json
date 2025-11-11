@@ -11,7 +11,6 @@
             "/doc2/": "docs/doc2",
             "/Linux/": "docs/Linux",
             "/Odoo/": "docs/Odoo",
-            "/Docker/": "docs/docker",
             "/Python/": "docs/python",
             "/Link/": "docs/Link"
         },
