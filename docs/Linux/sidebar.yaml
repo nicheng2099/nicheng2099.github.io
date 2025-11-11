@@ -24,9 +24,9 @@ items:
     collapsed: true
     items:
     -   label: Docker安装
-        file: README.md
+        file: Docker/README.md
     -   label: Docker部署Nginx(简单案例)
-        file: Docker部署Nginx.md
+        file: Docker/Docker部署Nginx.md
 -   label: Grafana
     collapsed: true
     items:
