@@ -1,6 +1,6 @@
 # 在Ubuntu上安装PostgreSQL 13
 
-## 方法一：使用官方APT仓库（推荐）
+## 方法一：使用官方APT仓库
 
 ### 1. 添加PostgreSQL官方仓库
 
