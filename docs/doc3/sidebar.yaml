@@ -16,12 +16,12 @@ items:
 -   label: NFS网络文件
     file: NFS网络文件.md
 -   label: Nginx
-    collapsed: false
+    collapsed: true
     items:
         -  label: Nginx安装部署
            file: Nginx/README.md
 -   label: Grafana
-    collapsed: false
+    collapsed: true
     items:
         -  label: 在Ubuntu上部署Grafana
            file: Grafana/在Ubuntu上部署Grafana.md
