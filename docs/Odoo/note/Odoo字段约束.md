@@ -32,5 +32,3 @@ def _check_discount(self):
 ```
 
 > SQL 约束通常比 Python 约束更有效。在性能⽅⾯，SQL 约束⽐ Python 约束更有优势。
-
-
