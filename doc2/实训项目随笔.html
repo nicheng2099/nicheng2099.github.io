@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>第一步、ODS层，创建hive表，将mysql数据导入ODS层 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class="active"><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/doc2/index.html"><span class="label">一、虚拟机的安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/二、配置主机名并添加ip映射.html"><span class="label">二、配置主机名并添加ip映射</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/三、配置Java环境.html"><span class="label">三、配置Java环境</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/四、克隆主机.html"><span class="label">四、克隆主机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/五、配置免密ssh.html"><span class="label">五、配置免密ssh</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/六、Hadoop安装.html"><span class="label">六、Hadoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/七、Hive.html"><span class="label">七、Hive</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/八、hive的相关操作.html"><span class="label">八、hive的相关操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/九、sqoop安装.html"><span class="label">九、sqoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/十、sqoop的操作.html"><span class="label">十、sqoop的操作</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/doc2/实训项目随笔.html"><span class="label">实训项目随笔</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/项目.html"><span class="label">项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/视频网址.html"><span class="label">视频网址</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/草稿.html"><span class="label">草稿</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>第一步、ODS层，创建hive表，将mysql数据导入ODS层</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-09-26">
+                                    2025-09-26
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h3 id="1%E3%80%81hive%E6%93%8D%E4%BD%9C">1、hive操作</h3>
+<h5 id="1.1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93">1.1 创建数据库</h5>
+
+<pre class="language-none"><code class="language-none">create databases gmall1;
+</code></pre>
+<h5 id="1.2-%E4%BD%BF%E7%94%A8%E6%95%B0%E6%8D%AE%E5%BA%93">1.2 使用数据库</h5>
+
+<pre class="language-none"><code class="language-none">use gmall1;
+</code></pre>
+<h5 id="1.2--%E8%AE%A2%E5%8D%95%E8%A1%A8%EF%BC%88%E5%A2%9E%E9%87%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%EF%BC%89">1.2  订单表（增量及更新）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_order_info`;
+create external table `gmall1.ods_order_info` (
+`id` string COMMENT '订单号',
+`order_status` string COMMENT '订单状态',
+`user_id` string COMMENT '用户id',
+`payment_way` string COMMENT '支付方式',
+`out_trade_no` string COMMENT '支付流水号',
+`create_time` string COMMENT '创建时间',
+`operate_time` string COMMENT '操作时间'
+) COMMENT '订单表'
+PARTITIONED BY (`dt` string)
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/order_info/data';
+</code></pre>
+<h5 id="1.3-%E8%AE%A2%E5%8D%95%E8%AF%A6%E6%83%85%E8%A1%A8%EF%BC%88%E5%A2%9E%E9%87%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%EF%BC%89">1.3 订单详情表（增量及更新）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_order_detail`;
+create external table `gmall1.ods_order_detail`(
+`id` string COMMENT '订单编号',
+`order_id` string COMMENT '订单号',
+`user_id` string COMMENT '用户id',
+`sku_id` string COMMENT '商品id',
+`sku_num` bigint COMMENT '商品数量',
+`create_time` string COMMENT '创建时间'
+) COMMENT '订单详情表'
+PARTITIONED BY (`dt` string)
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/order_detail/data';
+</code></pre>
+<h5 id="1.4-SKU%E5%95%86%E5%93%81%E8%A1%A8%EF%BC%88%E5%A2%9E%E9%87%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%EF%BC%89">1.4 SKU商品表（增量及更新）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_sku_info`;
+create external table `gmall1.ods_sku_info`(
+`id` string COMMENT 'skuId',
+`spu_id` string COMMENT 'spuid',
+`price` decimal(10,2) COMMENT '价格',
+`sku_name` string COMMENT '商品名称',
+`sku_desc` string COMMENT '商品描述',
+`weight` string COMMENT '重量',
+`tm_id` string COMMENT '品牌id',
+`category3_id` string COMMENT '品类id',
+`create_time` string COMMENT '创建时间'
+) COMMENT 'SKU商品表'
+PARTITIONED BY (`dt` string)
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/sku_info/data';
+</code></pre>
+<h5 id="1.5-%E7%94%A8%E6%88%B7%E8%A1%A8%EF%BC%88%E5%A2%9E%E9%87%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%EF%BC%89">1.5 用户表（增量及更新）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_user_info`;
+create external table `gmall1.ods_user_info`(
+`id` string COMMENT '用户id',
+`name` string COMMENT '姓名',
+`birthday` string COMMENT '生日',
+`gender` string COMMENT '性别',
+`email` string COMMENT '邮箱',
+`user_level` string COMMENT '用户等级',
+`create_time` string COMMENT '创建时间'
+) COMMENT '用户表'
+PARTITIONED BY (`dt` string)
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/user_info/data';
+</code></pre>
+<h5 id="1.6-%E5%95%86%E5%93%81%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E8%A1%A8%EF%BC%88%E5%85%A8%E9%87%8F%EF%BC%89">1.6 商品一级分类表（全量）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_base_category1`;
+create external table `gmall1.ods_base_category1`(
+`id` string COMMENT 'id',
+`name` string COMMENT '名称'
+) COMMENT '商品一级分类表'
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/base_category1/data/data1';
+</code></pre>
+<h5 id="1.7-%E5%95%86%E5%93%81%E4%BA%8C%E7%BA%A7%E5%88%86%E7%B1%BB%E8%A1%A8%EF%BC%88%E5%85%A8%E9%87%8F%EF%BC%89">1.7 商品二级分类表（全量）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_base_category2`;
+create external table `gmall1.ods_base_category2`(
+`id` string COMMENT 'id',
+`name` string COMMENT '名称',
+`category1_id` string COMMENT '一级品类id'
+) COMMENT '商品二级分类表'
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/base_category2/data/data1';
+</code></pre>
+<h5 id="1.8-%E5%95%86%E5%93%81%E4%B8%89%E7%BA%A7%E5%88%86%E7%B1%BB%E8%A1%A8%EF%BC%88%E5%85%A8%E9%87%8F%EF%BC%89">1.8 商品三级分类表（全量）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_base_category3`;
+create external table `gmall1.ods_base_category3`(
+`id` string COMMENT ' id',
+`name` string COMMENT '名称',
+`category2_id` string COMMENT '二级品类id'
+) COMMENT '商品三级分类表'
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/base_category3/data/data1';
+</code></pre>
+<h5 id="1.9-%E6%94%AF%E4%BB%98%E6%B5%81%E6%B0%B4%E8%A1%A8%EF%BC%88%E5%A2%9E%E9%87%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%EF%BC%89">1.9 支付流水表（增量及更新）</h5>
+
+<pre class="language-none"><code class="language-none">drop table if exists `gmall1.ods_payment_info`;
+create external table `gmall1.ods_payment_info`(
+`id` bigint COMMENT '编号',
+`out_trade_no` string COMMENT '对外业务编号',
+`order_id` string COMMENT '订单编号',
+`user_id` string COMMENT '用户编号',
+`alipay_trade_no` string COMMENT '支付宝交易流水编号',
+`subject` string COMMENT '交易内容',
+`payment_type` string COMMENT '支付类型',
+`payment_time` string COMMENT '支付时间'
+) COMMENT '支付流水表'
+PARTITIONED BY (`dt` string)
+row format delimited fields terminated by ','
+STORED AS TEXTFILE
+location '/gmall1_data/payment_info/data';
+</code></pre>
+<h3 id="2%E3%80%81%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E3%80%81sqoop%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5hdfs%E4%B8%AD">2、通过脚本、sqoop将数据导入hdfs中</h3>
+<h5 id="2.1-%E5%AF%B9%E4%BA%8E%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99%EF%BC%8C%E5%88%87%E8%AE%B0%E4%B8%80%E5%AE%9A%E8%A6%81%E8%AE%A9%E8%84%9A%E6%9C%AC%E4%B8%BAlinux%E4%B8%8B%E7%9A%84%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F">2.1 对于脚本的编写，切记一定要让脚本为linux下的编码格式</h5>
+
+<pre class="language-none"><code class="language-none"> set fileformat=unix
+</code></pre>
+<h5 id="2.2-%E5%9C%A8/opt/apps/gmall1/gmall1_sh%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA">2.2 在/opt/apps/gmall1/gmall1_sh目录下创建</h5>
+
+<pre class="language-none"><code class="language-none">vim  mysql_to_hdfs.sh
+</code></pre>
+
+<pre class="language-none"><code class="language-none">#! /bin/bash
+
+sqoop=/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin/sqoop
+do_date=`date -d '-1 day' +%F`
+
+if [ -n &quot;$2&quot; ]; then
+    do_date=$2
+fi
+
+import_data(){
+$sqoop import \
+--connect jdbc:mysql://LG04:3306/gmall1?characterEncoding=utf-8 \
+--username root \
+--password root \
+--query &quot;$2 and \$CONDITIONS&quot; -m 1 \
+--target-dir /gmall1_data/$1/data/$do_date \
+--delete-target-dir \
+--fields-terminated-by &quot;,&quot; \
+--lines-terminated-by &quot;\n&quot; \
+--null-string '\\N' \
+--null-non-string '\\N';
+}
+
+
+import_order_info(){
+  import_data &quot;order_info&quot; &quot;select
+                            id, 
+                            order_status, 
+                            user_id,
+                            payment_way,
+                            out_trade_no, 
+                            create_time, 
+                            operate_time      
+                        from order_info
+                        where (date_format(create_time,'%Y-%m-%d') = '$do_date' 
+                        or date_format(operate_time,'%Y-%m-%d') = '$do_date')&quot;
+}
+
+
+import_user_info(){
+  import_data &quot;user_info&quot; &quot;select 
+                            id,
+                            name,
+                            birthday,
+                            gender,
+                            email,
+                            user_level, 
+                            create_time
+                          from user_info 
+                          where DATE_FORMAT(create_time,'%Y-%m-%d') = '$do_date'&quot;
+}
+
+import_order_detail(){
+  import_data &quot;order_detail&quot; &quot;select 
+                              od.id,
+                              order_id, 
+                              user_id, 
+                              sku_id,
+                              sku_num, 
+                              od.create_time  
+                            from order_detail od
+                            join order_info oi
+                            on od.order_id = oi.id
+                            where DATE_FORMAT(od.create_time,'%Y-%m-%d') = '$do_date'&quot;
+}
+
+import_payment_info(){
+  import_data &quot;payment_info&quot;  &quot;select 
+                                id,  
+                                out_trade_no, 
+                                order_id, 
+                                user_id, 
+                                alipay_trade_no,  
+                                subject, 
+                                payment_type, 
+                                payment_time 
+                              from payment_info 
+                              where DATE_FORMAT(payment_time,'%Y-%m-%d') = '$do_date'&quot;
+}
+
+
+import_sku_info(){
+  import_data &quot;sku_info&quot; &quot;select 
+                          id,
+                          spu_id,
+                          price,
+                          sku_name,
+                          sku_desc,
+                          weight,
+                          tm_id,
+                          category3_id,
+                          create_time
+                        from sku_info 
+                        where DATE_FORMAT(create_time,'%Y-%m-%d') = '$do_date'&quot;
+}
+
+import_base_category1(){
+  import_data &quot;base_category1&quot;  &quot;select 
+                                  id,
+                                  name 
+                                from base_category1 where 1=1&quot;
+}
+
+import_base_category2(){
+  import_data &quot;base_category2&quot;  &quot;select
+                                  id,
+                                  name,
+                                  category1_id 
+                                from base_category2 where 1=1&quot;
+}
+
+import_base_category3(){
+  import_data &quot;base_category3&quot;  &quot;select
+                                  id,
+                                  name,
+                                  category2_id
+                                from base_category3 where 1=1&quot;
+}
+
+
+case $1 in
+  &quot;order_info&quot;)
+     import_order_info
+;;
+  &quot;base_category1&quot;)
+     import_base_category1
+;;
+  &quot;base_category2&quot;)
+     import_base_category2
+;;
+  &quot;base_category3&quot;)
+     import_base_category3
+;;
+  &quot;order_detail&quot;)
+     import_order_detail
+;;
+  &quot;sku_info&quot;)
+     import_sku_info
+;;
+  &quot;user_info&quot;)
+     import_user_info
+;;
+  &quot;payment_info&quot;)
+     import_payment_info
+;;
+
+&quot;first&quot;)
+   import_base_category1
+   import_base_category2
+   import_base_category3
+   import_order_info
+   import_order_detail
+   import_sku_info
+   import_user_info
+   import_payment_info
+;;
+&quot;all&quot;)
+   import_order_info
+   import_order_detail
+   import_sku_info
+   import_user_info
+   import_payment_info
+;;
+esac
+</code></pre>
+<h5 id="2.3-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%9C%AC%E6%9D%83%E9%99%90">2.3 修改脚本权限</h5>
+
+<pre class="language-none"><code class="language-none"> chmod 755 mysql_to_hdfs.sh
+</code></pre>
+<h5 id="2.4-%E5%B0%86%E6%AF%8F%E5%A4%A9%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5hdfs">2.4 将每天的数据导入hdfs</h5>
+
+<pre class="language-none"><code class="language-none">mysql_to_hdfs.sh first 2023-06-13
+mysql_to_hdfs.sh all 2023-06-13
+</code></pre>
+<h3 id="3%E3%80%81%E9%80%9A%E8%BF%87%E8%84%9A%E6%9C%AC%E5%B0%86hdfs%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5ODS%E5%B1%82">3、通过脚本将hdfs的数据导入ODS层</h3>
+<h5 id="3.1-%E5%9C%A8/opt/apps/gmall1/gmall1_sh%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%84%9A%E6%9C%AChdfs_to_ods_db.sh">3.1 在/opt/apps/gmall1/gmall1_sh目录下创建脚本hdfs_to_ods_db.sh</h5>
+
+<pre class="language-none"><code class="language-none">vim hdfs_to_ods_db.sh
+</code></pre>
+
+<pre class="language-none"><code class="language-none">#!/bin/bash
+APP=gmall1
+hive=/opt/apps/apache-hive-1.2.2-bin/bin/hive
+# 如果是输入的日期按照取输入日期；如果没输入日期取当前时间的前一天
+if [ -n &quot;$2&quot; ]; then
+do_date=$2
+else
+do_date=`date -d &quot;-1 day&quot; +%F`
+fi
+sql1=&quot;
+load data inpath '/gmall1_data/order_info/data/$do_date' OVERWRITE into table
+${APP}.ods_order_info partition(dt='$do_date');
+load data inpath '/gmall1_data/order_detail/data/$do_date' OVERWRITE into table
+${APP}.ods_order_detail partition(dt='$do_date');
+load data inpath '/gmall1_data/sku_info/data/$do_date' OVERWRITE into table
+${APP}.ods_sku_info partition(dt='$do_date');
+load data inpath '/gmall1_data/user_info/data/$do_date' OVERWRITE into table
+${APP}.ods_user_info partition(dt='$do_date');
+load data inpath '/gmall1_data/payment_info/data/$do_date' OVERWRITE into table
+${APP}.ods_payment_info partition(dt='$do_date');
+load data inpath '/gmall1_data/base_category1/data/$do_date' OVERWRITE into
+table ${APP}.ods_base_category1;
+load data inpath '/gmall1_data/base_category2/data/$do_date' OVERWRITE into
+table ${APP}.ods_base_category2;
+load data inpath '/gmall1_data/base_category3/data/$do_date' OVERWRITE into
+table ${APP}.ods_base_category3;
+&quot;
+sql2=&quot;
+load data inpath '/gmall1_data/order_info/data/$do_date' OVERWRITE into table
+${APP}.ods_order_info partition(dt='$do_date');
+load data inpath '/gmall1_data/order_detail/data/$do_date' OVERWRITE into table
+${APP}.ods_order_detail partition(dt='$do_date');
+load data inpath '/gmall1_data/sku_info/data/$do_date' OVERWRITE into table
+${APP}.ods_sku_info partition(dt='$do_date');
+load data inpath '/gmall1_data/user_info/data/$do_date' OVERWRITE into table
+${APP}.ods_user_info partition(dt='$do_date');
+load data inpath '/gmall1_data/payment_info/data/$do_date' OVERWRITE into table
+${APP}.ods_payment_info partition(dt='$do_date');
+&quot;
+case $1 in
+&quot;first&quot;)
+$hive -e &quot;$sql1&quot;
+;;
+&quot;all&quot;)
+$hive -e &quot;$sql2&quot;
+;;
+esac
+</code></pre>
+<h5 id="3.2-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%9C%AC%E6%9D%83%E9%99%90">3.2 修改脚本权限</h5>
+
+<pre class="language-none"><code class="language-none">chmod 755 hdfs_to_ods_db.sh
+</code></pre>
+<h5 id="3.3-%E5%B0%86%E6%AF%8F%E5%A4%A9%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5ODS">3.3 将每天的数据导入ODS</h5>
+
+<pre class="language-none"><code class="language-none"> ./hdfs_to_ods_db.sh first 2023-06-13
+ ./hdfs_to_ods_db.sh all 2023-06-13
+</code></pre>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/doc2/十、sqoop的操作.html">
+                            <span class="icon"></span>
+                            <span class="label">十、sqoop的操作</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/doc2/项目.html">
+                            <span class="label">项目</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

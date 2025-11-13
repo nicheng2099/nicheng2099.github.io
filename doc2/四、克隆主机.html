@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>克隆主机 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class="active"><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/doc2/index.html"><span class="label">一、虚拟机的安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/二、配置主机名并添加ip映射.html"><span class="label">二、配置主机名并添加ip映射</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/三、配置Java环境.html"><span class="label">三、配置Java环境</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/doc2/四、克隆主机.html"><span class="label">四、克隆主机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/五、配置免密ssh.html"><span class="label">五、配置免密ssh</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/六、Hadoop安装.html"><span class="label">六、Hadoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/七、Hive.html"><span class="label">七、Hive</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/八、hive的相关操作.html"><span class="label">八、hive的相关操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/九、sqoop安装.html"><span class="label">九、sqoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/十、sqoop的操作.html"><span class="label">十、sqoop的操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/实训项目随笔.html"><span class="label">实训项目随笔</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/项目.html"><span class="label">项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/视频网址.html"><span class="label">视频网址</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/草稿.html"><span class="label">草稿</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>克隆主机</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-09-26">
+                                    2025-09-26
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%B0%86LG04%E5%85%B3%E6%9C%BA%E5%9C%A8VMware%E4%B8%AD%E6%8C%89%E4%BB%A5%E4%B8%8B%E6%AD%A5%E9%AA%A4%E6%93%8D%E4%BD%9C">将LG04关机在VMware中按以下步骤操作</h2>
+<p>​	<img src="image/image-20230607172213118.png" alt="image-20230607172213118" /></p>
+<h2 id="%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">点击下一步</h2>
+<p>​	<img src="image/image-20230607172302478.png" alt="image-20230607172302478" /></p>
+<h2 id="%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">点击下一步</h2>
+<p>​	<img src="image/image-20230607172331537.png" alt="image-20230607172331537" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E5%88%9B%E5%BB%BA%E5%AE%8C%E6%95%B4%E5%85%8B%E9%9A%86%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选择创建完整克隆，点击下一步</h2>
+<p>​	<img src="image/image-20230607172423539.png" alt="image-20230607172423539" /></p>
+<h2 id="%E8%BE%93%E5%85%A5%E5%90%8D%E7%A7%B0%EF%BC%8C%E5%9C%B0%E5%9D%80%EF%BC%8C%E7%82%B9%E5%87%BB%E5%AE%8C%E6%88%90">输入名称，地址，点击完成</h2>
+<p>​	<img src="image/image-20230607172622328.png" alt="image-20230607172622328" /></p>
+<h2 id="%E5%BC%80%E5%90%AFLG06%09%09%3Cimg-src%3D%22image/image-20230607172744818.png%22-alt%3D%22image-20230607172744818%22-/%3E">开启LG06		<img src="image/image-20230607172744818.png" alt="image-20230607172744818" /></h2>
+<h2 id="%E6%9B%B4%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D%E4%B8%BALG06">更改主机名为LG06</h2>
+
+<pre class="language-none"><code class="language-none">vim /etc/sysconfig/network
+</code></pre>
+<p>​	<img src="image/image-20230607173001070.png" alt="image-20230607173001070" /></p>
+<h2 id="%E5%88%A0%E9%99%A4NAME%3D%26quot%3Beth0%26quot%3B%E6%97%A7%E7%BD%91%E5%8D%A1%E5%88%A0%E9%99%A4%EF%BC%8C%E5%B0%86%E6%96%B0%E7%BD%91%E5%8D%A1NAME%3D%26quot%3Beth1%26quot%3B%E6%94%B9%E4%B8%BA%26quot%3Beth0%26quot%3B%EF%BC%8C%E5%A4%8D%E5%88%B6%E6%96%B0%E7%9A%84ipv6%E5%9C%B0%E5%9D%80ATTR%7Baddress%7D%3D%26quot%3Bipv6%E7%9A%84%E5%80%BC%26quot%3B">删除NAME=&quot;eth0&quot;旧网卡删除，将新网卡NAME=&quot;eth1&quot;改为&quot;eth0&quot;，复制新的ipv6地址ATTR{address}=&quot;ipv6的值&quot;</h2>
+
+<pre class="language-none"><code class="language-none">vim /etc/udev/rules.d/70-persistent-net.rules
+</code></pre>
+<p>​	<img src="image/image-20230607173619101.png" alt="image-20230607173619101" /></p>
+<h2 id="%E4%BF%AE%E6%94%B9%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%EF%BC%8C%E6%9B%B4%E6%94%B9%E5%A4%8D%E5%88%B6%E7%9A%84ipv6%E5%9C%B0%E5%9D%80%EF%BC%8C%E6%94%B9%E9%9D%99%E6%80%81ipv4%E5%9C%B0%E5%9D%80">修改网卡配置，更改复制的ipv6地址，改静态ipv4地址</h2>
+
+<pre class="language-none"><code class="language-none">vim /etc/sysconfig/network-scripts/ifcfg-eth0
+</code></pre>
+<p>​	<img src="image/image-20230607173841709.png" alt="image-20230607173841709" /></p>
+<h2 id="%E9%87%8D%E5%90%AFLG06">重启LG06</h2>
+
+<pre class="language-none"><code class="language-none">reboot
+</code></pre>
+<h2 id="ping-www.baidu.com%EF%BC%8C%E5%8F%91%E7%8E%B0%E8%83%BD%E5%A4%9Fping%E9%80%9A">ping www.baidu.com，发现能够ping通</h2>
+
+<pre class="language-none"><code class="language-none">ping www.baidu.com
+</code></pre>
+<p>​	<img src="image/image-20230607174120931.png" alt="image-20230607174120931" /></p>
+<h2 id="%E6%9F%A5%E7%9C%8BLG04%E3%80%81LG05%E3%80%81LG06IP%E5%9C%B0%E5%9D%80">查看LG04、LG05、LG06IP地址</h2>
+
+<pre class="language-none"><code class="language-none">ifconfig
+</code></pre>
+<p>​	<img src="image/image-20230607174343609.png" alt="image-20230607174343609" /></p>
+<p>​	<img src="image/image-20230607174405254.png" alt="image-20230607174405254" /></p>
+<p>​	<img src="image/image-20230607174423811.png" alt="image-20230607174423811" /></p>
+<h2 id="%E4%BD%BF%E7%94%A8xshell%E8%BF%9E%E6%8E%A5LG04%E3%80%81LG05%E3%80%81LG06">使用xshell连接LG04、LG05、LG06</h2>
+<p>​	<img src="image/image-20230607174832380.png" alt="image-20230607174832380" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/doc2/三、配置Java环境.html">
+                            <span class="icon"></span>
+                            <span class="label">三、配置Java环境</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/doc2/五、配置免密ssh.html">
+                            <span class="label">五、配置免密ssh</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

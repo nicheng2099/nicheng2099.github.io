@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>1.物理机器（4台） - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class="active"><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/Linux/index.html"><span class="label">linux学习</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/linux mysql 操作命令.html"><span class="label">linux mysql 操作命令</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/CentOS 7 yum安装 MySQL 5.7.html"><span class="label">CentOS 7 yum安装 MySQL 5.7</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/在Ubuntu上安装PostgreSQL 13.html"><span class="label">在Ubuntu上安装PostgreSQL 13</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/lvs.html"><span class="label">lvs</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/Linux/lvs实操.html"><span class="label">lvs实操</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/克隆模板机.html"><span class="label">克隆模板机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/NFS网络文件.html"><span class="label">NFS网络文件</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">Nginx</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Linux/Nginx/index.html"><span class="label">Nginx安装部署</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Docker</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Linux/Docker/index.html"><span class="label">Docker安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/Docker/Docker部署Nginx.html"><span class="label">Docker部署Nginx(简单案例)</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Grafana</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Linux/Grafana/在Ubuntu上部署Grafana.html"><span class="label">在Ubuntu上部署Grafana</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>1.物理机器（4台）</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-11-11">
+                                    2025-11-11
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p><img src="./p/15.png" alt="" /></p>
+
+<pre class="language-bash"><code class="language-bash">VIP:192.168.11.7
+K1:192.168.11.3
+K2:192.168.11.4
+NG1:192.168.11.5
+NG2:192.168.11.6
+</code></pre>
+<h1 id="2.K1">2.K1</h1>
+
+<pre class="language-bash"><code class="language-bash">apt install -y keepalive
+</code></pre>
+<h2 id="Keepalived.conf">Keepalived.conf</h2>
+<p>/etc/keepalived/keepalived.conf</p>
+
+<pre class="language-none"><code class="language-none">global_defs {
+        notification_email {
+        39820581@qq.com
+    }
+    #notification_email_from guoxm@puzek.com
+    #smtp_server smtp.mxhichine.com
+    #smtp_connect_timeout 30
+    vrrp_mcast_group4 224.0.0.18
+    router_id LVSMASTER
+
+}
+
+vrrp_instance VI_1 {
+    state MASTER
+    interface ens33
+    virtual_router_id 137
+    priority 7
+    advert_int 3
+    authentication {
+        auth_type PASS
+        auth_pass abclmh
+    }
+    virtual_ipaddress {
+        192.168.11.7/24 dev ens33
+    }
+    virtual_ipaddress_excluded {
+        fd15:4ba5:5a2b:1003::7/128 dev ens33
+    }
+}
+
+# http
+virtual_server 192.168.11.7 80 {
+    delay_loop 6 #每隔6秒检查一次real server状态
+    lb_algo wrr
+    lb_kind DR   #LVS 集群模式
+   # persistence_timeout 50
+    protocol TCP
+    real_server 192.168.11.5 80 {
+        weight 1
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+    real_server 192.168.11.6 80 {
+        weight 1
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+
+}
+virtual_server fd15:4ba5:5a2b:1003::7 80 {
+    delay_loop 6 #每隔6秒检查一次real server状态
+    lb_algo wrr
+    lb_kind DR   #LVS 集群模式
+   # persistence_timeout 50
+    protocol TCP
+    real_server fd15:4ba5:5a2b:1003::5 80 {
+        weight 2
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+    real_server fd15:4ba5:5a2b:1003::6 80 {
+        weight 2
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+
+}
+</code></pre>
+<h2 id="k2">k2</h2>
+
+<pre class="language-bash"><code class="language-bash">global_defs {
+        notification_email {
+        39820581@qq.com
+    }
+    #notification_email_from guoxm@puzek.com
+    #smtp_server smtp.mxhichine.com
+    #smtp_connect_timeout 30
+    vrrp_mcast_group4 224.0.0.18
+    router_id LVSMASTER
+
+}
+
+vrrp_instance VI_1 {
+    state MASTER
+    interface ens33
+    virtual_router_id 137
+    priority 8
+    advert_int 3
+    authentication {
+        auth_type PASS
+        auth_pass abclmh
+    }
+    virtual_ipaddress {
+        192.168.11.7/24 dev ens33
+    }
+    virtual_ipaddress_excluded {
+        fd15:4ba5:5a2b:1003::7/128 dev ens33
+    }
+}
+
+# http
+virtual_server 192.168.11.7 80 {
+    delay_loop 6 #每隔6秒检查一次real server状态
+    lb_algo wrr
+    lb_kind DR   #LVS 集群模式
+   # persistence_timeout 50
+    protocol TCP
+    real_server 192.168.11.5 80 {
+        weight 1
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+    real_server 192.168.11.6 80 {
+        weight 1
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+
+}
+virtual_server fd15:4ba5:5a2b:1003::7 80 {
+    delay_loop 6 #每隔6秒检查一次real server状态
+    lb_algo wrr
+    lb_kind DR   #LVS 集群模式
+   # persistence_timeout 50
+    protocol TCP
+    real_server fd15:4ba5:5a2b:1003::5 80 {
+        weight 2
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+    real_server fd15:4ba5:5a2b:1003::6 80 {
+        weight 2
+        TCP_CHECK {
+            connect_timeout 3
+            }
+        }
+
+}
+</code></pre>
+<h1 id="3.nginx">3.nginx</h1>
+<h2 id="1.%E4%B8%BAlo%E5%A2%9E%E5%8A%A0%E5%9C%B0%E5%9D%80VIP">1.为lo增加地址VIP</h2>
+
+<pre class="language-bash"><code class="language-bash"># This is the network config written by 'subiquity'
+network:
+  ethernets:
+    ens33:
+      addresses:
+      - 192.168.11.5/24
+      - fd15:4ba5:5a2b:1003::5/64
+      gateway4: 192.168.11.1
+      nameservers:
+        addresses:
+        - 10.6.6.6
+        search:
+        - lzhit.edu.cn
+    lo:
+      addresses:
+      - 192.168.11.7/32
+      - fd15:4ba5:5a2b:1003::7/128
+  version: 2
+</code></pre>
+<h2 id="2./etc/sysctl.conf">2./etc/sysctl.conf</h2>
+
+<pre class="language-bash"><code class="language-bash">net.ipv4.conf.lo.arp_ignore = 1
+net.ipv4.conf.lo.arp_announce = 2
+net.ipv4.conf.all.arp_ignore = 1
+net.ipv4.conf.all.arp_announce = 2
+net.ipv4.conf.default.arp_ignore = 1
+net.ipv4.conf.default.arp_announce = 2
+</code></pre>
+<p>记得 执行sysctl  -p</p>
+<p>其他的RealServers除了自身的IP不一样以外，其他都一样</p>
+<h1 id="4.%E7%BB%93%E6%9E%9C">4.结果</h1>
+<p>keepalive</p>
+<p><img src="./p/16.png" alt="" /></p>
+<p>ng</p>
+<p><img src="./p/17.png" alt="" /></p>
+<p>ipvsadm -L -n</p>
+<p><img src="./p/18.png" alt="" /></p>
+<p>实际测试结果：</p>
+<p><img src="./p/19.png" alt="" /></p>
+<p><img src="./p/20.png" alt="" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/Linux/lvs.html">
+                            <span class="icon"></span>
+                            <span class="label">lvs</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/Linux/克隆模板机.html">
+                            <span class="label">克隆模板机</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

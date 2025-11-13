@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Tkinter 入门教程：从基础到实例 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class="active"><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="active with_link"><a href="/Python/index.html"><span class="label">Tkinter</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Tkinter 入门教程：从基础到实例</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-11-06">
+                                    2025-11-06
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p>Tkinter 是 Python 内置的 GUI（图形用户界面）库，无需额外安装，简单易用，适合快速开发小型桌面应用。本教程将从基础组件开始，逐步讲解核心用法，最后通过一个完整实例巩固知识点。</p>
+<h2 id="%E4%B8%80%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87">一、环境准备</h2>
+<p>Tkinter 是 Python 标准库，<strong>无需额外安装</strong>：</p>
+<ul>
+<li><p>Python 2.x：默认自带 Tkinter（注意拼写是 <code>Tkinter</code>，首字母大写）</p>
+</li>
+<li><p>Python 3.x：默认自带 tkinter（注意拼写是 <code>tkinter</code>，首字母小写）</p>
+</li>
+<li><p>验证是否可用：打开终端输入以下代码，若弹出窗口则说明正常：</p>
+</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+root = tk.Tk()
+
+root.mainloop()
+</code></pre>
+<h2 id="%E4%BA%8C%E3%80%81%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5">二、核心概念</h2>
+<ol>
+<li><p><strong>主窗口（Root）</strong>：所有 GUI 组件的容器，每个应用必须有且只有一个主窗口。</p>
+</li>
+<li><p><strong>组件（Widget）</strong>：按钮、文本框、标签等可视化元素（Tkinter 提供 15+ 种核心组件）。</p>
+</li>
+<li><p><strong>布局管理器</strong>：控制组件在窗口中的位置和大小（常用 <code>pack()</code>、<code>grid()</code>、<code>place()</code>）。</p>
+</li>
+<li><p><strong>事件循环（mainloop ()）</strong>：让窗口保持运行状态，监听用户操作（如点击、输入）。</p>
+</li>
+</ol>
+<h2 id="%E4%B8%89%E3%80%81%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E6%95%99%E7%A8%8B">三、基础组件教程</h2>
+<h3 id="1.-%E7%AC%AC%E4%B8%80%E4%B8%AA-Tkinter-%E7%A8%8B%E5%BA%8F">1. 第一个 Tkinter 程序</h3>
+<p>创建一个简单的窗口，包含标题和标签：</p>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+\# 1. 创建主窗口
+
+root = tk.Tk()
+
+root.title(&quot;我的第一个 Tkinter 程序&quot;)  # 设置窗口标题
+
+root.geometry(&quot;400x200&quot;)  # 设置窗口大小（宽x高），单位像素
+
+\# 2. 添加组件（标签 Label）
+
+label = tk.Label(
+
+&amp;#x20;   root,  # 父容器（主窗口）
+
+&amp;#x20;   text=&quot;Hello Tkinter!&quot;,  # 显示文本
+
+&amp;#x20;   font=(&quot;Arial&quot;, 16),  # 字体和大小
+
+&amp;#x20;   fg=&quot;blue&quot;  # 文字颜色
+
+)
+
+label.pack()  # 布局管理器：默认居中显示
+
+\# 3. 启动事件循环（必须放在最后）
+
+root.mainloop()
+</code></pre>
+<p>运行效果：弹出一个 400x200 的窗口，居中显示蓝色的 &quot;Hello Tkinter!&quot; 文字。</p>
+<h3 id="2.-%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6%E8%AF%A6%E8%A7%A3">2. 常用组件详解</h3>
+<h4 id="%EF%BC%881%EF%BC%89%E6%8C%89%E9%92%AE%EF%BC%88Button%EF%BC%89%2B-%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A">（1）按钮（Button）+ 事件绑定</h4>
+<p>按钮是交互核心，通过 <code>command</code> 参数绑定函数（点击时触发）：</p>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+root = tk.Tk()
+
+root.title(&quot;按钮示例&quot;)
+
+root.geometry(&quot;300x150&quot;)
+
+\# 定义按钮点击触发的函数
+
+def click\_me():
+
+&amp;#x20;   label.config(text=&quot;按钮被点击啦！&quot;)  # 修改标签文本
+
+\# 按钮组件
+
+btn = tk.Button(
+
+&amp;#x20;   root,
+
+&amp;#x20;   text=&quot;点击我&quot;,
+
+&amp;#x20;   font=(&quot;Arial&quot;, 14),
+
+&amp;#x20;   bg=&quot;lightgreen&quot;,  # 背景色
+
+&amp;#x20;   width=10,  # 按钮宽度（字符数）
+
+&amp;#x20;   height=2,  # 按钮高度（字符数）
+
+&amp;#x20;   command=click\_me  # 绑定点击事件
+
+)
+
+btn.pack(pady=20)  # pady：上下间距
+
+\# 标签（用于显示结果）
+
+label = tk.Label(root, text=&quot;等待点击...&quot;, font=(&quot;Arial&quot;, 12))
+
+label.pack()
+
+root.mainloop()
+</code></pre>
+<h4 id="%EF%BC%882%EF%BC%89%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%88Entry%EF%BC%89%2B-%E6%96%87%E6%9C%AC%E6%A1%86%EF%BC%88Text%EF%BC%89">（2）输入框（Entry）+ 文本框（Text）</h4>
+<ul>
+<li><p><code>Entry</code>：单行输入框（如账号、密码）</p>
+</li>
+<li><p><code>Text</code>：多行文本框（如备注、日志）</p>
+</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+root = tk.Tk()
+
+root.title(&quot;输入框示例&quot;)
+
+root.geometry(&quot;400x300&quot;)
+
+\# 单行输入框（Entry）
+
+entry = tk.Entry(
+
+&amp;#x20;   root,
+
+&amp;#x20;   font=(&quot;Arial&quot;, 14),
+
+&amp;#x20;   show=None  # 显示明文；若为 &quot;\*&quot; 则隐藏（如密码框）
+
+)
+
+entry.pack(pady=10)
+
+\# 多行文本框（Text）
+
+text = tk.Text(root, width=30, height=5, font=(&quot;Arial&quot;, 12))
+
+text.pack(pady=10)
+
+\# 按钮：获取输入内容并显示到文本框
+
+def get\_input():
+
+&amp;#x20;   input\_text = entry.get()  # 获取 Entry 内容
+
+&amp;#x20;   text.insert(tk.END, f&quot;你输入了：{input\_text}\n&quot;)  # 插入 Text 末尾
+
+&amp;#x20;   entry.delete(0, tk.END)  # 清空 Entry
+
+btn = tk.Button(root, text=&quot;提交&quot;, font=(&quot;Arial&quot;, 12), command=get\_input)
+
+btn.pack()
+
+root.mainloop()
+</code></pre>
+<h4 id="%EF%BC%883%EF%BC%89%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%88%E5%85%B3%E9%94%AE%EF%BC%81%EF%BC%89">（3）布局管理器（关键！）</h4>
+<p>Tkinter 有 3 种核心布局，推荐优先使用 <code>grid()</code>（网格布局）：</p>
+<ul>
+<li><p><code>pack()</code>：简单布局（上下 / 左右排列），适合快速原型。</p>
+</li>
+<li><p><code>grid(row, column)</code>：网格布局（行 × 列），适合复杂界面（最常用）。</p>
+</li>
+<li><p><code>place(x, y)</code>：绝对定位（指定坐标），不推荐（窗口缩放时组件位置不变）。</p>
+</li>
+</ul>
+<p><strong>grid () 示例</strong>（模拟登录界面）：</p>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+root = tk.Tk()
+
+root.title(&quot;登录界面&quot;)
+
+root.geometry(&quot;350x200&quot;)
+
+\# 标签
+
+tk.Label(root, text=&quot;账号：&quot;, font=(&quot;Arial&quot;, 12)).grid(row=0, column=0, padx=10, pady=20, sticky=&quot;e&quot;)
+
+tk.Label(root, text=&quot;密码：&quot;, font=(&quot;Arial&quot;, 12)).grid(row=1, column=0, padx=10, pady=5, sticky=&quot;e&quot;)
+
+\# 输入框
+
+entry\_user = tk.Entry(root, font=(&quot;Arial&quot;, 12), width=20)
+
+entry\_pwd = tk.Entry(root, font=(&quot;Arial&quot;, 12), width=20, show=&quot;\*&quot;)
+
+entry\_user.grid(row=0, column=1, padx=10, pady=20)
+
+entry\_pwd.grid(row=1, column=1, padx=10, pady=5)
+
+\# 按钮（跨列布局：columnspan=2 表示占 2 列）
+
+def login():
+
+&amp;#x20;   user = entry\_user.get()
+
+&amp;#x20;   pwd = entry\_pwd.get()
+
+&amp;#x20;   print(f&quot;账号：{user}，密码：{pwd}&quot;)  # 实际开发中可替换为验证逻辑
+
+tk.Button(root, text=&quot;登录&quot;, font=(&quot;Arial&quot;, 12), command=login).grid(row=2, column=0, columnspan=2, pady=15)
+
+root.mainloop()
+</code></pre>
+<h4 id="%EF%BC%884%EF%BC%89%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6">（4）其他常用组件</h4>
+<ul>
+<li><p><code>Checkbutton</code>（复选框）：多选场景（如兴趣爱好）。</p>
+</li>
+<li><p><code>Radiobutton</code>（单选按钮）：单选场景（如性别）。</p>
+</li>
+<li><p><code>Listbox</code>（列表框）：显示可选择的列表项。</p>
+</li>
+</ul>
+<h2 id="%E5%9B%9B%E3%80%81%E5%AE%8C%E6%95%B4%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%AE%80%E6%98%93%E8%AE%B0%E4%BA%8B%E6%9C%AC">四、完整实例：简易记事本</h2>
+<p>功能：新建 / 打开 / 保存文本文件，支持基本文本编辑。</p>
+
+<pre class="language-none"><code class="language-none">import tkinter as tk
+
+from tkinter import filedialog  # 文件对话框（需额外导入）
+
+import os
+
+class SimpleNotepad:
+
+&amp;#x20;   def \_\_init\_\_(self, root):
+
+&amp;#x20;       self.root = root
+
+&amp;#x20;       self.root.title(&quot;简易记事本&quot;)
+
+&amp;#x20;       self.root.geometry(&quot;800x600&quot;)  # 初始窗口大小
+
+&amp;#x20;       self.file\_path = None  # 记录当前打开的文件路径
+
+&amp;#x20;       # 1. 创建菜单栏
+
+&amp;#x20;       self.menu\_bar = tk.Menu(root)
+
+&amp;#x20;       root.config(menu=self.menu\_bar)
+
+&amp;#x20;       # 2. 菜单：文件（新建/打开/保存/退出）
+
+&amp;#x20;       self.file\_menu = tk.Menu(self.menu\_bar, tearoff=0)  # tearoff=0 取消分隔线
+
+&amp;#x20;       self.file\_menu.add\_command(label=&quot;新建&quot;, command=self.new\_file)
+
+&amp;#x20;       self.file\_menu.add\_command(label=&quot;打开&quot;, command=self.open\_file)
+
+&amp;#x20;       self.file\_menu.add\_command(label=&quot;保存&quot;, command=self.save\_file)
+
+&amp;#x20;       self.file\_menu.add\_separator()  # 添加分隔线
+
+&amp;#x20;       self.file\_menu.add\_command(label=&quot;退出&quot;, command=root.quit)
+
+&amp;#x20;       self.menu\_bar.add\_cascade(label=&quot;文件&quot;, menu=self.file\_menu)
+
+&amp;#x20;       # 3. 菜单：编辑（复制/剪切/粘贴）
+
+&amp;#x20;       self.edit\_menu = tk.Menu(self.menu\_bar, tearoff=0)
+
+&amp;#x20;       self.edit\_menu.add\_command(label=&quot;复制&quot;, command=self.copy\_text)
+
+&amp;#x20;       self.edit\_menu.add\_command(label=&quot;剪切&quot;, command=self.cut\_text)
+
+&amp;#x20;       self.edit\_menu.add\_command(label=&quot;粘贴&quot;, command=self.paste\_text)
+
+&amp;#x20;       self.menu\_bar.add\_cascade(label=&quot;编辑&quot;, menu=self.edit\_menu)
+
+&amp;#x20;       # 4. 文本编辑区域（Text 组件）
+
+&amp;#x20;       self.text\_area = tk.Text(
+
+&amp;#x20;           root,
+
+&amp;#x20;           font=(&quot;Consolas&quot;, 12),
+
+&amp;#x20;           wrap=tk.WORD  # 按单词换行
+
+&amp;#x20;       )
+
+&amp;#x20;       self.text\_area.pack(expand=True, fill=tk.BOTH)  # 占满窗口（缩放时自适应）
+
+&amp;#x20;   # 新建文件
+
+&amp;#x20;   def new\_file(self):
+
+&amp;#x20;       self.root.title(&quot;未命名 - 简易记事本&quot;)
+
+&amp;#x20;       self.file\_path = None
+
+&amp;#x20;       self.text\_area.delete(1.0, tk.END)  # 清空文本（1.0 表示第 1 行第 0 列）
+
+&amp;#x20;   # 打开文件
+
+&amp;#x20;   def open\_file(self):
+
+&amp;#x20;       # 弹出文件选择对话框（仅允许 txt 文件）
+
+&amp;#x20;       self.file\_path = filedialog.askopenfilename(
+
+&amp;#x20;           title=&quot;打开文件&quot;,
+
+&amp;#x20;           filetypes=\[(&quot;文本文件&quot;, &quot;\*.txt&quot;), (&quot;所有文件&quot;, &quot;\*.\*&quot;)]
+
+&amp;#x20;       )
+
+&amp;#x20;       if self.file\_path:  # 若选择了文件
+
+&amp;#x20;           self.root.title(f&quot;{os.path.basename(self.file\_path)} - 简易记事本&quot;)
+
+&amp;#x20;           with open(self.file\_path, &quot;r&quot;, encoding=&quot;utf-8&quot;) as f:
+
+&amp;#x20;               content = f.read()
+
+&amp;#x20;               self.text\_area.delete(1.0, tk.END)
+
+&amp;#x20;               self.text\_area.insert(1.0, content)
+
+&amp;#x20;   # 保存文件
+
+&amp;#x20;   def save\_file(self):
+
+&amp;#x20;       if not self.file\_path:  # 若未指定文件路径（新建文件）
+
+&amp;#x20;           self.file\_path = filedialog.asksaveasfilename(
+
+&amp;#x20;               title=&quot;保存文件&quot;,
+
+&amp;#x20;               defaultextension=&quot;.txt&quot;,
+
+&amp;#x20;               filetypes=\[(&quot;文本文件&quot;, &quot;\*.txt&quot;), (&quot;所有文件&quot;, &quot;\*.\*&quot;)]
+
+&amp;#x20;           )
+
+&amp;#x20;       if self.file\_path:  # 若选择了保存路径
+
+&amp;#x20;           self.root.title(f&quot;{os.path.basename(self.file\_path)} - 简易记事本&quot;)
+
+&amp;#x20;           content = self.text\_area.get(1.0, tk.END)  # 获取所有文本
+
+&amp;#x20;           with open(self.file\_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+
+&amp;#x20;               f.write(content)
+
+&amp;#x20;   # 复制文本（依赖系统剪贴板）
+
+&amp;#x20;   def copy\_text(self):
+
+&amp;#x20;       self.root.clipboard\_clear()  # 清空剪贴板
+
+&amp;#x20;       self.root.clipboard\_append(self.text\_area.selection\_get())  # 添加选中文本
+
+&amp;#x20;   # 剪切文本
+
+&amp;#x20;   def cut\_text(self):
+
+&amp;#x20;       self.copy\_text()
+
+&amp;#x20;       self.text\_area.delete(tk.SEL\_FIRST, tk.SEL\_LAST)  # 删除选中文本
+
+&amp;#x20;   # 粘贴文本
+
+&amp;#x20;   def paste\_text(self):
+
+&amp;#x20;       self.text\_area.insert(tk.INSERT, self.root.clipboard\_get())  # 在光标位置插入剪贴板内容
+
+if \_\_name\_\_ == &quot;\_\_main\_\_&quot;:
+
+&amp;#x20;   root = tk.Tk()
+
+&amp;#x20;   app = SimpleNotepad(root)
+
+&amp;#x20;   root.mainloop()
+</code></pre>
+<h3 id="%E5%AE%9E%E4%BE%8B%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E">实例功能说明</h3>
+<ol>
+<li><strong>菜单功能</strong>：</li>
+</ol>
+<ul>
+<li><p>「文件」：新建空白文件、打开本地 txt 文件、保存文件到指定路径。</p>
+</li>
+<li><p>「编辑」：复制 / 剪切 / 粘贴文本（调用系统剪贴板）。</p>
+</li>
+</ul>
+<ol>
+<li><strong>界面特性</strong>：</li>
+</ol>
+<ul>
+<li><p>文本区域自适应窗口大小（缩放窗口时自动调整）。</p>
+</li>
+<li><p>窗口标题显示当前文件名。</p>
+</li>
+<li><p>支持 UTF-8 编码（避免中文乱码）。</p>
+</li>
+</ul>
+<h3 id="%E8%BF%90%E8%A1%8C%E6%95%88%E6%9E%9C">运行效果</h3>
+<ul>
+<li><p>启动后显示空白编辑区，可直接输入文本。</p>
+</li>
+<li><p>点击「文件→打开」选择本地 txt 文件，内容会加载到编辑区。</p>
+</li>
+<li><p>点击「文件→保存」可将内容保存为 txt 文件（新建文件会弹出保存对话框）。</p>
+</li>
+</ul>
+<h2 id="%E4%BA%94%E3%80%81%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91">五、进阶学习方向</h2>
+<ol>
+<li><p><strong>组件美化</strong>：使用 <code>ttk</code>（Tkinter 主题组件）替代原生组件，支持更多样式。</p>
+</li>
+<li><p><strong>事件绑定</strong>：除了 <code>command</code>，还可通过 <code>bind()</code> 绑定键盘事件（如 <code>Ctrl+S</code> 保存）。</p>
+</li>
+<li><p><strong>多窗口</strong>：通过 <code>Toplevel()</code> 创建子窗口（如关于对话框、设置窗口）。</p>
+</li>
+<li><p><strong>数据可视化</strong>：结合 <code>matplotlib</code> 在 Tkinter 中绘制图表。</p>
+</li>
+<li><p><strong>打包成 exe</strong>：使用 <code>pyinstaller</code> 将脚本打包为 Windows 可执行文件（方便分发）。</p>
+</li>
+</ol>
+<p>Tkinter 虽然功能不如 PyQt、Kivy 强大，但胜在轻量、内置、学习成本低，适合快速开发中小型桌面应用。建议先掌握本教程的基础组件和布局逻辑，再逐步探索进阶功能！</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
