@@ -25,8 +25,12 @@ Python 约束被定义为⼀个用 **constrains()** 装饰的方法，并在记�
 ```python
 @api.constrains('discount')
 def _check_discount(self):
-    # 遍历所有正在被操作的记录
-    for record in self:
-        if record.discount < 0 or record.discount > 100:
-            raise ValidationError(_("折扣必须在 0 到 100 之间！"))
+    # 遍历所有正在被操作的记录
+    for record in self:
+        if record.discount < 0 or record.discount > 100:
+        raise ValidationError(_("折扣必须在 0 到 100 之间！"))
 ```
+
+> SQL 约束通常比 Python 约束更有效。在性能⽅⾯，SQL 约束⽐ Python 约束更有优势。
+
+
