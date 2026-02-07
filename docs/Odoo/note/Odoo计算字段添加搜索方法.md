@@ -6,9 +6,7 @@
 
 ```python
 class AccountMove(models.Model):
-    """ 凭证，结算单，对账单增加审批流程，1级，二级"""
-    _name = 'account.move'
-    _inherit = ['account.move', 'form.lock.mixin']
+    _inherit = 'account.move'
 
     summary_from_first_line = fields.Char(string='摘要', compute='_compute_summary_from_first_line', search='_search_summary_from_first_line')
 
