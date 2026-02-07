@@ -31,6 +31,8 @@ items:
         file: note/Odoo提示模块.md
     -   label: Odoo活动安排
         file: note/Odoo安排活动.md
+    -   label: Odoo计算字段添加搜索方法
+        file: note/Odoo计算字段添加搜索方法.md
     -   label: form视图固定tree行高
         file: note/form视图固定tree行高.md
     -   label: 冻结tree视图第一列
