@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>虚拟机的安装 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class="active"><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="active with_link"><a href="/doc2/index.html"><span class="label">一、虚拟机的安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/二、配置主机名并添加ip映射.html"><span class="label">二、配置主机名并添加ip映射</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/三、配置Java环境.html"><span class="label">三、配置Java环境</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/四、克隆主机.html"><span class="label">四、克隆主机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/五、配置免密ssh.html"><span class="label">五、配置免密ssh</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/六、Hadoop安装.html"><span class="label">六、Hadoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/七、Hive.html"><span class="label">七、Hive</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/八、hive的相关操作.html"><span class="label">八、hive的相关操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/九、sqoop安装.html"><span class="label">九、sqoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/十、sqoop的操作.html"><span class="label">十、sqoop的操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/实训项目随笔.html"><span class="label">实训项目随笔</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/项目.html"><span class="label">项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/视频网址.html"><span class="label">视频网址</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/草稿.html"><span class="label">草稿</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>虚拟机的安装</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-09-26">
+                                    2025-09-26
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E7%82%B9%E5%87%BB%E5%88%9B%E5%BB%BA%E6%96%B0%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA">点击创建新的虚拟机</h2>
+<p><img src="image/image-20230619135144223.png" alt="image-20230619135144223" /></p>
+<h2 id="%E9%80%89%E4%B8%AD%E5%85%B8%E5%9E%8B%E5%B9%B6%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选中典型并点击下一步</h2>
+<p><img src="image/image-20230619135302422.png" alt="image-20230619135302422" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E7%A8%8D%E5%90%8E%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选择稍后安装操作系统，再点击下一步</h2>
+<p><img src="image/image-20230619135402804.png" alt="image-20230619135402804" /></p>
+<h2 id="%E9%80%89%E6%8B%A9Linux%EF%BC%8C%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9CentOS-6-64%E4%BD%8D%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选择Linux，版本选择CentOS 6 64位，再点击下一步</h2>
+<blockquote>
+<p>版本选择对应光驱版本</p>
+</blockquote>
+<p><img src="image/image-20230619135627964.png" alt="image-20230619135627964" /></p>
+<h2 id="%E8%BE%93%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%8D%E7%A7%B0%E3%80%81%E4%BD%8D%E7%BD%AE%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">输入虚拟机名称、位置，再点击下一步</h2>
+<p><img src="image/image-20230619135829251.png" alt="image-20230619135829251" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E7%A3%81%E7%9B%98%E5%A4%A7%E5%B0%8F%EF%BC%8C%E5%B0%86%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E5%AD%98%E5%82%A8%E4%B8%BA%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E6%9C%80%E5%90%8E%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选择磁盘大小，将虚拟磁盘存储为单个文件，最后点击下一步</h2>
+<p><img src="image/image-20230619140523720.png" alt="image-20230619140523720" /></p>
+<h2 id="%E7%82%B9%E5%87%BB%E5%AE%8C%E6%88%90">点击完成</h2>
+<p><img src="image/image-20230619140632608.png" alt="image-20230619140632608" /></p>
+<h2 id="%E7%82%B9%E5%87%BB%E7%BC%96%E8%BE%91%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE">点击编辑虚拟机设置</h2>
+<p><img src="image/image-20230619140722369.png" alt="image-20230619140722369" /></p>
+<h2 id="%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%86%85%E5%AD%98%E8%AE%BE%E7%BD%AE%E4%B8%BA2048">虚拟机内存设置为2048</h2>
+<p><img src="image/image-20230619140852540.png" alt="image-20230619140852540" /></p>
+<h2 id="%E5%9C%A8CD%E8%AE%BE%E7%BD%AE%E4%B8%AD%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8ISO%E6%98%A0%E5%83%8F%E6%96%87%E4%BB%B6%EF%BC%8C%E9%80%89%E6%8B%A9ISO%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84">在CD设置中选择使用ISO映像文件，选择ISO文件路径</h2>
+<p><img src="image/image-20230619141121512.png" alt="image-20230619141121512" /></p>
+<h2 id="%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E5%B0%86%E6%89%93%E5%8D%B0%E6%9C%BA%E7%A7%BB%E9%99%A4">可以选择将打印机移除</h2>
+<p><img src="image/image-20230619141234696.png" alt="image-20230619141234696" /></p>
+<h2 id="%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90%E5%90%8E%E7%82%B9%E5%87%BB%E7%A1%AE%E5%AE%9A">配置完成后点击确定</h2>
+<p><img src="image/image-20230619141309315.png" alt="image-20230619141309315" /></p>
+<h2 id="%E5%BC%80%E5%90%AFLG01%E8%99%9A%E6%8B%9F%E6%9C%BA">开启LG01虚拟机</h2>
+<p><img src="image/image-20230619141342690.png" alt="image-20230619141342690" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E7%AC%AC%E4%B8%80%E4%B8%AA%EF%BC%8C%E5%B9%B6%E6%8C%89%E5%9B%9E%E8%BD%A6">选择第一个，并按回车</h2>
+<p><img src="image/image-20230619141456263.png" alt="image-20230619141456263" /></p>
+<h2 id="%E9%80%9A%E8%BF%87%E6%8C%89%E5%B7%A6%E5%8F%B3%E9%94%AE%E5%B0%86%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8%E5%88%B0Skip%EF%BC%8C%E5%B9%B6%E6%8C%89%E5%9B%9E%E8%BD%A6%E8%B7%B3%E8%BF%87%E6%A3%80%E6%B5%8B">通过按左右键将光标移动到Skip，并按回车跳过检测</h2>
+<p><img src="image/image-20230619141554958.png" alt="image-20230619141554958" /></p>
+<h2 id="%E7%82%B9%E5%87%BBNext">点击Next</h2>
+<p><img src="image/image-20230619141635289.png" alt="image-20230619141635289" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E8%8B%B1%E8%AF%AD%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BBNext">选择英语，再点击Next</h2>
+<p><img src="image/image-20230619141736786.png" alt="image-20230619141736786" /></p>
+<h2 id="%E7%BB%A7%E7%BB%AD%E7%82%B9%E5%87%BBNext">继续点击Next</h2>
+<p><img src="image/image-20230619141826527.png" alt="image-20230619141826527" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E5%9F%BA%E7%A1%80%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">选择基础的安装，点击下一步</h2>
+<p><img src="image/image-20230619141922005.png" alt="image-20230619141922005" /></p>
+<h2 id="%E9%80%89%E6%8B%A9Yes%EF%BC%8C%E5%BF%BD%E7%95%A5%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE">选择Yes，忽略所有数据</h2>
+<p><img src="image/image-20230619142011038.png" alt="image-20230619142011038" /></p>
+<h2 id="%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%BB%E6%9C%BA%E5%90%8D%E5%92%8C%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%8D%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4%EF%BC%8C%E4%B8%BALG01%EF%BC%8C%E7%82%B9%E5%87%BBConfigure-Network%EF%BC%8C%E9%80%89%E4%B8%ADSystem-eth0%EF%BC%8C%E7%82%B9%E5%87%BBEdit%E3%80%82">虚拟机主机名和虚拟机名保持一致，为LG01，点击Configure Network，选中System eth0，点击Edit。</h2>
+<p><img src="image/image-20230619142529078.png" alt="image-20230619142529078" /></p>
+<h2 id="%E8%BF%94%E5%9B%9E%E7%9C%9F%E5%AE%9E%E4%B8%BB%E6%9C%BA%EF%BC%8C%E8%BF%9B%E5%85%A5%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%EF%BC%8C%E9%80%89%E4%B8%ADVMware-Network-Adapter-VMnet8%EF%BC%8C%E5%B9%B6%E7%82%B9%E5%87%BB%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7">返回真实主机，进入网络连接，选中VMware Network Adapter VMnet8，并点击鼠标右键中的属性</h2>
+<p><img src="image/image-20230619143006575.png" alt="image-20230619143006575" /></p>
+<h2 id="%E9%80%89%E4%B8%ADipv4%EF%BC%8C%E7%82%B9%E5%87%BB%E5%B1%9E%E6%80%A7%EF%BC%8C%E5%B9%B6%E8%BE%93%E5%85%A5%E4%BB%A5%E4%B8%8B%E9%85%8D%E7%BD%AE">选中ipv4，点击属性，并输入以下配置</h2>
+<p><img src="image/image-20230619143115294.png" alt="image-20230619143115294" /></p>
+<h2 id="%E5%8B%BE%E9%80%89Connect-automatically%EF%BC%8C%E7%82%B9%E5%87%BBIPv4-Settings%EF%BC%8C%E9%85%8D%E7%BD%AE%E5%A5%BD%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E3%80%81%E7%BD%91%E5%85%B3%E3%80%81DNS%EF%BC%8C%E6%9C%80%E5%90%8E%E7%82%B9%E5%87%BBapply">勾选Connect automatically，点击IPv4 Settings，配置好网络地址、子网掩码、网关、DNS，最后点击apply</h2>
+<p><img src="image/image-20230619143855295.png" alt="image-20230619143855295" /></p>
+<h2 id="%E7%82%B9%E5%87%BBClose%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BBNext">点击Close，再点击Next</h2>
+<p><img src="image/image-20230619143950122.png" alt="image-20230619143950122" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E4%B8%8A%E6%B5%B7%E6%97%B6%E5%8C%BA%EF%BC%8C%E5%86%8D%E7%82%B9%E5%87%BBNext">选择上海时区，再点击Next</h2>
+<p><img src="image/image-20230619144130567.png" alt="image-20230619144130567" /></p>
+<h2 id="%E8%BF%99%E9%87%8C%E8%BE%93%E5%85%A5root%E5%AF%86%E7%A0%81%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E6%AD%A5">这里输入root密码，点击下一步</h2>
+<p><img src="image/image-20230619144341313.png" alt="image-20230619144341313" /></p>
+<h2 id="%E9%80%89%E6%8B%A9Use-Anyway">选择Use Anyway</h2>
+<p><img src="image/image-20230619144425559.png" alt="image-20230619144425559" /></p>
+<h2 id="%E9%80%89%E6%8B%A9Create-Custom-Layout%EF%BC%8C%E7%82%B9%E5%87%BBNext">选择Create Custom Layout，点击Next</h2>
+<p><img src="image/image-20230619144539497.png" alt="image-20230619144539497" /></p>
+<h2 id="%E7%82%B9%E5%87%BBCreate">点击Create</h2>
+<p><img src="image/image-20230619144952112.png" alt="image-20230619144952112" /></p>
+<h2 id="%E4%BE%9D%E6%AC%A1%E5%88%9B%E5%BB%BA/boot%E3%80%81%E4%BA%A4%E6%8D%A2%E7%A9%BA%E9%97%B4swap%E3%80%81%E6%A0%B9%E7%9B%AE%E5%BD%95">依次创建/boot、交换空间swap、根目录</h2>
+<p><img src="image/image-20230619145043521.png" alt="image-20230619145043521" /></p>
+<h2 id="%E7%82%B9%E5%87%BBNext%E3%80%81Format">点击Next、Format</h2>
+<p><img src="image/image-20230619145135841.png" alt="image-20230619145135841" /></p>
+<h2 id="%E7%82%B9%E5%87%BBwrite-changes-to-disk">点击write changes to disk</h2>
+<p><img src="image/image-20230619145216471.png" alt="image-20230619145216471" /></p>
+<h2 id="%E6%8E%A5%E4%B8%8B%E6%9D%A5%E7%9A%84%E6%AD%A5%E9%AA%A4%E4%B8%80%E7%9B%B4%E7%82%B9Next%EF%BC%8C%E7%AD%89%E5%BE%85%E5%AE%89%E8%A3%85">接下来的步骤一直点Next，等待安装</h2>
+<p><strong><img src="image/image-20230619145327531.png" alt="image-20230619145327531" /></strong></p>
+<h2 id="%E7%82%B9%E5%87%BBReboot%E9%87%8D%E5%90%AF">点击Reboot重启</h2>
+<p><img src="image/image-20230619150112039.png" alt="image-20230619150112039" /></p>
+<h2 id="%E6%AC%A2%E8%BF%8E%E7%95%8C%E9%9D%A2%E7%82%B9%E5%87%BBForward">欢迎界面点击Forward</h2>
+<p><img src="image/image-20230619150320863.png" alt="image-20230619150320863" /></p>
+<h2 id="%E5%90%8C%E6%84%8F%E6%9D%A1%E7%BA%A6%EF%BC%8C%E7%82%B9%E5%87%BBForward">同意条约，点击Forward</h2>
+<p><img src="image/image-20230619150404409.png" alt="image-20230619150404409" /></p>
+<h2 id="%E4%B8%8D%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%82%B9%E5%87%BBForward%EF%BC%8CYes">不创建普通用户，直接点击Forward，Yes</h2>
+<p><img src="image/image-20230619150550554.png" alt="image-20230619150550554" /></p>
+<h2 id="%E9%80%89%E6%8B%A9%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91%E5%90%8C%E6%AD%A5%E6%97%B6%E9%97%B4%EF%BC%8C%E7%82%B9%E5%87%BBForward">选择与互联网同步时间，点击Forward</h2>
+<p><img src="image/image-20230619150821036.png" alt="image-20230619150821036" /></p>
+<h2 id="%E5%B0%86kdump%E9%80%89%E9%A1%B9%E5%8E%BB%E6%8E%89%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%82%B9%E5%87%BBFinish">将kdump选项去掉，直接点击Finish</h2>
+<p><img src="image/image-20230619151016291.png" alt="image-20230619151016291" /></p>
+<h2 id="%E5%9C%A8VMware%E4%B8%AD%E9%85%8D%E7%BD%AE%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91%E5%99%A8">在VMware中配置虚拟网络编辑器</h2>
+<p><img src="image/image-20230619153254263.png" alt="image-20230619153254263" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/doc2/二、配置主机名并添加ip映射.html">
+                            <span class="label">二、配置主机名并添加ip映射</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

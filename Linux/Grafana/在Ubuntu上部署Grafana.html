@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>在 Ubuntu 上部署 Grafana - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class="active"><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/Linux/index.html"><span class="label">linux学习</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/linux mysql 操作命令.html"><span class="label">linux mysql 操作命令</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/CentOS 7 yum安装 MySQL 5.7.html"><span class="label">CentOS 7 yum安装 MySQL 5.7</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/在Ubuntu上安装PostgreSQL 13.html"><span class="label">在Ubuntu上安装PostgreSQL 13</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/lvs.html"><span class="label">lvs</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/lvs实操.html"><span class="label">lvs实操</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/克隆模板机.html"><span class="label">克隆模板机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/NFS网络文件.html"><span class="label">NFS网络文件</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">Nginx</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Linux/Nginx/index.html"><span class="label">Nginx安装部署</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">Docker</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Linux/Docker/index.html"><span class="label">Docker安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Linux/Docker/Docker部署Nginx.html"><span class="label">Docker部署Nginx(简单案例)</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">Grafana</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active with_link"><a href="/Linux/Grafana/在Ubuntu上部署Grafana.html"><span class="label">在Ubuntu上部署Grafana</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>在 Ubuntu 上部署 Grafana</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-11-11">
+                                    2025-11-11
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8%E5%AE%98%E6%96%B9APT%E4%BB%93%E5%BA%93">方法一：使用官方APT仓库</h2>
+<h3 id="%E6%AD%A5%E9%AA%A41%EF%BC%9A%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E5%8C%85">步骤1：更新系统包</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A42%EF%BC%9A%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E4%BE%9D%E8%B5%96">步骤2：安装必要的依赖</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo apt install -y software-properties-common wget curl gnupg
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A43%EF%BC%9A%E6%B7%BB%E5%8A%A0Grafana%E5%AE%98%E6%96%B9GPG%E5%AF%86%E9%92%A5">步骤3：添加Grafana官方GPG密钥</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo mkdir -p /etc/apt/keyrings/
+wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg &gt; /dev/null
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A44%EF%BC%9A%E6%B7%BB%E5%8A%A0Grafana-APT%E4%BB%93%E5%BA%93">步骤4：添加Grafana APT仓库</h3>
+
+<pre class="language-shell"><code class="language-shell">echo &quot;deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main&quot; | sudo tee /etc/apt/sources.list.d/grafana.list
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A45%EF%BC%9A%E6%9B%B4%E6%96%B0%E5%8C%85%E5%88%97%E8%A1%A8%E5%B9%B6%E5%AE%89%E8%A3%85Grafana">步骤5：更新包列表并安装Grafana</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo apt update
+sudo apt install grafana -y
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A46%EF%BC%9A%E5%90%AF%E5%8A%A8%E5%B9%B6%E5%90%AF%E7%94%A8Grafana%E6%9C%8D%E5%8A%A1">步骤6：启动并启用Grafana服务</h3>
+
+<pre class="language-shell"><code class="language-shell"># 启动Grafana服务
+sudo systemctl start grafana-server
+
+# 设置开机自启
+sudo systemctl enable grafana-server
+
+# 检查服务状态
+sudo systemctl status grafana-server
+</code></pre>
+<h2 id="%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2">方法二：使用Docker部署</h2>
+<h3 id="%E6%AD%A5%E9%AA%A41%EF%BC%9A%E5%AE%89%E8%A3%85Docker">步骤1：安装Docker</h3>
+
+<pre class="language-shell"><code class="language-shell"># 安装Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# 将当前用户添加到docker组
+sudo usermod -aG docker $USER
+newgrp docker
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A42%EF%BC%9A%E4%BD%BF%E7%94%A8Docker%E8%BF%90%E8%A1%8CGrafana">步骤2：使用Docker运行Grafana</h3>
+
+<pre class="language-shell"><code class="language-shell"># 创建数据目录
+sudo mkdir -p /docker/grafana/data
+sudo chmod 777 /docker/grafana/data
+
+# 运行Grafana容器
+docker run -d \
+  --name=grafana \
+  -p 3000:3000 \
+  -v /docker/grafana/data:/var/lib/grafana \
+  -e &quot;GF_SECURITY_ADMIN_PASSWORD=admin123&quot; \
+  grafana/grafana-oss:latest
+</code></pre>
+<h2 id="%E9%85%8D%E7%BD%AEGrafana">配置Grafana</h2>
+<h3 id="%E6%AD%A5%E9%AA%A41%EF%BC%9A%E8%AE%BF%E9%97%AEGrafana-Web%E7%95%8C%E9%9D%A2">步骤1：访问Grafana Web界面</h3>
+<ul>
+<li><p>•</p>
+<p>打开浏览器访问：<code>http://你的服务器IP:3000</code></p>
+</li>
+<li><p>•</p>
+<p>默认用户名：<code>admin</code></p>
+</li>
+<li><p>•</p>
+<p>默认密码：<code>admin</code>（首次登录后会要求修改）</p>
+</li>
+</ul>
+<h3 id="%E6%AD%A5%E9%AA%A42%EF%BC%9A%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">步骤2：基本配置</h3>
+
+<pre class="language-shell"><code class="language-shell"># 编辑Grafana配置文件
+sudo nano /etc/grafana/grafana.ini
+</code></pre>
+<p>主要配置项：</p>
+
+<pre class="language-shell"><code class="language-shell">[server]
+# 监听地址（设置为0.0.0.0允许外部访问）
+http_addr = 0.0.0.0
+http_port = 3000
+
+[database]
+# 数据库配置（默认使用SQLite）
+;type = sqlite3
+;path = grafana.db
+
+[security]
+# 安全配置
+admin_user = admin
+admin_password = admin
+</code></pre>
+<h3 id="%E6%AD%A5%E9%AA%A43%EF%BC%9A%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8%E9%85%8D%E7%BD%AE">步骤3：重启服务应用配置</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo systemctl restart grafana-server
+</code></pre>
+<h2 id="%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE">防火墙配置</h2>
+<h3 id="%E5%A6%82%E6%9E%9C%E4%BD%BF%E7%94%A8UFW%E9%98%B2%E7%81%AB%E5%A2%99">如果使用UFW防火墙</h3>
+
+<pre class="language-shell"><code class="language-shell"># 允许3000端口
+sudo ufw allow 3000/tcp
+sudo ufw reload
+</code></pre>
+<h3 id="%E5%A6%82%E6%9E%9C%E4%BD%BF%E7%94%A8iptables">如果使用iptables</h3>
+
+<pre class="language-shell"><code class="language-shell">sudo iptables -A INPUT -p tcp --dport 3000 -j ACCEPT
+</code></pre>
+<h2 id="%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96%E7%9B%AE%E5%BD%95">数据持久化目录</h2>
+<p>Grafana的重要数据位置：</p>
+<ul>
+<li><p>•</p>
+<p>配置文件：<code>/etc/grafana/grafana.ini</code></p>
+</li>
+<li><p>•</p>
+<p>数据文件：<code>/var/lib/grafana</code></p>
+</li>
+<li><p>•</p>
+<p>日志文件：<code>/var/log/grafana</code></p>
+</li>
+<li><p>•</p>
+<p>插件目录：<code>/var/lib/grafana/plugins</code></p>
+</li>
+</ul>
+<h2 id="%E5%B8%B8%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4">常用管理命令</h2>
+
+<pre class="language-shell"><code class="language-shell"># 启动服务
+sudo systemctl start grafana-server
+
+# 停止服务
+sudo systemctl stop grafana-server
+
+# 重启服务
+sudo systemctl restart grafana-server
+
+# 查看服务状态
+sudo systemctl status grafana-server
+
+# 查看日志
+sudo journalctl -u grafana-server -f
+</code></pre>
+<h2 id="%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D">备份和恢复</h2>
+<h3 id="%E5%A4%87%E4%BB%BDGrafana%E6%95%B0%E6%8D%AE">备份Grafana数据</h3>
+
+<pre class="language-shell"><code class="language-shell"># 备份配置和数据
+sudo tar -czf grafana-backup-$(date +%Y%m%d).tar.gz /etc/grafana /var/lib/grafana
+</code></pre>
+<h3 id="%E6%81%A2%E5%A4%8DGrafana%E6%95%B0%E6%8D%AE">恢复Grafana数据</h3>
+
+<pre class="language-shell"><code class="language-shell"># 停止Grafana服务
+sudo systemctl stop grafana-server
+
+# 恢复备份
+sudo tar -xzf grafana-backup-20231201.tar.gz -C /
+
+# 启动服务
+sudo systemctl start grafana-server
+</code></pre>
+<h2 id="%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除</h2>
+<h3 id="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3">常见问题解决</h3>
+<ol>
+<li><ol>
+<li></li>
+</ol>
+<p><strong>端口被占用</strong></p>
+</li>
+</ol>
+
+<pre class="language-shell"><code class="language-shell"># 检查3000端口占用
+sudo netstat -tulpn | grep 3000
+
+# 如果被占用，修改Grafana端口或停止占用程序
+</code></pre>
+<ol>
+<li><ol start="2">
+<li></li>
+</ol>
+<p><strong>无法访问Web界面</strong></p>
+</li>
+</ol>
+
+<pre class="language-shell"><code class="language-shell"># 检查防火墙设置
+sudo ufw status
+
+# 检查Grafana服务状态
+sudo systemctl status grafana-server
+
+# 查看日志
+sudo journalctl -u grafana-server -n 50
+</code></pre>
+<ol>
+<li><ol start="3">
+<li></li>
+</ol>
+<p><strong>权限问题</strong></p>
+</li>
+</ol>
+
+<pre class="language-shell"><code class="language-shell"># 修复数据目录权限
+sudo chown -R grafana:grafana /var/lib/grafana
+sudo chmod 755 /var/lib/grafana
+</code></pre>
+<h2 id="%E5%90%8E%E7%BB%AD%E6%AD%A5%E9%AA%A4">后续步骤</h2>
+<ol>
+<li><ol>
+<li></li>
+</ol>
+<p><strong>添加数据源</strong>：配置Prometheus、InfluxDB等数据源</p>
+</li>
+<li><ol start="2">
+<li></li>
+</ol>
+<p><strong>安装插件</strong>：根据需求安装相关插件</p>
+</li>
+<li><ol start="3">
+<li></li>
+</ol>
+<p><strong>创建仪表板</strong>：设计监控仪表板</p>
+</li>
+<li><ol start="4">
+<li></li>
+</ol>
+<p><strong>设置警报</strong>：配置监控警报规则</p>
+</li>
+</ol>
+<p>这样就完成了Grafana在Ubuntu上的部署！</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/Linux/Docker/Docker部署Nginx.html">
+                            <span class="icon"></span>
+                            <span class="label">Docker部署Nginx(简单案例)</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

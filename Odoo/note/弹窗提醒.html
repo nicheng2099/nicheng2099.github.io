@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>弹窗提醒 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/Odoo/index.html"><span class="label">指令</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Link.html"><span class="label">链接</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Tool.html"><span class="label">工具</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Field.html"><span class="label">字段</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Class.html"><span class="label">样式</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/SQL.html"><span class="label">SQL</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">第三方模块</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Theme.html"><span class="label">主题</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">随笔</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/Odoo/note/打印Excel(report_py3o).html"><span class="label">打印Excel(report_py3o)</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/Odoo/note/弹窗提醒.html"><span class="label">弹窗提醒</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo提示模块.html"><span class="label">Odoo提示模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo安排活动.html"><span class="label">Odoo活动安排</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo计算字段添加搜索方法.html"><span class="label">Odoo计算字段添加搜索方法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/form视图固定tree行高.html"><span class="label">form视图固定tree行高</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/冻结tree视图第一列.html"><span class="label">冻结tree视图第一列</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo视图字段默认显示.html"><span class="label">Odoo视图字段默认显示</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo动态域设置.html"><span class="label">Odoo动态域设置</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>弹窗提醒</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-10-11">
+                                    2025-10-11
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <blockquote>
+<p>通过写一个瞬态模型达到实现弹窗提醒的功能，点击确认继续执行，点击取消撤回该操作。</p>
+</blockquote>
+<p>参考代码链接：<a href="https://gitee.com/LC_Link/document/tree/master/Module/lc_tip_dialog"  target="_blank">Module/lc_tip_dialog · LC_Link/document - 码云 - 开源中国 (gitee.com)</a></p>
+<h2 id="%E5%88%9B%E5%BB%BA">创建</h2>
+<h3 id="%E5%BC%B9%E7%AA%97%E6%A8%A1%E5%9D%97lc_tip_dialog">弹窗模块lc_tip_dialog</h3>
+<blockquote>
+<p>可以写在需要弹窗功能的模块下面，也可写成公共模块</p>
+</blockquote>
+<p><strong>目录结构</strong></p>
+
+<pre class="language-shell"><code class="language-shell">├─security
+│  └─ir.model.access.csv
+│
+├─wizard
+│  └─__init__.py
+│  └─tips_dialog.py
+│  └─tips_dialog.xml
+│
+├─__init__.py
+│
+└─__manifest__.py
+</code></pre>
+<h3 id="%E7%BC%96%E8%BE%91tips_dialog.py%E7%9E%AC%E6%80%81%E6%A8%A1%E5%9E%8B">编辑tips_dialog.py瞬态模型</h3>
+
+<pre class="language-python"><code class="language-python">from odoo import models, fields
+
+
+class TipsDialog(models.TransientModel):
+    _name = 'lc.tips.dialog'
+    _description = '提示弹窗'
+
+    title = fields.Char(string='Title')
+    content = fields.Html(string='Content')
+
+    res_model = fields.Char(string='Resource Model')
+    res_ids = fields.Char(string='Resource IDs')
+    context = fields.Char(string='Context')
+
+    ok_func = fields.Char(string='Ok Function')
+    no_func = fields.Char(string='No Function')
+
+    def eval(self, func):
+        self.ensure_one()
+        if self.res_model and self.res_ids and func:
+            res = self.env[self.res_model].browse(eval(self.res_ids))
+            if res and res.__getattribute__(func):
+                if self.context:
+                    res = res.with_context(eval(self.context))
+                return res.__getattribute__(func)()
+
+    def action_ok(self):
+        result = self.eval(self.ok_func)
+        return result
+
+    def action_no(self):
+        result = self.eval(self.no_func)
+        return result
+
+    def tips(self, params=None):
+        if params is None:
+            params = {}
+        context = dict(self.env.context)
+        context.update(eval(params.get('context', '{}')))
+        params.update({'context': context})
+        res = self.sudo().create(params)
+        action = self.sudo().env.ref('lc_tip_dialog.lc_tips_dialog_action').read()[0]
+        action.update({
+            'name': res.title,
+            'res_id': res.id
+        })
+        return action
+
+    def tips_basic(self, title='提醒', content='', ok_func=''):
+        return self.env['lc.tips.dialog'].tips({
+            'title': title,
+            'content': content,
+            'ok_func': ok_func
+        })
+</code></pre>
+<h3 id="%E7%BC%96%E8%BE%91tips_dialog.xml%E5%BC%B9%E7%AA%97%E8%A7%86%E5%9B%BE">编辑tips_dialog.xml弹窗视图</h3>
+
+<pre class="language-xml"><code class="language-xml">&lt;odoo&gt;
+
+    &lt;record id=&quot;lc_tips_dialog&quot; model=&quot;ir.ui.view&quot;&gt;
+        &lt;field name=&quot;name&quot;&gt;Tips&lt;/field&gt;
+        &lt;field name=&quot;model&quot;&gt;lc.tips.dialog&lt;/field&gt;
+        &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;
+            &lt;form create=&quot;false&quot; edit=&quot;false&quot; delete=&quot;false&quot; duplicate=&quot;false&quot;&gt;
+                &lt;sheet&gt;
+                    &lt;field name=&quot;title&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;res_model&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;res_ids&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;context&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;ok_func&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;no_func&quot; invisible=&quot;1&quot;/&gt;
+                    &lt;field name=&quot;content&quot; nolabel=&quot;1&quot;/&gt;
+                &lt;/sheet&gt;
+                &lt;footer&gt;
+                    &lt;button name=&quot;action_ok&quot; string=&quot;确认&quot; type=&quot;object&quot; class=&quot;btn-primary&quot;
+                            attrs=&quot;{'invisible':[('ok_func','=',False)]}&quot;/&gt;
+                    &lt;button name=&quot;action_no&quot; string=&quot;取消&quot; type=&quot;object&quot; class=&quot;btn-secondary&quot;
+                            attrs=&quot;{'invisible':[('no_func','=',False)]}&quot;/&gt;
+                    &lt;button special=&quot;cancel&quot; string=&quot;取消&quot; class=&quot;btn-secondary&quot;
+                        attrs=&quot;{'invisible':['|',('ok_func','!=',False),('no_func','!=',False)]}&quot;/&gt;
+                &lt;/footer&gt;
+            &lt;/form&gt;
+        &lt;/field&gt;
+    &lt;/record&gt;
+
+    &lt;record id=&quot;lc_tips_dialog_action&quot; model=&quot;ir.actions.act_window&quot;&gt;
+        &lt;field name=&quot;name&quot;&gt;Tips&lt;/field&gt;
+        &lt;field name=&quot;res_model&quot;&gt;lc.tips.dialog&lt;/field&gt;
+        &lt;field name=&quot;view_mode&quot;&gt;form&lt;/field&gt;
+        &lt;field name=&quot;target&quot;&gt;new&lt;/field&gt;
+    &lt;/record&gt;
+
+&lt;/odoo&gt;
+</code></pre>
+<h3 id="%E6%B7%BB%E5%8A%A0ir.model.access.csv%E6%9D%83%E9%99%90">添加ir.model.access.csv权限</h3>
+
+<pre class="language-cvs"><code class="language-cvs">id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+act_tips_dialog,tips_dialog,model_lc_tips_dialog,,1,1,1,1
+</code></pre>
+<h3 id="%E5%9C%A8%3Cstrong%3Emanifest%3C/strong%3E.py%E5%BC%95%E5%85%A5tips_dialog.xml">在<strong>manifest</strong>.py引入tips_dialog.xml</h3>
+
+<pre class="language-python"><code class="language-python">'data': [
+    'security/ir.model.access.csv',
+    'wizard/tips_dialog.xml'
+],
+</code></pre>
+<h2 id="%E4%BD%BF%E7%94%A8">使用</h2>
+<h3 id="%E5%9C%A8%E4%BD%BF%E7%94%A8%E5%BC%B9%E7%AA%97%E7%9A%84%E6%A8%A1%E5%9D%97%3Cstrong%3Emanifest%3C/strong%3E.py%E4%BE%9D%E8%B5%96%E5%BC%B9%E7%AA%97%E6%A8%A1%E5%9D%97">在使用弹窗的模块<strong>manifest</strong>.py依赖弹窗模块</h3>
+
+<pre class="language-python"><code class="language-python">'depends': ['base','lc_tip_dialog'],
+</code></pre>
+<h3 id="%E5%9C%A8%E9%9C%80%E8%A6%81%E5%BC%B9%E7%AA%97%E7%9A%84%E6%8C%89%E9%92%AE%E5%8A%A8%E4%BD%9C%E4%BD%BF%E7%94%A8%E5%AF%B9%E5%BA%94%E5%BC%B9%E7%AA%97">在需要弹窗的按钮动作使用对应弹窗</h3>
+
+<pre class="language-python"><code class="language-python">def action_cancel(self):
+    self.ensure_one()
+    return self.env['lc.tips.dialog'].tips({
+        'title': '提醒',
+        'content': f&quot;取消{','.join(self.mapped('name'))}后无法再次编辑&quot;,
+        'res_model': self._name,
+        'res_ids': self.ids,
+        'ok_func': '_action_cancel',
+        'no_func': ''
+    })
+
+def _action_cancel(self):
+    if self.state == 'confirmed':
+        raise UserError(&quot;已确定的定价不能取消&quot;)
+    self.state = 'cancel'state = 'cancel'
+</code></pre>
+<h2 id="%E6%95%88%E6%9E%9C">效果</h2>
+<p><img src="assets/2025-10-11-09-18-12-image.png" alt="" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/Odoo/note/打印Excel(report_py3o).html">
+                            <span class="icon"></span>
+                            <span class="label">打印Excel(report_py3o)</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/Odoo/note/Odoo提示模块.html">
+                            <span class="label">Odoo提示模块</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

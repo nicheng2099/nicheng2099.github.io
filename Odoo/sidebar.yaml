@@ -1,0 +1,44 @@
+items:
+-   label: 指令
+    file: README.md
+-   label: 链接
+    file: Link.md
+-   label: 工具
+    file: Tool.md
+-   label: 字段
+    file: Field.md
+-   label: 小部件
+    file: Widget.md
+-   label: 样式
+    file: Class.md
+-   label: SQL
+    file: SQL.md
+-   label: 第三方模块
+    collapsed: true
+    items:
+    -   label: 小部件
+        file: third_party_modules/Widget.md
+    -   label: 主题
+        file: third_party_modules/Theme.md
+-   label: 随笔
+    collapsed: false
+    items:
+    -   label: 打印Excel(report_py3o)
+        file: note/打印Excel(report_py3o).md
+    -   label: 弹窗提醒
+        file: note/弹窗提醒.md
+    -   label: Odoo提示模块
+        file: note/Odoo提示模块.md
+    -   label: Odoo活动安排
+        file: note/Odoo安排活动.md
+    -   label: Odoo计算字段添加搜索方法
+        file: note/Odoo计算字段添加搜索方法.md
+    -   label: form视图固定tree行高
+        file: note/form视图固定tree行高.md
+    -   label: 冻结tree视图第一列
+        file: note/冻结tree视图第一列.md
+    -   label: Odoo视图字段默认显示
+        file: note/Odoo视图字段默认显示.md
+    -   label: Odoo动态域设置
+        file: note/Odoo动态域设置.md
+

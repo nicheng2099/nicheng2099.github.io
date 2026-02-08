@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>sqoop的操作 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class="active"><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/doc2/index.html"><span class="label">一、虚拟机的安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/二、配置主机名并添加ip映射.html"><span class="label">二、配置主机名并添加ip映射</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/三、配置Java环境.html"><span class="label">三、配置Java环境</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/四、克隆主机.html"><span class="label">四、克隆主机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/五、配置免密ssh.html"><span class="label">五、配置免密ssh</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/六、Hadoop安装.html"><span class="label">六、Hadoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/七、Hive.html"><span class="label">七、Hive</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/八、hive的相关操作.html"><span class="label">八、hive的相关操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/九、sqoop安装.html"><span class="label">九、sqoop安装</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/doc2/十、sqoop的操作.html"><span class="label">十、sqoop的操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/实训项目随笔.html"><span class="label">实训项目随笔</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/项目.html"><span class="label">项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/视频网址.html"><span class="label">视频网址</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/草稿.html"><span class="label">草稿</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>sqoop的操作</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-09-26">
+                                    2025-09-26
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="sqoop%E7%9A%84%E5%AF%BC%E5%85%A5">sqoop的导入</h2>
+<h3 id="%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E6%97%A0%E4%B8%BB%E9%94%AE%EF%BC%8C%E4%B8%80%E4%B8%AAmap%EF%BC%89">创建数据库（无主键，一个map）</h3>
+<h5 id="%E8%BF%9B%E5%85%A5MySQL%E7%9A%84test%E6%95%B0%E6%8D%AE%E5%BA%93">进入MySQL的test数据库</h5>
+
+<pre class="language-none"><code class="language-none">mysql -uroot -proot
+show databases;
+use test;
+show tables;
+</code></pre>
+<p><img src="image/image-20230613151813636.png" alt="image-20230613151813636" /></p>
+<p><img src="image/image-20230613151834877.png" alt="image-20230613151834877" /></p>
+<h5 id="%E5%88%9B%E5%BB%BA%E8%A1%A8">创建表</h5>
+
+<pre class="language-none"><code class="language-none">create table nba(id int(4),name varchar(20),num int(4),team varchar(20));
+</code></pre>
+<p><img src="image/image-20230613152153649.png" alt="image-20230613152153649" /></p>
+<h5 id="%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE">插入数据</h5>
+
+<pre class="language-none"><code class="language-none">insert into nba values(1,&quot;科比&quot;,42,&quot;湖人&quot;),(2,&quot;詹姆斯&quot;,37,&quot;湖人&quot;),(3,&quot;库里&quot;,32,&quot;勇士&quot;),(4,&quot;哈登&quot;,32,&quot;火箭&quot;);
+</code></pre>
+<p><img src="image/image-20230613152500735.png" alt="image-20230613152500735" /></p>
+<h3 id="%E4%BD%BF%E7%94%A8sqoop%E5%AF%BC%E5%85%A5hdf%EF%BC%88%E6%97%A0%E4%B8%BB%E9%94%AE%EF%BC%8C%E4%B8%80%E4%B8%AAmap%EF%BC%89">使用sqoop导入hdf（无主键，一个map）</h3>
+<h5 id="%E5%88%B0/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin%E7%9B%AE%E5%BD%95%E4%B8%8B">到/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin
+</code></pre>
+<h5 id="%E6%89%A7%E8%A1%8C%E5%AF%BC%E5%85%A5">执行导入</h5>
+<blockquote>
+<p>因为nba表中无主键 m不能&gt;1</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">./sqoop import \
+&gt; --connect jdbc:mysql://LG04:3306/test \
+&gt; --username root \
+&gt; --password root \
+&gt; --table nba \
+&gt; --target-dir /data/to_hdfs \
+&gt; --m 1
+</code></pre>
+
+<pre class="language-none"><code class="language-none">./sqoop import --connect jdbc:mysql://LG04:3306/test --username root --password root --table nba --target-dir /data/to_hdfs --m 1
+</code></pre>
+<p><img src="image/image-20230613160539871.png" alt="image-20230613160539871" /></p>
+<p><img src="image/image-20230613160553186.png" alt="image-20230613160553186" /></p>
+<h3 id="%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E6%9C%89%E4%B8%BB%E9%94%AE%EF%BC%8C%E5%A4%9A%E4%B8%AAmap%EF%BC%89">创建数据库（有主键，多个map）</h3>
+<h5 id="%E5%88%9B%E5%BB%BA%E8%A1%A8">创建表</h5>
+
+<pre class="language-none"><code class="language-none">create table nba_key(id int(4) primary key,name varchar(20),num int(4),team varchar(20));
+</code></pre>
+<p><img src="image/image-20230613161144972.png" alt="image-20230613161144972" /></p>
+<h5 id="%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE">插入数据</h5>
+
+<pre class="language-none"><code class="language-none">insert into nba_key values(1,&quot;科比&quot;,42,&quot;湖人&quot;),(2,&quot;詹姆斯&quot;,37,&quot;湖人&quot;),(3,&quot;库里&quot;,32,&quot;勇士&quot;),(4,&quot;哈登&quot;,32,&quot;火箭&quot;);
+</code></pre>
+<p><img src="image/image-20230613161329875.png" alt="image-20230613161329875" /></p>
+<h3 id="%E4%BD%BF%E7%94%A8sqoop%E5%AF%BC%E5%85%A5hdf%EF%BC%88%E6%9C%89%E4%B8%BB%E9%94%AE%EF%BC%8C%E5%A4%9A%E4%B8%AAmap%EF%BC%89">使用sqoop导入hdf（有主键，多个map）</h3>
+<h5 id="%E5%88%B0/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin%E7%9B%AE%E5%BD%95%E4%B8%8B">到/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin
+</code></pre>
+<h5 id="%E6%89%A7%E8%A1%8C%E5%AF%BC%E5%85%A5">执行导入</h5>
+<blockquote>
+<p>map可以为多个,结果会有多个part文件拆分数据</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">./sqoop import \
+&gt; --connect jdbc:mysql://LG04:3306/test \
+&gt; --username root \
+&gt; --password root \
+&gt; --table nba_key \
+&gt; --target-dir /data/to_hdfs_nba_key \
+&gt; --m 4
+</code></pre>
+
+<pre class="language-none"><code class="language-none">./sqoop import --connect jdbc:mysql://LG04:3306/test --username root --password root  --table nba_key --target-dir /data/to_hdfs_nba_key --m 4
+</code></pre>
+<p><img src="image/image-20230613161916985.png" alt="image-20230613161916985" /></p>
+<p><img src="image/image-20230613161938763.png" alt="image-20230613161938763" /></p>
+<h2 id="sqoop%E7%9A%84%E5%AF%BC%E5%87%BA">sqoop的导出</h2>
+<h5 id="%E5%BB%BA%E4%B8%80%E5%BC%A0%E7%A9%BA%E8%A1%A8">建一张空表</h5>
+<blockquote>
+<p>用于接收导出的数据</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">create table nba_result(id int(4) primary key,name varchar(20),num int(4),team varchar(20));
+</code></pre>
+<p><img src="image/image-20230613162914343.png" alt="image-20230613162914343" /></p>
+<h5 id="%E8%BF%9B%E5%85%A5/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin%E7%9B%AE%E5%BD%95%E4%B8%8B">进入/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin
+</code></pre>
+<h5 id="%E6%89%A7%E8%A1%8C%E5%AF%BC%E5%87%BA">执行导出</h5>
+<blockquote>
+<p>没有必要指定m，有几个文件，就指定几个map</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">./sqoop export \
+&gt; --connect jdbc:mysql://LG04:3306/test \
+&gt; --username root \
+&gt; --password root \
+&gt; --table nba_result \
+&gt; --export-dir /data/to_hdfs_nba_key \
+&gt; --fields-terminated-by ',' \
+&gt; --lines-terminated-by '\n'
+</code></pre>
+<p><img src="image/image-20230613163931923.png" alt="image-20230613163931923" /></p>
+<h2 id="%E5%A2%9E%E9%87%8F%E5%AF%BC%E5%85%A5">增量导入</h2>
+<blockquote>
+<p>必须要在有主键中的表中实现</p>
+</blockquote>
+<h5 id="%E5%9C%A8nba_key%E8%A1%A8%E4%B8%AD%E5%86%8D%E6%B7%BB%E5%8A%A04%E6%9D%A1%E6%95%B0%E6%8D%AE">在nba_key表中再添加4条数据</h5>
+
+<pre class="language-none"><code class="language-none">insert into nba_key values(5,&quot;杜兰特&quot;,31,&quot;篮网&quot;),(6,&quot;欧文&quot;,30,&quot;独行侠&quot;),(7,&quot;东七七&quot;,26,&quot;独行侠&quot;),(8,&quot;易建联&quot;,36,&quot;宏远&quot;);
+</code></pre>
+<p><img src="image/image-20230613164507662.png" alt="image-20230613164507662" /></p>
+<h5 id="%E8%BF%9B%E5%85%A5/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin%E7%9B%AE%E5%BD%95%E4%B8%8B">进入/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin
+</code></pre>
+<h5 id="%E6%89%A7%E8%A1%8C%E5%AF%BC%E5%85%A5">执行导入</h5>
+
+<pre class="language-none"><code class="language-none">./sqoop import \
+&gt; --connect jdbc:mysql://LG04:3306/test \
+&gt; --username root \
+&gt; --password root \
+&gt; --table nba_key \
+&gt; --target-dir /data/to_hdfs_nba_key \
+&gt; --check-column id \
+&gt; --incremental append \
+&gt; --last-value 4
+</code></pre>
+
+<pre class="language-none"><code class="language-none">./sqoop import --connect jdbc:mysql://LG04:3306/test --username root --password root --table nba_key --target-dir /data/to_hdfs_nba_key --check-column id --incremental append --last-value 4
+</code></pre>
+<p><img src="image/image-20230613165438247.png" alt="image-20230613165438247" /></p>
+<h2 id="%E5%A2%9E%E9%87%8F%E5%AF%BC%E5%87%BA">增量导出</h2>
+<blockquote>
+<p>将增量增加的文件导出给mysql</p>
+</blockquote>
+<h5 id="%E8%BF%9B%E5%85%A5/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin%E7%9B%AE%E5%BD%95%E4%B8%8B">进入/opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/sqoop-1.4.7.bin__hadoop-2.6.0/bin
+</code></pre>
+<h5 id="%E6%89%A7%E8%A1%8C%E5%AF%BC%E5%87%BA">执行导出</h5>
+<blockquote>
+<p>将part-m-00004导入nba_result表</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">./sqoop export --connect jdbc:mysql://LG04:3306/test --username root --password root --table nba_result --export-dir /data/to_hdfs_nba_key/part-m-00004 --fields-terminated-by ',' --lines-terminated-by '\n'
+</code></pre>
+<p><img src="image/image-20230613170252036.png" alt="image-20230613170252036" /></p>
+<p><img src="image/image-20230613170206574.png" alt="image-20230613170206574" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/doc2/九、sqoop安装.html">
+                            <span class="icon"></span>
+                            <span class="label">九、sqoop安装</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/doc2/实训项目随笔.html">
+                            <span class="label">实训项目随笔</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

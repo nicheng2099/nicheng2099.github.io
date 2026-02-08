@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>字段 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/Odoo/index.html"><span class="label">指令</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Link.html"><span class="label">链接</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Tool.html"><span class="label">工具</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/Odoo/Field.html"><span class="label">字段</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Class.html"><span class="label">样式</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/SQL.html"><span class="label">SQL</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">第三方模块</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Theme.html"><span class="label">主题</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="not_active no_link"><a><span class="label">随笔</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/Odoo/note/打印Excel(report_py3o).html"><span class="label">打印Excel(report_py3o)</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/弹窗提醒.html"><span class="label">弹窗提醒</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo提示模块.html"><span class="label">Odoo提示模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo安排活动.html"><span class="label">Odoo活动安排</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo计算字段添加搜索方法.html"><span class="label">Odoo计算字段添加搜索方法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/form视图固定tree行高.html"><span class="label">form视图固定tree行高</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/冻结tree视图第一列.html"><span class="label">冻结tree视图第一列</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo视图字段默认显示.html"><span class="label">Odoo视图字段默认显示</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo动态域设置.html"><span class="label">Odoo动态域设置</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>字段</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-10-20">
+                                    2025-10-20
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p>在 Odoo 中，字段（Field）是模型（Model）的核心元素，不同的字段类型用于存储不同类型的数据，而字段属性则用于定义其行为、约束、展示方式等。以下是 Odoo 中常用的<strong>字段类型</strong>和<strong>通用 / 专用属性</strong>的详细说明：</p>
+<h3 id="%E4%B8%80%E3%80%81%E5%B8%B8%E7%94%A8%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B">一、常用字段类型</h3>
+<p>Odoo 的字段类型可分为<strong>基础类型</strong>（存储简单数据）和<strong>关联类型</strong>（处理模型间关系），具体如下：</p>
+<h4 id="1.-%E5%9F%BA%E7%A1%80%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%EF%BC%88%E5%AD%98%E5%82%A8%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%EF%BC%89">1. 基础字段类型（存储简单数据）</h4>
+<table>
+<thead>
+<tr>
+  <th>字段类型</th>
+  <th>说明</th>
+  <th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Char</td>
+  <td>字符串（短文本），默认长度 512 字符，可通过 size 限制前端输入长度。</td>
+  <td>名称、手机号、编码</td>
+</tr>
+<tr>
+  <td>Text</td>
+  <td>长文本，无长度限制，适合存储描述、备注等大段文字。</td>
+  <td>产品描述、订单备注</td>
+</tr>
+<tr>
+  <td>Integer</td>
+  <td>整数（32 位），存储无小数的数值。</td>
+  <td>数量、年龄</td>
+</tr>
+<tr>
+  <td>Float</td>
+  <td>浮点数，可通过 digits 定义精度（整数位 + 小数位）。</td>
+  <td>价格、重量</td>
+</tr>
+<tr>
+  <td>Monetary</td>
+  <td>货币类型，需配合 currency_field 指定货币字段（关联 res.currency）。</td>
+  <td>订单金额、成本</td>
+</tr>
+<tr>
+  <td>Boolean</td>
+  <td>布尔值，存储 True/False（数据库中为 t/f）。</td>
+  <td>是否激活、是否含税</td>
+</tr>
+<tr>
+  <td>Date</td>
+  <td>日期类型（YYYY-MM-DD），前端显示为日期选择器。</td>
+  <td>生日、订单日期</td>
+</tr>
+<tr>
+  <td>Datetime</td>
+  <td>日期时间类型（YYYY-MM-DD HH:MM:SS），包含时间信息。</td>
+  <td>创建时间、最后更新时间</td>
+</tr>
+<tr>
+  <td>Binary</td>
+  <td>二进制数据，用于存储文件（如图片、文档），需注意数据库存储压力。</td>
+  <td>产品图片、附件</td>
+</tr>
+<tr>
+  <td>Selection</td>
+  <td>下拉选择框，值为预定义的选项列表（[(key, value), ...]）。</td>
+  <td>订单状态（草稿 / 确认 / 取消）</td>
+</tr>
+<tr>
+  <td>Html</td>
+  <td>富文本类型，支持 HTML 格式，前端显示为富文本编辑器。</td>
+  <td>邮件内容、富文本说明</td>
+</tr>
+<tr>
+  <td>Many2one</td>
+  <td>多对一关联（如 “订单” 关联 “客户”，多个订单对应一个客户）。</td>
+  <td>订单→客户、员工→部门</td>
+</tr>
+<tr>
+  <td>One2many</td>
+  <td>一对多关联（如 “客户” 关联 “订单”，一个客户对应多个订单），依赖 Many2one 反向定义。</td>
+  <td>客户→订单、部门→员工</td>
+</tr>
+<tr>
+  <td>Many2many</td>
+  <td>多对多关联（如 “产品” 关联 “标签”，一个产品可多个标签，一个标签可多个产品），通过中间表实现。</td>
+  <td>产品→标签、学生→课程</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2.-%E7%89%B9%E6%AE%8A%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B">2. 特殊字段类型</h4>
+<table>
+<thead>
+<tr>
+  <th>字段类型</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Related</td>
+  <td>关联映射字段，通过已有关联字段引用目标模型的字段（值自动同步），本质是 Many2one/One2many 的快捷方式。</td>
+</tr>
+<tr>
+  <td>Computed</td>
+  <td>计算字段，通过 compute 方法动态计算值，不直接存储（可通过 store=True 存储）。</td>
+</tr>
+<tr>
+  <td>Reference</td>
+  <td>动态关联字段，可关联任意模型的记录（如 “消息” 关联 “订单” 或 “客户”），值格式为 model_name,id。</td>
+</tr>
+<tr>
+  <td>Property</td>
+  <td>企业级多公司字段，不同公司可设置不同值（需配合 res.company 使用）。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E4%BA%8C%E3%80%81%E5%AD%97%E6%AE%B5%E7%9A%84%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7">二、字段的核心属性</h3>
+<p>字段属性分为<strong>通用属性</strong>（所有字段适用）和<strong>专用属性</strong>（特定类型字段专用），以下是常用属性：</p>
+<h4 id="1.-%E9%80%9A%E7%94%A8%E5%B1%9E%E6%80%A7%EF%BC%88%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%E9%80%82%E7%94%A8%EF%BC%89">1. 通用属性（所有字段适用）</h4>
+<table>
+<thead>
+<tr>
+  <th>属性名</th>
+  <th>说明</th>
+  <th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>string</td>
+  <td>字段在视图中显示的标签名称。</td>
+  <td>string=&quot;客户名称&quot;</td>
+</tr>
+<tr>
+  <td>required</td>
+  <td>布尔值，是否为必填项（默认 False）。</td>
+  <td>required=True</td>
+</tr>
+<tr>
+  <td>readonly</td>
+  <td>布尔值，是否为只读（默认 False）。</td>
+  <td>readonly=True</td>
+</tr>
+<tr>
+  <td>default</td>
+  <td>默认值，可为固定值或返回值的函数（lambda 或方法）。</td>
+  <td>default=0 或 default=lambda self: fields.Date.today()</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>帮助文本，鼠标悬停时显示提示。</td>
+  <td>help=&quot;请输入有效的邮箱地址&quot;</td>
+</tr>
+<tr>
+  <td>groups</td>
+  <td>限制可见 / 编辑权限的用户组（多个组用逗号分隔）。</td>
+  <td>groups=&quot;base.group_system, my_module.group_manager&quot;</td>
+</tr>
+<tr>
+  <td>states</td>
+  <td>根据记录状态（state 字段）动态设置 readonly/required。</td>
+  <td>states={'draft': [('readonly', False)], 'done': [('readonly', True)]}</td>
+</tr>
+<tr>
+  <td>copy</td>
+  <td>复制记录时是否复制该字段（默认 True）。</td>
+  <td>copy=False（如订单编号不复制）</td>
+</tr>
+<tr>
+  <td>index</td>
+  <td>是否为字段创建数据库索引（加速查询，默认 False）。</td>
+  <td>index=True</td>
+</tr>
+<tr>
+  <td>tracking</td>
+  <td>整数，字段变更时是否记录跟踪日志（0 不跟踪，值越大优先级越高）。</td>
+  <td>tracking=1</td>
+</tr>
+<tr>
+  <td>translate</td>
+  <td>布尔值，是否支持多语言翻译（仅 Char/Text/Html 适用，默认 False）。</td>
+  <td>translate=True</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2.-%E4%B8%93%E7%94%A8%E5%B1%9E%E6%80%A7%EF%BC%88%E6%8C%89%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E5%88%86%E7%B1%BB%EF%BC%89">2. 专用属性（按字段类型分类）</h4>
+<h5 id="%EF%BC%881%EF%BC%89%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B%E4%B8%93%E7%94%A8%E5%B1%9E%E6%80%A7">（1）基础类型专用属性</h5>
+<table>
+<thead>
+<tr>
+  <th>字段类型</th>
+  <th>专用属性</th>
+  <th>说明</th>
+  <th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Char</td>
+  <td>size</td>
+  <td>前端输入框长度限制（数据库仍存储 512 字符）。</td>
+  <td>size=50</td>
+</tr>
+<tr>
+  <td>Char/Text</td>
+  <td>placeholder</td>
+  <td>输入框占位提示文本（Odoo 12+ 支持）。</td>
+  <td>placeholder=&quot;请输入手机号&quot;</td>
+</tr>
+<tr>
+  <td>Float/Monetary</td>
+  <td>digits</td>
+  <td>数值精度（元组 (整数位, 小数位)）。</td>
+  <td>digits=(10, 2)（10 位整数 + 2 位小数）</td>
+</tr>
+<tr>
+  <td>Monetary</td>
+  <td>currency_field</td>
+  <td>关联的货币字段（如 'currency_id'，需关联 res.currency）。</td>
+  <td>currency_field='currency_id'</td>
+</tr>
+<tr>
+  <td>Selection</td>
+  <td>selection</td>
+  <td>下拉选项列表（[(key, value), ...]），可为方法动态返回。</td>
+  <td>selection=[('draft', '草稿'), ('done', '完成')]</td>
+</tr>
+<tr>
+  <td>Selection</td>
+  <td>selection_add</td>
+  <td>继承模型时，在原有选项基础上添加新选项。</td>
+  <td>selection_add=[('cancel', '取消')]</td>
+</tr>
+</tbody>
+</table>
+<h5 id="%EF%BC%882%EF%BC%89%E5%85%B3%E8%81%94%E7%B1%BB%E5%9E%8B%E4%B8%93%E7%94%A8%E5%B1%9E%E6%80%A7%EF%BC%88Many2one/One2many/Many2many%EF%BC%89">（2）关联类型专用属性（Many2one/One2many/Many2many）</h5>
+<table>
+<thead>
+<tr>
+  <th>字段类型</th>
+  <th>专用属性</th>
+  <th>说明</th>
+  <th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>所有关联类型</td>
+  <td>comodel_name</td>
+  <td>关联的目标模型名称（One2many/Many2many 必选）。</td>
+  <td>comodel_name='res.partner'</td>
+</tr>
+<tr>
+  <td>One2many</td>
+  <td>inverse_name</td>
+  <td>目标模型中关联当前模型的 Many2one 字段名（必选）。</td>
+  <td>inverse_name='order_id'（订单行关联订单）</td>
+</tr>
+<tr>
+  <td>Many2many</td>
+  <td>relation</td>
+  <td>自定义中间表名称（默认自动生成 model1_model2）。</td>
+  <td>relation='product_tag_rel'</td>
+</tr>
+<tr>
+  <td>Many2many</td>
+  <td>column1/column2</td>
+  <td>中间表中当前模型 ID 和目标模型 ID 的字段名（默认 'id'）。</td>
+  <td>column1='product_id', column2='tag_id'</td>
+</tr>
+<tr>
+  <td>所有关联类型</td>
+  <td>domain</td>
+  <td>过滤关联记录的条件列表（如只显示特定类型的记录）。</td>
+  <td>domain=[('is_company', '=', True)]（只显示公司）</td>
+</tr>
+<tr>
+  <td>所有关联类型</td>
+  <td>context</td>
+  <td>传递给关联字段的上下文（影响默认值、视图过滤等）。</td>
+  <td>context={'default_type': 'customer'}</td>
+</tr>
+<tr>
+  <td>所有关联类型</td>
+  <td>auto_join</td>
+  <td>是否自动生成 SQL JOIN（优化查询性能，默认 False）。</td>
+  <td>auto_join=True</td>
+</tr>
+<tr>
+  <td>Many2one</td>
+  <td>ondelete</td>
+  <td>主记录删除时的处理策略（'cascade' 级联删除、'set null' 设为空、'restrict' 禁止删除）。</td>
+  <td>ondelete='cascade'</td>
+</tr>
+<tr>
+  <td>Many2one</td>
+  <td>delegate</td>
+  <td>是否 “委托继承” 目标模型的字段（类似组合式继承，默认 False）。</td>
+  <td>delegate=True（当前模型可直接使用目标模型字段）</td>
+</tr>
+</tbody>
+</table>
+<h5 id="%EF%BC%883%EF%BC%89%E8%AE%A1%E7%AE%97%E5%AD%97%E6%AE%B5%E4%B8%93%E7%94%A8%E5%B1%9E%E6%80%A7%EF%BC%88Computed%EF%BC%89">（3）计算字段专用属性（Computed）</h5>
+<table>
+<thead>
+<tr>
+  <th>属性名</th>
+  <th>说明</th>
+  <th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>compute</td>
+  <td>计算字段值的方法名（必选）。</td>
+  <td>compute='_compute_total'</td>
+</tr>
+<tr>
+  <td>inverse</td>
+  <td>允许手动编辑计算字段的反向方法（可选）。</td>
+  <td>inverse='_inverse_total'</td>
+</tr>
+<tr>
+  <td>depends</td>
+  <td>计算依赖的字段（依赖字段变化时重新计算）。</td>
+  <td>depends=['quantity', 'price_unit']</td>
+</tr>
+<tr>
+  <td>store</td>
+  <td>是否将计算结果存储到数据库（默认 False，实时计算）。</td>
+  <td>store=True</td>
+</tr>
+<tr>
+  <td>compute_sudo</td>
+  <td>计算时是否以管理员权限执行（忽略当前用户权限，默认 False）。</td>
+  <td>compute_sudo=True</td>
+</tr>
+<tr>
+  <td>search</td>
+  <td>定义计算字段的搜索逻辑（默认不可搜索）。</td>
+  <td>search='_search_total'</td>
+</tr>
+</tbody>
+</table>
+<h3 id="%E4%B8%89%E3%80%81%E6%80%BB%E7%BB%93">三、总结</h3>
+<ul>
+<li><p><strong>字段类型</strong>决定了数据的存储格式和基础行为（如 Char 存字符串，Many2one 处理关联）。</p>
+</li>
+<li><p><strong>字段属性</strong>用于精细化控制（如 required 限制必填，ondelete 控制级联删除，compute 实现动态计算）。</p>
+</li>
+</ul>
+<p>根据业务需求选择合适的字段类型和属性组合，是构建 Odoo 模型的核心步骤。例如：订单金额用 Monetary 类型并指定货币精度，订单与客户的关联用 Many2one 并设置 ondelete='restrict' 避免误删客户导致订单孤立。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/Odoo/Tool.html">
+                            <span class="icon"></span>
+                            <span class="label">工具</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/Odoo/Widget.html">
+                            <span class="label">小部件</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>

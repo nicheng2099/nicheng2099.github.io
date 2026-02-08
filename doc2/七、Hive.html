@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Hive - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/Odoo/">Odoo</a></li>
+<li class="active"><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/doc2/index.html"><span class="label">一、虚拟机的安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/二、配置主机名并添加ip映射.html"><span class="label">二、配置主机名并添加ip映射</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/三、配置Java环境.html"><span class="label">三、配置Java环境</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/四、克隆主机.html"><span class="label">四、克隆主机</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/五、配置免密ssh.html"><span class="label">五、配置免密ssh</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/六、Hadoop安装.html"><span class="label">六、Hadoop安装</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/doc2/七、Hive.html"><span class="label">七、Hive</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/八、hive的相关操作.html"><span class="label">八、hive的相关操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/九、sqoop安装.html"><span class="label">九、sqoop安装</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/十、sqoop的操作.html"><span class="label">十、sqoop的操作</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/实训项目随笔.html"><span class="label">实训项目随笔</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/项目.html"><span class="label">项目</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/视频网址.html"><span class="label">视频网址</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/doc2/草稿.html"><span class="label">草稿</span><span class=""></span></a></li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Hive</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2025-09-26">
+                                    2025-09-26
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <blockquote>
+<p>hive是基于Hadoop的一个数据仓库工具，用来进行数据提取、转化、加载，这是一种可以存储、查询和分析存储在Hadoop中的大规模数据的机制。hive数据仓库工具能将结构化的数据文件映射为一张数据库表，并提供SQL查询功能，能将SQL语句转变成MapReduce任务来执行。Hive的优点是学习成本低，可以通过类似SQL语句实现快速MapReduce统计，使MapReduce变得更加简单，而不必开发专门的MapReduce应用程序。hive十分适合对数据仓库进行统计分析。</p>
+</blockquote>
+<h3 id="hadoop%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C">hadoop文件操作</h3>
+<h5 id="%E5%9C%A8LG04%E4%B8%AD%E5%90%AF%E5%8A%A8dfs-%E5%9C%A8LG06%E4%B8%AD%E5%90%AF%E5%8A%A8yarm">在LG04中启动dfs 在LG06中启动yarm</h5>
+
+<pre class="language-none"><code class="language-none">/opt/apps/hadoop-2.7.2/sbin/start-dfs.sh
+/opt/apps/hadoop-2.7.2/sbin/start-yarn.sh
+</code></pre>
+<p><img src="image/image-20230610140839910.png" alt="image-20230610140839910" /></p>
+<p><img src="image/image-20230610141413998.png" alt="image-20230610141413998" /></p>
+<h5 id="%E5%9C%A8bin%E4%B8%AD%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9test">在bin中创建文件夹test</h5>
+
+<pre class="language-none"><code class="language-none">./hdfs dfs -mkdir /test
+</code></pre>
+<p><img src="image/image-20230610141556002.png" alt="image-20230610141556002" /></p>
+<p><img src="image/image-20230610141620570.png" alt="image-20230610141620570" /></p>
+<h5 id="%E5%9C%A8bin%E4%B8%AD%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6">在bin中上传文件</h5>
+
+<pre class="language-none"><code class="language-none">./hdfs dfs -put /opt/apps/data.txt /test
+
+//其中的-put将put换成linux文件指令就可操作文件
+</code></pre>
+<p><img src="image/image-20230610142444823.png" alt="image-20230610142444823" /></p>
+<p><img src="image/image-20230610142431601.png" alt="image-20230610142431601" /></p>
+<h3 id="%E5%AE%89%E8%A3%85hive">安装hive</h3>
+<h5 id="%E5%B0%86hive%E5%AE%89%E8%A3%85%E5%8C%85%E6%94%BE%E5%85%A5/opt/soft">将hive安装包放入/opt/soft</h5>
+<p><img src="image/image-20230610143344125.png" alt="image-20230610143344125" /></p>
+<h5 id="%E8%A7%A3%E5%8E%8B%E5%88%B0/opt/apps">解压到/opt/apps</h5>
+
+<pre class="language-none"><code class="language-none">tar -zxvf ./apache-hive-1.2.2-bin.tar.gz -C /opt/apps/
+</code></pre>
+<p><img src="image/image-20230610143453022.png" alt="image-20230610143453022" /></p>
+<h5 id="%E5%88%B0%E8%A7%A3%E5%8E%8B%E7%9A%84%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E4%B8%8B">到解压的文件目录下</h5>
+<p><img src="image/image-20230610143631621.png" alt="image-20230610143631621" /></p>
+<h3 id="%E5%AE%89%E8%A3%85Mysql">安装Mysql</h3>
+<h5 id="%E6%89%BE%E5%87%BArpm%E4%B8%AD%E5%8E%9F%E6%9D%A5%E7%9A%84mysql%E5%8C%85%E5%B9%B6%E5%8D%B8%E8%BD%BD">找出rpm中原来的mysql包并卸载</h5>
+
+<pre class="language-none"><code class="language-none">rpm -qa|grep mysql
+
+rpm -e --nodeps mysql-libs-5.1.73-5.el6_6.x86_64
+</code></pre>
+<p><img src="image/image-20230610144924385.png" alt="image-20230610144924385" /></p>
+<h5 id="%E5%B0%86MySQL%E7%9A%84%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E7%AB%AF%E3%80%81%E9%A9%B1%E5%8A%A8%E6%94%BE%E5%85%A5/opt/soft/%E4%B8%AD%E5%B9%B6%E5%AE%89%E8%A3%85">将MySQL的客户端、服务端、驱动放入/opt/soft/中并安装</h5>
+<blockquote>
+<p>先安装服务端，在安装客户端，最后启动</p>
+<p>mysql只启动这一次，以后不用再重启</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">rpm -ivh ./MySQL-server-5.5.47-1.linux2.6.x86_64.rpm
+rpm -ivh ./MySQL-client-5.5.47-1.linux2.6.x86_64.rpm
+service mysql start
+</code></pre>
+<p><img src="image/image-20230610150732374.png" alt="image-20230610150732374" /></p>
+<p><img src="image/image-20230610145613650.png" alt="image-20230610145613650" /></p>
+<h5 id="%E8%BF%9B%E5%85%A5mysql">进入mysql</h5>
+
+<pre class="language-none"><code class="language-none">mysql
+</code></pre>
+<p><img src="image/image-20230610153058295.png" alt="image-20230610153058295" /></p>
+
+<pre class="language-none"><code class="language-none">show databases;
+use test;
+show tables;
+</code></pre>
+<p><img src="image/image-20230610153316621.png" alt="image-20230610153316621" /></p>
+<h5 id="%E8%AE%BE%E7%BD%AEmysql%E5%AF%86%E7%A0%81">设置mysql密码</h5>
+
+<pre class="language-none"><code class="language-none">mysqladmin -u root password &quot;root&quot;
+mysql -uroot -proot
+</code></pre>
+<p><img src="image/image-20230610153438400.png" alt="image-20230610153438400" /></p>
+<h5 id="%E4%BD%BF%E7%94%A8mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84user%E8%A1%A8">使用mysql数据库中的user表</h5>
+
+<pre class="language-none"><code class="language-none">show databases;
+use mysql;
+show tables;
+</code></pre>
+<p><img src="image/image-20230619164358128.png" alt="image-20230619164358128" /></p>
+<h5 id="%E6%9F%A5%E8%AF%A2user%E8%A1%A8%E4%B8%AD%E7%9A%84host%E3%80%81user%E3%80%81password%E6%95%B0%E6%8D%AE">查询user表中的host、user、password数据</h5>
+<blockquote>
+<p>mysql用户登录的密码</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">select host,user,password from user;
+</code></pre>
+<p><img src="image/image-20230619164641999.png" alt="image-20230619164641999" /></p>
+<h5 id="%E4%BF%AE%E6%94%B9host%E4%B8%BALG02%E7%9A%84password%E5%80%BC%E4%B8%BAlocalhost%E7%9A%84password%E5%80%BC">修改host为LG02的password值为localhost的password值</h5>
+<blockquote>
+<p>让root用户登录LG02</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">update user set password=&quot;*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B&quot; where host=&quot;lg02&quot; and user=&quot;root&quot;;
+</code></pre>
+<p><img src="image/image-20230619165142409.png" alt="image-20230619165142409" /></p>
+<h5 id="%E5%88%B7%E6%96%B0%E6%89%80%E6%9C%89%E7%9A%84%E6%9D%83%E9%99%90">刷新所有的权限</h5>
+<blockquote>
+<p>无论什么主机都能使用密码登录mysql</p>
+</blockquote>
+
+<pre class="language-none"><code class="language-none">grant all privileges on *.* to 'root'@'%' identified by 'root';
+flush privileges;
+</code></pre>
+<p><img src="image/image-20230619165610030.png" alt="image-20230619165610030" /></p>
+
+<pre class="language-none"><code class="language-none">cp /usr/share/mysql/my-medium.cnf /etc/my.cnf
+vim /etc/my.cnf
+character_set_server = utf8
+</code></pre>
+<p><img src="image/image-20230610154737778.png" alt="image-20230610154737778" /></p>
+
+<pre class="language-none"><code class="language-none">service mysql restart
+</code></pre>
+<p><img src="image/image-20230610154839207.png" alt="image-20230610154839207" /></p>
+<h5 id="%E5%9C%A8Navicat%E4%B8%AD%E9%93%BE%E6%8E%A5LG04%E4%B8%AD%E7%9A%84mysql">在Navicat中链接LG04中的mysql</h5>
+<p><img src="image/image-20230610155157814.png" alt="image-20230610155157814" /></p>
+<h3 id="%E9%85%8D%E7%BD%AEHive">配置Hive</h3>
+<h5 id="%E8%BF%9B%E5%85%A5/opt/apps/apache-hive-1.2.2-bin/conf%E7%9B%AE%E5%BD%95%E4%B8%8B">进入/opt/apps/apache-hive-1.2.2-bin/conf目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/apache-hive-1.2.2-bin/conf
+</code></pre>
+<h5 id="%E5%B0%86hive-env.sh.template%E9%87%8D%E5%91%BD%E5%90%8D%E4%B8%BAhive-env.sh%E5%B9%B6%E7%BC%96%E8%BE%91">将hive-env.sh.template重命名为hive-env.sh并编辑</h5>
+
+<pre class="language-none"><code class="language-none">mv ./hive-env.sh.template ./hive-env.sh
+vim hive-env.sh
+</code></pre>
+<p><img src="image/image-20230610155812018.png" alt="image-20230610155812018" /></p>
+<h5 id="%E8%BF%9B%E5%85%A5-vim-hive-default.xml.template%E5%A4%8D%E5%88%B6%E5%A4%B4%E6%A0%87%E7%AD%BE">进入 vim hive-default.xml.template复制头标签</h5>
+
+<pre class="language-none"><code class="language-none"> vim hive-default.xml.template
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;configuration.xsl&quot;?&gt;
+</code></pre>
+<h5 id="%E5%88%9B%E5%BB%BAhive-site.xml%E6%96%87%E4%BB%B6">创建hive-site.xml文件</h5>
+
+<pre class="language-none"><code class="language-none">vim hive-site.xml
+将头文件复制在hive-site.xml文件中
+</code></pre>
+
+<pre class="language-none"><code class="language-none">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;?xml-stylesheet type=&quot;text/xsl&quot; href=&quot;configuration.xsl&quot;?&gt;
+
+&lt;configuration&gt;
+&lt;property&gt;
+        &lt;name&gt;hive.metastore.uris&lt;/name&gt;
+        &lt;value&gt;thrift://LG04:9083&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;hive.metastore.warehouse.dir&lt;/name&gt;
+        &lt;value&gt;/user/hive/warehouse&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;hive.metastore.schema.verification&lt;/name&gt;
+        &lt;value&gt;false&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;
+        &lt;value&gt;jdbc:mysql://LG04:3306/hive?createDatabaseIfNotExist=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;
+        &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;
+        &lt;value&gt;root&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;
+        &lt;value&gt;root&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;hive.cli.print.current.db&lt;/name&gt;
+        &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+        &lt;name&gt;hive.cli.print.header&lt;/name&gt;
+        &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+&lt;/configuration&gt;
+</code></pre>
+<h5 id="%E8%BF%9B%E5%85%A5/opt/apps/apache-hive-1.2.2-bin/lib%E7%9B%AE%E5%BD%95%EF%BC%8C%E5%B9%B6%E5%B0%86%E9%A9%B1%E5%8A%A8%E5%A4%8D%E5%88%B6%E5%88%B0%E8%AF%A5%E7%9B%AE%E5%BD%95%E4%B8%8B">进入/opt/apps/apache-hive-1.2.2-bin/lib目录，并将驱动复制到该目录下</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/apache-hive-1.2.2-bin/lib
+cp /opt/soft/mysql-connector-java-5.1.31.jar ./
+</code></pre>
+<p><img src="image/image-20230610181120681.png" alt="image-20230610181120681" /></p>
+<h5 id="%E5%8E%BB/opt/apps/apache-hive-1.2.2-bin/bin%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%A7%E8%A1%8C./schematool--dbType-mysql--initSchema">去/opt/apps/apache-hive-1.2.2-bin/bin目录下执行./schematool -dbType mysql -initSchema</h5>
+
+<pre class="language-none"><code class="language-none">cd /opt/apps/apache-hive-1.2.2-bin/bin
+./schematool -dbType mysql -initSchema
+</code></pre>
+<p><img src="image/image-20230610180618493.png" alt="image-20230610180618493" /></p>
+<p><img src="image/image-20230610180659939.png" alt="image-20230610180659939" /></p>
+<p><img src="image/image-20230610181230153.png" alt="image-20230610181230153" /></p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/doc2/六、Hadoop安装.html">
+                            <span class="icon"></span>
+                            <span class="label">六、Hadoop安装</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/doc2/八、hive的相关操作.html">
+                            <span class="label">八、hive的相关操作</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
