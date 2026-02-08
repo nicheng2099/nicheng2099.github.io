@@ -39,4 +39,6 @@ items:
         file: note/冻结tree视图第一列.md
     -   label: Odoo视图字段默认显示
         file: note/Odoo视图字段默认显示.md
+    -   label: Odoo动态域设置
+        file: note/Odoo动态域设置.md
 
