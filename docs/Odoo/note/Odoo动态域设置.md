@@ -5,6 +5,8 @@
 参考代码
 
 ```python
+from odoo.osv import expression
+
 def get_production_domain(self):
     domain = [
         ('company_id', '=', self.company_id.id),
