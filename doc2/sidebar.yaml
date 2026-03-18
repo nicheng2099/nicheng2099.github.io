@@ -1,0 +1,30 @@
+items:
+-   label: 一、虚拟机的安装
+    file: README.md
+-   label: 二、配置主机名并添加ip映射
+    file: 二、配置主机名并添加ip映射.md
+-   label: 三、配置Java环境
+    file: 三、配置Java环境.md
+-   label: 四、克隆主机
+    file: 四、克隆主机.md
+-   label: 五、配置免密ssh
+    file: 五、配置免密ssh.md
+-   label: 六、Hadoop安装
+    file: 六、Hadoop安装.md
+-   label: 七、Hive
+    file: 七、Hive.md
+-   label: 八、hive的相关操作
+    file: 八、hive的相关操作.md
+-   label: 九、sqoop安装
+    file: 九、sqoop安装.md
+-   label: 十、sqoop的操作
+    file: 十、sqoop的操作.md
+-   label: 实训项目随笔
+    file: 实训项目随笔.md
+-   label: 项目
+    file: 项目.md
+-   label: 视频网址
+    file: 视频网址.md
+-   label: 草稿
+    file: 草稿.md
+

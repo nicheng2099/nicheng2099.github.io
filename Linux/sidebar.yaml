@@ -1,0 +1,34 @@
+items:
+-   label: linux学习
+    file: README.md
+-   label: linux mysql 操作命令
+    file: linux mysql 操作命令.md
+-   label: CentOS 7 yum安装 MySQL 5.7
+    file: CentOS 7 yum安装 MySQL 5.7.md
+-   label: 在Ubuntu上安装PostgreSQL 13
+    file: 在Ubuntu上安装PostgreSQL 13.md
+-   label: lvs
+    file: lvs.md
+-   label: lvs实操
+    file: lvs实操.md
+-   label: 克隆模板机
+    file: 克隆模板机.md
+-   label: NFS网络文件
+    file: NFS网络文件.md
+-   label: Nginx
+    collapsed: true
+    items:
+        -  label: Nginx安装部署
+           file: Nginx/README.md
+-   label: Docker
+    collapsed: true
+    items:
+    -   label: Docker安装
+        file: Docker/README.md
+    -   label: Docker部署Nginx(简单案例)
+        file: Docker/Docker部署Nginx.md
+-   label: Grafana
+    collapsed: true
+    items:
+        -  label: 在Ubuntu上部署Grafana
+           file: Grafana/在Ubuntu上部署Grafana.md

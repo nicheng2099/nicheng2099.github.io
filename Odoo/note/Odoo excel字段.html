@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"  class="">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="">
+    
+    
+    <meta name="description" content="">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Odoo excel字段 - DOC</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": [], "date": null, "update": [], "ts": 0, "author": "", "brief": "", "cover": ""}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                    <img class="site_logo" src="/static/image/logo2.png" alt="/">
+                
+                
+                    <h2>笔记</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class="active"><a  href="/Odoo/">Odoo</a></li>
+<li class=""><a  href="/doc2/">大数据</a></li>
+<li class=""><a  href="/Linux/">Linux</a></li>
+<li class=""><a  href="/Python/">Python</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+<li class=""><a  href="/Link/">收藏的链接</a></li>
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/Odoo/index.html"><span class="label">指令</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Link.html"><span class="label">链接</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Tool.html"><span class="label">工具</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Field.html"><span class="label">字段</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/Class.html"><span class="label">样式</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/SQL.html"><span class="label">SQL</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">第三方模块</span><span class="sub_indicator sub_indicator_collapsed"></span></a><ul class="">
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Widget.html"><span class="label">小部件</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/third_party_modules/Theme.html"><span class="label">主题</span><span class=""></span></a></li>
+</ul>
+</li>
+<li class="active_parent no_link"><a><span class="label">随笔</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/Odoo/note/打印Excel(report_py3o).html"><span class="label">打印Excel(report_py3o)</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/弹窗提醒.html"><span class="label">弹窗提醒</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo提示模块.html"><span class="label">Odoo提示模块</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo安排活动.html"><span class="label">Odoo活动安排</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo计算字段添加搜索方法.html"><span class="label">Odoo计算字段添加搜索方法</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/form视图固定tree行高.html"><span class="label">form视图固定tree行高</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/冻结tree视图第一列.html"><span class="label">冻结tree视图第一列</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo视图字段默认显示.html"><span class="label">Odoo视图字段默认显示</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/Odoo/note/Odoo动态域设置.html"><span class="label">Odoo动态域设置</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/Odoo/note/Odoo excel字段.html"><span class="label">Odoo excel字段</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Odoo excel字段</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2026-03-18">
+                                    2026-03-18
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%8A%A8%E6%80%81excel%E5%AD%97%E6%AE%B5">动态excel字段</h2>
+<ol>
+<li><p>继承html.table.mixin模型</p>
+
+<pre class="language-python"><code class="language-python">_inherit = 'html.table.mixin'
+</code></pre>
+</li>
+<li><p>重写_prepare_table_data方法</p>
+
+<pre class="language-python"><code class="language-python">def _prepare_table_data(self):
+ title_format = 'font-weight: bold;'
+    self.fill_cell(1, 1, '在第1行第1列插入字段', title_format)
+</code></pre>
+</li>
+<li><p>在视图引用table_html</p>
+
+<pre class="language-xml"><code class="language-xml">&lt;group col=&quot;1&quot;&gt;
+    &lt;label for=&quot;table_html&quot; string=&quot;汇总&quot;/&gt;
+    &lt;div class=&quot;o_row&quot;&gt;
+        &lt;field name=&quot;table_html&quot; widget=&quot;html&quot;&gt;&lt;/field&gt;
+    &lt;/div&gt;
+&lt;/group&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="%E5%AD%98%E5%82%A8excel%E5%AD%97%E6%AE%B5">存储excel字段</h2>
+<ol>
+<li><p>继承html.table.mixin模型</p>
+
+<pre class="language-python"><code class="language-python">_inherit = 'html.table.mixin'
+</code></pre>
+</li>
+<li><p>在方法中调用_set_table_html_store_header和_add_table_html_store_rows方法添加表头和数据</p>
+
+<pre class="language-python"><code class="language-python"># 示例
+def add_sample_data(self):
+     # 设置表头
+     headers = ['编码', '名称', '价格']
+     self.table_html_store = self._set_table_html_store_header(headers)
+
+     # 添加数据
+     data = [
+         ['P001', '产品A', '100'],
+         ['P002', '产品B', '200'],
+     ]
+
+     self._add_table_html_store_rows(data)
+</code></pre>
+</li>
+<li><p>在视图引用table_html_store</p>
+
+<pre class="language-xml"><code class="language-xml">&lt;field name=&quot;table_html_store&quot; widget=&quot;html&quot; readonly=&quot;1&quot;/&gt;
+</code></pre>
+</li>
+</ol>
+<h2 id="%E6%BA%90%E4%BB%A3%E7%A0%81">源代码</h2>
+
+<pre class="language-python"><code class="language-python"># -*- coding: utf-8 -*-
+from odoo import models, fields
+import re
+
+DATA_ROW_STYLE = &quot;&quot;&quot;
+&lt;style&gt;
+    .table-container {
+        width: 100%;
+    }
+    .table-container table {
+        width: 100%; 
+        border-collapse: collapse; 
+        font-size: 12px; 
+        border: 1px solid #ddd;
+    }
+    .table-container table thead tr th {
+        border: 1px solid #4CAF50; 
+        background-color: #f5f5f5; 
+        font-weight: bold; 
+        position: sticky; 
+        top: 0;
+    }
+    .table-container table thead tr th:first-child {
+        width: 50px;
+    }
+    .table-container table tbody tr td {
+        padding: 6px;
+        border: 1px solid #ddd;
+    }
+    .table-container table tbody tr td:first-child {
+        text-align: center;
+    }
+    .table-container table tbody tr td:not(:first-child) {
+        text-align: left;
+    }
+&lt;/style&gt;
+&quot;&quot;&quot;
+
+def _generate_table_html(table_data, rows, cols):
+    html = '''
+    &lt;table border-collapse: collapse;style=&quot;width: 100%;margin: 0; padding: 10;&quot;&gt;
+        &lt;tbody&gt;
+    '''
+    for row in range(rows):
+        html += f'&lt;tr&gt;'
+        for col in range(cols):
+            cell_key = f'{row}_{col}'
+            cell_info = table_data.get(cell_key, {})
+            cell_value = cell_info.get('data', '') if isinstance(cell_info, dict) else cell_info
+            cell_style = cell_info.get('style', '') if isinstance(cell_info, dict) else ''
+            style_attr = f' style=&quot;{cell_style}&quot;' if cell_style else ''
+            html += f'&lt;td {style_attr}&gt;{cell_value}&lt;/td&gt;'
+        html += '&lt;/tr&gt;'
+    html += '''
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+    '''
+
+    return html
+
+
+def _calculate_table_size(table_data):
+    max_rows = 0
+    max_cols = 0
+
+    for key in table_data:
+        if '_' in key:
+            try:
+                row, col = map(int, key.split('_'))
+                max_rows = max(max_rows, row + 1)
+                max_cols = max(max_cols, col + 1)
+            except Exception as e:
+                raise ValueError(f'表格数据传值错误：{str(e)}')
+
+    return max_rows, max_cols
+
+
+class HtmlTableMixin(models.AbstractModel):
+    _name = 'html.table.mixin'
+    _description = 'HTML Table Mixin'
+    _abstract = True
+
+    # 动态table
+    table_html = fields.Html(string='Table HTML', compute='_compute_table_html')
+    table_data = fields.Json(string='Table Data', compute='_prepare_table_data', help='表格数据，JSON格式')
+
+    def _compute_table_html(self):
+        for record in self:
+            record.table_data = {}
+            record._prepare_table_data()
+            table_data = record.table_data or {}
+            max_rows, max_cols = _calculate_table_size(table_data)
+            max_rows = max(max_rows, 1)
+            max_cols = max(max_cols, 1)
+            record.table_html = _generate_table_html(table_data, max_rows, max_cols)
+
+    def _prepare_table_data(self):
+        &quot;&quot;&quot;
+        准备表格数据
+
+        子类应重写此方法，在此方法内调用 fill_cell 填充数据
+        表格 table_html 会自动根据填充的数据生成
+        &quot;&quot;&quot;
+        self.fill_cell(0, 0, None, None)
+
+    # 填入数据的方法
+    def fill_cell(self, row, col, data, style=None):
+        self.ensure_one()
+        if row &lt; 0 or col &lt; 0:
+            raise ValueError('表格数据的行和列必须大于零')
+        table_data = self.table_data or {}
+        table_data[f'{row}_{col}'] = {
+            'data': data,
+            'style': style
+        }
+        self.table_data = table_data
+
+    # 存储table
+    table_html_store = fields.Html(string='Table HTML Store', sanitize=False)
+
+    def _set_table_html_store_header(self, column_names):
+        &quot;&quot;&quot;
+            ['ID', '名称', '值']
+        &quot;&quot;&quot;
+        if not column_names:
+            self.table_html_store = &quot;&quot;
+            return
+
+        # 设置表头
+        header_cells = (
+            '&lt;th&gt;序号&lt;/th&gt;' + &quot;&quot;.join([f'&lt;th&gt;{col}&lt;/th&gt;' for col in column_names])
+        )
+        # 定义table
+        html = f&quot;&quot;&quot;
+            {DATA_ROW_STYLE}
+            &lt;div class=&quot;table-container&quot;&gt;
+                &lt;table&gt;
+                    &lt;thead&gt;&lt;tr&gt;{header_cells}&lt;/tr&gt;&lt;/thead&gt;
+                    &lt;tbody&gt;&lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &quot;&quot;&quot;
+
+        self.write({'table_html_store': html})
+
+    def _add_table_html_store_row(self, row_data):
+        &quot;&quot;&quot;
+            ['P001', '产品A', '100']
+        &quot;&quot;&quot;
+        html_content = self.table_html_store or &quot;&quot;
+        if not html_content or '&lt;table' not in html_content:
+            # 无表格则创建基本表头
+            column_names = [f'列{i + 1}' for i in range(len(row_data))]
+            self._set_table_html_store_header(column_names)
+            html_content = self.table_html_store
+
+        # 计算当前行数
+        # 统计已有的&lt;tr&gt;数量
+        row_count = html_content.count('&lt;tr&gt;') - 1  # 表头有1个tr，剩下的都是数据行
+        serial_number = row_count + 1
+
+        # 构建数据行
+        data_cells = (
+            f'&lt;td&gt;{serial_number}&lt;/td&gt;'
+            + &quot;&quot;.join([f'&lt;td&gt;{cell or &quot;&quot;}&lt;/td&gt;' for cell in row_data])
+        )
+
+        row_html = f'&lt;tr&gt;{data_cells}&lt;/tr&gt;'
+
+        # 插入到tbody
+        if '&lt;/tbody&gt;' in html_content:
+            updated_html = re.sub(r'\s*&lt;/tbody&gt;\s*', f'{row_html}&lt;/tbody&gt;', html_content)
+            self.write({'table_html_store': updated_html})
+
+    def _add_table_html_store_rows(self, rows_data):
+        &quot;&quot;&quot;
+            批量添加
+        &quot;&quot;&quot;
+        for row_data in rows_data:
+            self._add_table_html_store_row(row_data)
+
+    def _clear_table_html_store(self):
+        &quot;&quot;&quot;
+            清空表格
+        &quot;&quot;&quot;
+        if not self.table_html_store:
+            return
+
+        # 清除tbody部分
+        html = self.table_html_store
+        if '&lt;tbody&gt;' in html and '&lt;/tbody&gt;' in html:
+            tbody_start = html.find('&lt;tbody&gt;')
+            header_part = str(html[:tbody_start + 7])
+            self.write({'table_html_store': header_part + '&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;'})
+
+    # # 示例
+    # def add_sample_data(self):
+    #     # 设置表头
+    #     headers = ['编码', '名称', '价格']
+    #     self.table_html_store = self._set_table_html_store_header(headers)
+    #
+    #     # 添加数据
+    #     data = [
+    #         ['P001', '产品A', '100'],
+    #         ['P002', '产品B', '200'],
+    #     ]
+    #
+    #     self._add_table_html_store_rows(data)
+</code></pre>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/Odoo/note/Odoo动态域设置.html">
+                            <span class="icon"></span>
+                            <span class="label">Odoo动态域设置</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a></a><ul><li><a target="_blank" href="/#"></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://gitee.com/LC_Link">技术支持 | LC_Link</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+</body>
+
+</html>
