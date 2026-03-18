@@ -41,4 +41,6 @@ items:
         file: note/Odoo视图字段默认显示.md
     -   label: Odoo动态域设置
         file: note/Odoo动态域设置.md
+    -   label: Odoo excel字段
+        file: note/Odoo excel字段.md
 
